@@ -149,3 +149,4 @@ All endpoints are served from the Express server (default `http://localhost:3001
 - Club popup/list items link out to external sites with `target="_blank" rel="noopener noreferrer"`.
 - Assets under `client/images` were downloaded from Unsplash at build time so the site does not hotlink imagery.
 # Alpine-Ascent
+# alpine-ascent
