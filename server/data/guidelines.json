@@ -1,0 +1,90 @@
+{
+  "cards": [
+    {
+      "id": "fitness",
+      "title": "Fitness Training",
+      "icon": "heart-pulse",
+      "intro": "Strong legs, a strong heart and a strong mind. Start training at least 12–16 weeks before departure.",
+      "items": [
+        "Aerobic base: 3–4 sessions weekly of hiking, running or cycling",
+        "Weighted-pack hikes with 10–15 kg on hilly terrain, building to 6+ hours",
+        "Leg strength: lunges, step-ups and squats twice per week",
+        "Core and balance work to protect your back under load",
+        "Practise back-to-back long days to simulate expedition fatigue"
+      ]
+    },
+    {
+      "id": "gear",
+      "title": "Gear List",
+      "icon": "backpack2",
+      "intro": "Quality over quantity. Every item should earn its place in your pack.",
+      "items": [
+        "Layering system: base, insulating mid, hardshell and a down jacket",
+        "Mountaineering boots that are correctly fitted and well broken in",
+        "Helmet, harness, crampons, ice axe and carabiners (we supply on request)",
+        "Sleeping bag rated 5 °C colder than the expected minimum",
+        "Headtorch, sunglasses (category 4), sunscreen, and spare batteries"
+      ]
+    },
+    {
+      "id": "permits",
+      "title": "Permits & Documents",
+      "icon": "file-earmark-check",
+      "intro": "Regulations vary widely. We handle permits, but you must bring valid documents.",
+      "items": [
+        "Passport valid for at least six months beyond your return date",
+        "Peak and national-park permits arranged by Alpine Ascents",
+        "Visas and vaccination records where required",
+        "Digital and paper copies of all documents, stored separately",
+        "Emergency contacts and medical information card"
+      ]
+    },
+    {
+      "id": "lnt",
+      "title": "Leave No Trace",
+      "icon": "tree",
+      "intro": "The mountains are not ours to keep. Leave them better than you found them.",
+      "items": [
+        "Pack out everything you pack in, including human waste where required",
+        "Stay on established trails and camp on durable surfaces",
+        "Use stoves rather than fires; respect all wildlife",
+        "Respect local cultures, shrines and communities",
+        "Leave what you find, from rocks to prayer flags"
+      ]
+    },
+    {
+      "id": "insurance",
+      "title": "Insurance",
+      "icon": "shield-check",
+      "intro": "Rescue and evacuation can cost tens of thousands. Insurance is mandatory on every expedition.",
+      "items": [
+        "Policy must cover mountaineering up to your maximum altitude",
+        "Helicopter evacuation and repatriation cover must be included",
+        "Trip cancellation and interruption cover is strongly recommended",
+        "Carry your policy number and the insurer's 24-hour emergency line",
+        "Check exclusions carefully: some require a guide or specific certification"
+      ]
+    },
+    {
+      "id": "emergency",
+      "title": "Emergency Protocol",
+      "icon": "exclamation-octagon",
+      "intro": "Know what to do before something goes wrong. Your guide leads, but everyone must be prepared.",
+      "items": [
+        "Stop, assess, and make the scene safe before helping anyone",
+        "Alert your guide immediately; never leave a sick team-member alone",
+        "Use the satellite messenger or radio to call for help, giving location and condition",
+        "Descend early for altitude sickness. Descent saves lives",
+        "Follow the guide's evacuation plan and keep the group together"
+      ]
+    }
+  ],
+  "gearChecklist": [
+    { "group": "Clothing", "items": ["Merino or synthetic base layers (2 sets)", "Fleece or softshell mid-layer", "Insulated down or synthetic jacket", "Waterproof hardshell jacket and trousers", "Liner gloves, insulated gloves and expedition mitts", "Warm hat, balaclava and buff", "Mountaineering socks (3 pairs)"] },
+    { "group": "Climbing Hardware", "items": ["Mountaineering boots", "12-point crampons", "Ice axe (technical or classic)", "Harness and helmet", "3 locking carabiners and 2 slings", "Trekking poles", "Prusik loops"] },
+    { "group": "Camp & Sleep", "items": ["Four-season sleeping bag", "Insulated sleeping mat", "Backpack 40–55 L", "Water bottles (2 × 1 L) and insulated sleeves", "Headlamp with spare batteries", "Stuff sacks and dry bags"] },
+    { "group": "Safety & Health", "items": ["Personal first-aid kit and blister care", "Sunscreen SPF 50+ and lip balm", "Glacier glasses (category 4) and goggles", "Altitude medication (as prescribed)", "Water purification tablets", "Satellite messenger (team provided)"] },
+    { "group": "Documents & Money", "items": ["Passport and visa", "Insurance certificate", "Permits (team provided)", "Emergency contact card", "Cash in small denominations", "Printed itinerary"] }
+  ]
+}
+

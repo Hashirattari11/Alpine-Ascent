@@ -1,0 +1,68 @@
+[
+  {
+    "id": "highest",
+    "label": "Highest Peaks",
+    "intro": "The world's great summits, ranked by elevation above sea level. Measurements are rounded to the nearest metre.",
+    "items": [
+      { "title": "Mount Everest", "value": 8849, "unit": "m", "detail": "Nepal / China (Tibet). Official height of 8,848.86 m was jointly announced by Nepal and China in December 2020.", "holder": "Highest above sea level", "year": "1953" },
+      { "title": "K2 (Chogori)", "value": 8611, "unit": "m", "detail": "Pakistan / China. The second-highest mountain and widely considered the most demanding of the 8,000ers.", "holder": "Karakoram", "year": "1954" },
+      { "title": "Kangchenjunga", "value": 8586, "unit": "m", "detail": "India / Nepal. The third-highest peak, first climbed by Joe Brown and George Band.", "holder": "Himalaya", "year": "1955" },
+      { "title": "Aconcagua", "value": 6961, "unit": "m", "detail": "Argentina. Highest peak outside Asia and the highest in both the Southern and Western Hemispheres.", "holder": "Andes", "year": "1897" },
+      { "title": "Denali", "value": 6190, "unit": "m", "detail": "USA (Alaska). The highest peak in North America, with one of the greatest vertical rises of any mountain on Earth.", "holder": "Alaska Range", "year": "1913" },
+      { "title": "Kilimanjaro", "value": 5895, "unit": "m", "detail": "Tanzania. The world's tallest free-standing mountain and Africa's highest summit.", "holder": "Uhuru Peak", "year": "1889" },
+      { "title": "Broad Peak", "value": 8051, "unit": "m", "detail": "Pakistan. The 12th-highest peak and the only 8,000er with three summits, nicknamed 'the mountain of a thousand roads'.", "holder": "Karakoram", "year": "1957" },
+      { "title": "Mount Vinson", "value": 4892, "unit": "m", "detail": "Antarctica. The highest mountain on the continent, a long way from any support.", "holder": "Ellsworth Range", "year": "1966" }
+    ]
+  },
+  {
+    "id": "firsts",
+    "label": "First Ascents",
+    "intro": "The moments when humanity first stood on top of the world's most coveted summits.",
+    "items": [
+      { "title": "Mont Blanc", "value": 1786, "unit": "", "plain": true, "detail": "Jacques Balmat and Michel-Gabriel Paccard make the first ascent, launching modern alpinism.", "holder": "Balmat & Paccard", "year": "1786" },
+      { "title": "Annapurna I", "value": 1950, "unit": "", "plain": true, "detail": "First 8,000-metre peak to be climbed, by Maurice Herzog and Louis Lachenal.", "holder": "French Expedition", "year": "1950" },
+      { "title": "Mount Everest", "value": 1953, "unit": "", "plain": true, "detail": "Edmund Hillary and Tenzing Norgay reach the summit on 29 May.", "holder": "Hillary & Tenzing", "year": "1953" },
+      { "title": "K2", "value": 1954, "unit": "", "plain": true, "detail": "Lino Lacedelli and Achille Compagnoni, Italian expedition led by Ardito Desio.", "holder": "Lacedelli & Compagnoni", "year": "1954" },
+      { "title": "K2 in winter", "value": 2021, "unit": "", "plain": true, "detail": "Ten Nepali climbers stand on the summit on 16 January: the last 8,000er climbed in winter.", "holder": "Nepali team", "year": "2021" },
+      { "title": "All fourteen 8,000ers", "value": 1986, "unit": "", "plain": true, "detail": "Reinhold Messner completes the set with Lhotse on 16 October.", "holder": "Reinhold Messner", "year": "1986" },
+      { "title": "Gasherbrum I", "value": 1958, "unit": "", "plain": true, "detail": "Peter Schoening climbs to the summit alone on 6 July after injuries to the rest of the summit party.", "holder": "Pete Schoening", "year": "1958" },
+      { "title": "The Eiger north face", "value": 1938, "unit": "", "plain": true, "detail": "Toni Kurz's death in 1932 defines the route's reputation; the first ascent comes six years later.", "holder": "Heckmair, Angerer, Aspis & Wiessner", "year": "1938" }
+    ]
+  },
+  {
+    "id": "speed",
+    "label": "Fastest & Most",
+    "intro": "Feats of endurance, efficiency and sheer persistence.",
+    "items": [
+      { "title": "Matterhorn North Face", "value": 106, "unit": "min", "detail": "Dani Arnold's 2015 speed record: 1 hour 46 minutes from the start of the route to the summit.", "holder": "Dani Arnold", "year": "2015" },
+      { "title": "All fourteen 8,000ers", "value": 6, "unit": "months + 6 days", "detail": "Nirmal Purja's 'Project Possible' in 2019 shattered the previous record of just under eight years.", "holder": "Nirmal Purja", "year": "2019" },
+      { "title": "Everest without oxygen or fixed ropes", "value": 26, "unit": "hours", "detail": "Kilian Jornet's 2017 ascent from Rongbuk Monastery, the pinnacle of fast-and-light mountaineering.", "holder": "Kilian Jornet", "year": "2017" },
+      { "title": "Most Everest summits", "value": 30, "suffix": "+", "unit": "summits", "detail": "Kami Rita Sherpa of Nepal holds the record for the most ascents of Everest by anyone.", "holder": "Kami Rita Sherpa", "year": "1994 – today" },
+      { "title": "Fastest ascent of K2", "value": 48, "suffix": "+", "unit": "hours", "detail": "The standard K2 route has been climbed in under two days by pre-supported teams moving with fixed caches.", "holder": "Pre-supported teams", "year": "2008 onward" },
+      { "title": "Hour for the world's biggest walls", "value": 28, "suffix": "+", "unit": "climbs/day", "detail": "On a big-wall push, elite alpinists climb and sleep a full day at altitude, every day, for weeks.", "holder": "Elite big-wall teams", "year": "1990s onward" }
+    ]
+  },
+  {
+    "id": "age",
+    "label": "Youngest & Oldest",
+    "intro": "Everest does not care how old you are, but extraordinary people have stood on top at both ends of life.",
+    "items": [
+      { "title": "Youngest on Everest", "value": 13, "unit": "years", "detail": "Jordan Romero of the USA summited from the Tibetan side aged 13 years and 10 months. Both Nepal and China have since raised minimum ages.", "holder": "Jordan Romero", "year": "2010" },
+      { "title": "Oldest on Everest", "value": 80, "unit": "years", "detail": "Japanese mountaineer Yuichiro Miura reached the summit aged 80 years and 224 days, after three heart operations.", "holder": "Yuichiro Miura", "year": "2013" },
+      { "title": "Youngest to climb all fourteen 8,000ers", "value": 18, "unit": "years", "detail": "Nepal's Nima Rinji Sherpa completed the full set while still a teenager, a generation after Messner first did it.", "holder": "Nima Rinji Sherpa", "year": "2025" }
+    ]
+  },
+  {
+    "id": "women",
+    "label": "Women's Records",
+    "intro": "Pioneers who redefined what was possible, and who the mountains were open to.",
+    "items": [
+      { "title": "First woman on Everest", "value": 1975, "unit": "", "plain": true, "detail": "Junko Tabei of Japan reaches the summit on 16 May 1975.", "holder": "Junko Tabei", "year": "1975" },
+      { "title": "First woman on K2", "value": 1986, "unit": "", "plain": true, "detail": "Wanda Rutkiewicz of Poland, who also became the first European woman on Everest in 1978.", "holder": "Wanda Rutkiewicz", "year": "1986" },
+      { "title": "All 14 without bottled oxygen", "value": 2011, "unit": "", "plain": true, "detail": "Gerlinde Kaltenbrunner of Austria is the first woman to climb all fourteen 8,000ers without supplemental oxygen.", "holder": "Gerlinde Kaltenbrunner", "year": "2011" },
+      { "title": "Most Everest summits by a woman", "value": 10, "unit": "summits", "detail": "Lhakpa Sherpa of Nepal, who reached the summit for the tenth time in 2022.", "holder": "Lhakpa Sherpa", "year": "2022" },
+      { "title": "First woman on the Eiger north face", "value": 1952, "unit": "", "plain": true, "detail": "Evelyn Camissac of Switzerland became the first woman to climb the north face, five years before it was first climbed without a fixed rope.", "holder": "Evelyn Camissac", "year": "1952" },
+      { "title": "Seven Summits in a single year", "value": 1997, "unit": "", "plain": true, "detail": "Chantal Mauduit finished all seven continental summits within one calendar year, topping out on Aconcagua in December.", "holder": "Chantal Mauduit", "year": "1997" }
+    ]
+  }
+]

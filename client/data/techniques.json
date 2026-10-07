@@ -1,0 +1,171 @@
+[
+  {
+    "id": "rappel",
+    "title": "Rappelling & Abseiling",
+    "icon": "signpost-split",
+    "summary": "Getting down safely is a skill in its own right. A controlled rappel on snow, rock or ice is one of the most reliable ways out of a bad situation.",
+    "steps": [
+      "Back up the rope, keeping both ends brakeable: never tie off a single strand you cannot hold.",
+      "Set up your anchor equalised and redundant, ideally masterpointed, and equalise before loading.",
+      "Back up the system with a second tie-in: a lock-off or a knot in the standing strand.",
+      "Descend facing downhill with weight on the brake strand; keep the device above your waist."
+    ],
+    "tip": "Rappel on an ice axe: weight on the shaft-side strand, free-hanging on the spike, and step down the face as you go.",
+    "image": "campfire"
+  },
+  {
+    "id": "crevasse-rescue",
+    "title": "Crevasse Rescue",
+    "icon": "life-preserver",
+    "summary": "If a partner falls into a crevasse you have minutes, not hours. Every rope team must be able to haul 100 kg out of a hole in ice.",
+    "steps": [
+      "Immediately build an anchor: ice screws, a snow picket or a buried pack, and get the casualty talking.",
+      "Lock the rope to the anchor so the system can hold weight even if you are pulled forward.",
+      "Run a mechanical advantage haul: a Z-pulley, a 3:1 or the drop-loop method, one person hauling at a time.",
+      "Belay the hauling end hard; raise in short pulls with clear communication."
+    ],
+    "tip": "Practise with an empty pack on a rope over a crevasse before you ever need it for real.",
+    "image": "winter-lake"
+  },
+  {
+    "id": "avalanche-rescue",
+    "title": "Avalanche Rescue",
+    "icon": "cloud-snow",
+    "summary": "Companion rescue is the single most important survival skill in the mountains. Most buried climbers are alive when they stop moving.",
+    "steps": [
+      "Switch your transceiver to search, count and time; keep it on your body so the signal keeps broadcasting.",
+      "Sweep the avalanche debris in a systematic grid; probe in a 60 × 60 pattern with a strong, steady probe.",
+      "Once you feel a body shape, shovel from downhill to upward, digging a wide deep pit and leaving the face on the uphill side.",
+      "Clear the airway, check for avalanche debris in the airway, rewarm gently and treat for trauma."
+    ],
+    "tip": "Everyone carries a transceiver, probe and shovel, and all three are practised together before any trip leaves base camp.",
+    "image": "snow-forest"
+  },
+  {
+    "id": "weather",
+    "title": "Weather Forecasting",
+    "icon": "cloud-lightning-rain",
+    "summary": "On the big peaks the weather decides everything. Reading it early is the difference between a summit day and a rescue.",
+    "steps": [
+      "Check a mountain-specific forecast, not just the valley: the summit can be 15 °C colder and far windier.",
+      "Read pressure trends: a rapid drop means low cloud, falling temperatures and a rising chance of snow.",
+      "Spot clouds building over summits through the day: start early, be back in the valley by early afternoon.",
+      "Agree a turnaround time and forecast window before leaving, and tell someone your route and return time."
+    ],
+    "tip": "Wind is the deciding factor on summits. Learn to read the mountain's own wind and pick the sheltered side of the ridge.",
+    "image": "aurora"
+  },
+  {
+    "id": "snow-anchoring",
+    "title": "Snowcraft & Anchors",
+    "icon": "bezier",
+    "summary": "On snow, ice and mixed ground there is no bolt for a hand, so you build your own: knots, pickets, screws and deadman systems.",
+    "steps": [
+      "Tie solid, load-bearing anchors: hand grips, a chest hitch, a Munter, a clove or the lark's foot.",
+      "Carry three or four snow pickets as backup; test every anchor by pulling hard before you clip in.",
+      "Know how to place a deadman anchor in a snow pit and how to protect a vertical wall.",
+      "Clean snow anchors as you go, and re-test them after wind, thaw or a long rest."
+    ],
+    "tip": "A wall of poured snow can hold several body weights — but not if the snow is wet, hollow or sliding.",
+    "image": "ridge-hiker"
+  },
+  {
+    "id": "rope",
+    "title": "Rope Work",
+    "icon": "bezier2",
+    "summary": "The rope is the climbing team's lifeline. Sound rope work means choosing the right system for the terrain, tying reliable knots, and communicating clearly.",
+    "steps": [
+      "Tie in with a re-threaded figure-eight on a bight, finished with a stopper knot, and check your partner's knot every time.",
+      "On glaciers, rope up at 8–10 m intervals with butterfly knots or prusik-friendly spacing so a fall can be arrested by the team.",
+      "Coil the rope in the 'mountaineer's coil' for carrying; keep it dry and away from crampon points.",
+      "Agree and rehearse rope commands: 'On belay?', 'Belay on', 'Climbing', 'Climb on', 'Take', 'Slack'."
+    ],
+    "tip": "A dry rope is a strong rope. Wet or icy ropes can lose a significant fraction of their dynamic strength, so protect them from meltwater.",
+    "image": "rock-climber"
+  },
+  {
+    "id": "belay",
+    "title": "Belaying",
+    "icon": "shield-check",
+    "summary": "Belaying is the act of managing the rope so that a falling climber is caught safely. It demands full attention from the first move to the last.",
+    "steps": [
+      "Use a tube or assisted-braking device; always keep a brake hand on the rope and never let go.",
+      "Stand close to the wall and slightly offset so the fall line is clear; give a soft catch by stepping or jumping lightly.",
+      "Perform a partner check before every climb: harness, knot, device, locking carabiner, rope end.",
+      "On multi-pitch, build anchors that are redundant, equalised and strong enough to hold a factor-2 fall."
+    ],
+    "tip": "Most belay accidents are human error. Pause, look at the system, and say it aloud.",
+    "image": "campfire"
+  },
+  {
+    "id": "crampon",
+    "title": "Crampon & Ice Axe Use",
+    "icon": "tools",
+    "summary": "Crampons and ice axes turn frozen slopes into secure terrain. Efficient technique saves energy and keeps you safe on steep snow and ice.",
+    "steps": [
+      "Flat-footing (French technique): keep all points biting on moderate slopes, ankles flexed.",
+      "Front-pointing: kick straight in with the front points on steep ice, heels low, hands about shoulder height.",
+      "Carry the axe in the uphill hand, spike in the snow, adze forward, and plunge it with every step on a traverse.",
+      "Always check that crampons fit your boot before a climb and that anti-balling plates are fitted."
+    ],
+    "tip": "Walk with feet slightly wider than normal so crampon points never snag your trousers or boots.",
+    "image": "snow-aerial"
+  },
+  {
+    "id": "arrest",
+    "title": "Self-Arrest",
+    "icon": "life-preserver",
+    "summary": "A fall on a steep snow slope can accelerate within seconds. Self-arrest is the single most important snow-travel skill and must be practised until instinctive.",
+    "steps": [
+      "Grip the axe with one hand on the head (thumb under the adze) and the other on the shaft near the spike.",
+      "Roll towards the axe, pulling the pick into your shoulder at chest level and kicking your toes up, off the snow.",
+      "Dig the pick in with your chest weight over it and your hips low; spread your legs wide for stability.",
+      "Practise falling head-first, on your back and face-down so the response is automatic."
+    ],
+    "tip": "Remove crampons or keep points clear: kicking a crampon into the slope while falling can flip you over or cause serious injury.",
+    "image": "winter-lake"
+  },
+  {
+    "id": "route",
+    "title": "Route Finding",
+    "icon": "signpost-split",
+    "summary": "Reading terrain is half of mountaineering. Good route finding avoids objective hazards and finds the most efficient line to the summit and back.",
+    "steps": [
+      "Study the route beforehand: topos, satellite imagery, guidebooks and recent conditions reports.",
+      "Look for natural weaknesses: ribs and ridges are safer than gullies, which funnel rockfall and avalanches.",
+      "Set a turn-around time and stick to it, regardless of how close the summit appears.",
+      "Mark the route with GPS waypoints and, where appropriate, wands or cairns for the descent."
+    ],
+    "tip": "Look back often. The descent looks completely different from the ascent, so memorise landmarks as you climb.",
+    "image": "ridge-hiker"
+  },
+  {
+    "id": "acclimatization",
+    "title": "Acclimatization",
+    "icon": "triangle",
+    "summary": "The body needs days or weeks to adapt to lower oxygen pressure. Slow, staged ascent is the most reliable protection against altitude illness.",
+    "steps": [
+      "Above 3,000 m, increase your sleeping altitude by no more than 300–500 m per night, with a rest day every 3–4 days.",
+      "'Climb high, sleep low': make day trips to higher altitude, then descend to sleep.",
+      "Hydrate well, eat carbohydrate-rich food, and avoid alcohol and sedatives.",
+      "Descend immediately if symptoms of acute mountain sickness worsen or do not improve with rest."
+    ],
+    "tip": "Fitness does not prevent altitude illness. The fittest climbers are often those who ascend too fast.",
+    "image": "above-clouds"
+  },
+  {
+    "id": "navigation",
+    "title": "Navigation",
+    "icon": "compass",
+    "summary": "Whiteout, darkness and fog can make familiar terrain unrecognisable. Navigation combines map, compass and modern GPS tools, and a margin for error.",
+    "steps": [
+      "Orient the map, take a bearing, and walk in short, verified legs. Count paces and note time in poor visibility.",
+      "Use a handrail (a ridge, stream or cliff edge) and a catching feature beyond the target to avoid overshooting.",
+      "Carry a GPS or phone with offline maps as a backup, never as the only tool.",
+      "Know how to calculate declination and set it on your compass for your region."
+    ],
+    "tip": "Fresh batteries are a navigation tool. Keep electronics warm inside your jacket to preserve charge.",
+    "image": "peak-teal"
+  }
+]
+

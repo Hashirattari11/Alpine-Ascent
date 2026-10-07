@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark" data-page="contact">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Contact &amp; Enquiries | Alpine Ascents</title>
+    <meta name="description" content="Talk to a guide about your expedition: Mont Blanc, Matterhorn, Denali, Aconcagua, the Himalaya and more." />
+    <meta name="theme-color" content="#0B0F14" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Alpine Ascents" />
+    <meta property="og:title" content="Contact &amp; Enquiries | Alpine Ascents" />
+    <meta property="og:description" content="Talk to a guide about your expedition: Mont Blanc, Matterhorn, Denali, Aconcagua, the Himalaya and more." />
+    <meta property="og:image" content="images/aurora.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact &amp; Enquiries | Alpine Ascents" />
+    <meta name="twitter:image" content="images/aurora.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" />
+
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+    <script>
+      window.__errs = []
+      window.addEventListener('error', (e) => window.__errs.push(`${e.message} @ ${e.filename}:${e.lineno}`))
+      window.addEventListener('unhandledrejection', (e) => window.__errs.push('rejected: ' + (e.reason && e.reason.message ? e.reason.message : e.reason)))
+    </script>
+    <script type="application/ld+json">
+      { "@context": "https://schema.org", "@type": "Organization", "name": "Alpine Ascents", "description": "Premium guided mountaineering and expedition company.", "slogan": "Where the Sky Begins", "sameAs": ["https://www.instagram.com/", "https://www.youtube.com/", "https://www.facebook.com/"] }
+    </script>
+  </head>
+
+  <body class="is-loading" data-page="contact">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="preloader" id="preloader" role="status" aria-label="Loading Alpine Ascents">
+      <div class="preloader__inner">
+        <svg class="preloader__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path class="pl-path" pathLength="1" d="M3 41 L18.500 12 L25.500 25 L30.500 17 L45 41 Z" stroke="#C9A961" stroke-width="1.600" stroke-linejoin="round" stroke-linecap="round" />
+          <path class="pl-cap" d="M13.800 21 L18.500 12 L23.200 20.700 L19.500 19 L16.800 22.200 Z" fill="#F4F7FA" />
+        </svg>
+        <p class="preloader__word">ALPINE <b>ASCENTS</b></p>
+        <div class="preloader__bar"><span></span></div>
+      </div>
+    </div>
+
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+    <header class="site-nav" id="siteNav">
+      <div class="site-nav__inner">
+        <a class="brand" href="index.html" aria-label="Alpine Ascents, home">
+          <img src="images/logo-mark.svg" width="40" height="40" alt="" />
+          <span class="brand__word">ALPINE <b>ASCENTS</b></span>
+        </a>
+
+        <nav class="site-nav__menu" aria-label="Primary">
+          <ul class="nav-list" id="navList">
+            <li><a href="index.html" data-nav="home">Home</a></li>
+            <li><a href="expeditions.html" data-nav="expeditions">Expeditions</a></li>
+            <li><a href="history.html" data-nav="history">History</a></li>
+            <li><a href="types.html" data-nav="types">Types</a></li>
+            <li><a href="techniques.html" data-nav="techniques">Techniques</a></li>
+            <li><a href="sheltering.html" data-nav="sheltering">Sheltering</a></li>
+            <li><a href="hazards.html" data-nav="hazards">Hazards</a></li>
+            <li><a href="records.html" data-nav="records">Records</a></li>
+            <li><a href="clubs.html" data-nav="clubs">Clubs &amp; Map</a></li>
+            <li><a href="stories.html" data-nav="stories">Stories</a></li>
+            <li><a href="gallery.html" data-nav="gallery">Gallery</a></li>
+            <li><a href="latest.html" data-nav="latest">Latest</a></li>
+            <li><a href="guidelines.html" data-nav="guidelines">Guidelines</a></li>
+            <li><a href="contact.html" data-nav="contact" class="is-active" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-nav__right">
+          <div class="visitor-badge" id="visitorBadge" title="Total visitors" aria-live="polite">
+            <i class="bi bi-people" aria-hidden="true"></i>
+            <span class="visitor-badge__label">Visitors</span>
+            <strong id="visitorCount" aria-label="Visitor count loading">&mdash;</strong>
+          </div>
+          <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="mobile-menu__bg" aria-hidden="true"></div>
+      <nav aria-label="Mobile primary"><ul class="mobile-menu__list" id="mobileList"><li style="--i:0"><a href="index.html" data-nav="home"><small>01</small>Home</a></li><li style="--i:1"><a href="expeditions.html" data-nav="expeditions"><small>02</small>Expeditions</a></li><li style="--i:2"><a href="history.html" data-nav="history"><small>03</small>History</a></li><li style="--i:3"><a href="types.html" data-nav="types"><small>04</small>Types</a></li><li style="--i:4"><a href="techniques.html" data-nav="techniques"><small>05</small>Techniques</a></li><li style="--i:5"><a href="sheltering.html" data-nav="sheltering"><small>06</small>Sheltering</a></li><li style="--i:6"><a href="hazards.html" data-nav="hazards"><small>07</small>Hazards</a></li><li style="--i:7"><a href="records.html" data-nav="records"><small>08</small>Records</a></li><li style="--i:8"><a href="clubs.html" data-nav="clubs"><small>09</small>Clubs &amp; Map</a></li><li style="--i:9"><a href="stories.html" data-nav="stories"><small>10</small>Stories</a></li><li style="--i:10"><a href="gallery.html" data-nav="gallery"><small>11</small>Gallery</a></li><li style="--i:11"><a href="latest.html" data-nav="latest"><small>12</small>Latest</a></li><li style="--i:12"><a href="guidelines.html" data-nav="guidelines"><small>13</small>Guidelines</a></li><li style="--i:13"><a href="contact.html" data-nav="contact" class="is-active" aria-current="page"><small>14</small>Contact</a></li></ul></nav>
+      <p class="mobile-menu__foot">Where the sky begins &middot; <a href="contact.html" data-nav="contact">Plan your ascent</a></p>
+    </div>
+
+    <main id="main" tabindex="-1">
+<section class="page-head" aria-labelledby="pageTitle">
+        <span class="page-head__bg" aria-hidden="true"><img src="images/aurora-sm.webp" alt="" loading="eager" /></span>
+        <div class="container page-head__inner">
+          <p class="eyebrow" data-reveal><span class="eyebrow__line"></span><span class="eyebrow__num">12</span> Contact</p>
+          <h1 class="display" id="pageTitle" data-reveal>Begin your <em>ascent</em></h1>
+          <p class="lead-text" data-reveal style="--d:.1s">Tell us about the mountain in your mind. A guide, not a call centre, will reply within one working day.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Contact form">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-5" data-reveal>
+              <p class="eyebrow"><span class="eyebrow__line"></span>Where to find us</p>
+              <h2 class="display">Geneva base,<br /><em>worldwide routes</em></h2>
+              <ul class="contact-list list-unstyled">
+                <li><i class="bi bi-geo-alt"></i><span>Rue du Mont-Blanc 14<br />1201 Geneva, Switzerland</span></li>
+                <li><i class="bi bi-telephone"></i><a href="tel:+41225550142">+41 22 555 0142</a></li>
+                <li><i class="bi bi-envelope"></i><a href="mailto:expeditions@alpineascents.example">expeditions@alpineascents.example</a></li>
+                <li><i class="bi bi-clock"></i><span>Mon&ndash;Fri 08:00&ndash;18:00 CET</span></li>
+              </ul>
+              <div class="mt-4 pt-4" style="border-top:1px solid var(--line)">
+                <p class="footer-blurb small mb-2">Planning a Himalayan or Patagonian trip? Include your dates and experience level, and we will suggest an itinerary.</p>
+                <a class="link-arrow" href="clubs.html"><span>Find a local club</span><i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-7" data-reveal style="--d:.12s">
+              <div class="form-card">
+                <form id="enquiryForm" novalidate>
+                  <div class="row g-3">
+                    <div class="col-md-6"><div class="field"><input type="text" class="form-control" id="fName" name="name" placeholder=" " autocomplete="name" required minlength="2" maxlength="80" /><label for="fName">Full name</label><div class="invalid-feedback" id="eName"></div></div></div>
+                    <div class="col-md-6"><div class="field"><input type="email" class="form-control" id="fEmail" name="email" placeholder=" " autocomplete="email" required maxlength="120" /><label for="fEmail">Email address</label><div class="invalid-feedback" id="eEmail"></div></div></div>
+                    <div class="col-md-6"><div class="field"><input type="tel" class="form-control" id="fPhone" name="phone" placeholder=" " autocomplete="tel" maxlength="24" /><label for="fPhone">Phone (optional)</label><div class="invalid-feedback" id="ePhone"></div></div></div>
+                    <div class="col-md-6"><div class="field"><select class="form-select" id="fInterest" name="interest" required><option value="" selected disabled>Choose an expedition</option></select><label for="fInterest" class="is-select">Expedition interest</label><div class="invalid-feedback" id="eInterest"></div></div></div>
+                    <div class="col-12"><div class="field"><textarea class="form-control" id="fMessage" name="message" rows="5" placeholder=" " required minlength="10" maxlength="2000"></textarea><label for="fMessage">Your message</label><div class="field__count"><span id="msgCount">0</span>/2000</div><div class="invalid-feedback" id="eMessage"></div></div></div>
+                    <div class="d-none" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
+                    <div class="col-12 d-flex flex-wrap align-items-center gap-3">
+                      <button type="submit" class="btn btn-gold magnetic" id="submitBtn"><span>Send enquiry</span><i class="bi bi-send"></i></button>
+                      <p class="form-note mb-0" id="formNote" role="alert"></p>
+                    </div>
+                  </div>
+                </form>
+                <div class="form-success" id="formSuccess" hidden role="status">
+                  <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="36" pathLength="1" /><path d="M24 41 L35 52 L57 28" pathLength="1" /></svg>
+                  <h3>Enquiry received</h3>
+                  <p id="successMsg">Thank you. A guide will reply within one working day.</p>
+                  <button type="button" class="btn btn-ghost btn-sm" id="againBtn">Send another</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" aria-labelledby="teamTitle">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <p class="eyebrow"><span class="eyebrow__line"></span><span class="eyebrow__num">13</span> The guides</p>
+            <h2 class="display" id="teamTitle">You climb <em>with these people</em></h2>
+            <p class="lead-text">Our guides are IFMGA-certified, average fourteen seasons in the field, and are hand-picked for judgement rather than photographs.</p>
+          </header>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3" data-reveal>
+              <div class="card-lux guide-card"><div class="img-wrap" style="aspect-ratio:3/4"><img src="images/ridge-hiker-sm.webp" alt="Portrait of Marc Dubois" loading="lazy" /></div>
+                <div class="card-lux__body"><h3>Marc Dubois</h3><p class="small mb-2" style="color:var(--ice);letter-spacing:.14em;text-transform:uppercase;font-size:.66rem">IFMGA · Chamonix</p>
+                <p>Nineteen seasons in the Alps and eleven on Everest. Specialises in fast-and-light alpine routes and coaching first 4,000ers.</p></div></div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-reveal style="--d:.1s">
+              <div class="card-lux guide-card"><div class="img-wrap" style="aspect-ratio:3/4"><img src="images/rock-climber-sm.webp" alt="Portrait of Sofia Ricci" loading="lazy" /></div>
+                <div class="card-lux__body"><h3>Sofia Ricci</h3><p class="small mb-2" style="color:var(--ice);letter-spacing:.14em;text-transform:uppercase;font-size:.66rem">IFMGA · Aosta</p>
+                <p>Alpine and rock specialist, nine-season guide, with a talent for making first-time climbers feel genuinely safe on steep ground.</p></div></div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-reveal style="--d:.2s">
+              <div class="card-lux guide-card"><div class="img-wrap" style="aspect-ratio:3/4"><img src="images/trekkers-sm.webp" alt="Portrait of Pemba Sherpa" loading="lazy" /></div>
+                <div class="card-lux__body"><h3>Pemba Sherpa</h3><p class="small mb-2" style="color:var(--ice);letter-spacing:.14em;text-transform:uppercase;font-size:.66rem">IFMGA · Khumbu</p>
+                <p>Twelve seasons guiding in the Khumbu, four on K2, and a former national icefall rescuer. Leads all our Himalaya trips.</p></div></div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-reveal style="--d:.3s">
+              <div class="card-lux guide-card"><div class="img-wrap" style="aspect-ratio:3/4"><img src="images/ski-air-sm.webp" alt="Portrait of Anne Lindberg" loading="lazy" /></div>
+                <div class="card-lux__body"><h3>Anne Lindberg</h3><p class="small mb-2" style="color:var(--ice);letter-spacing:.14em;text-transform:uppercase;font-size:.66rem">IFMGA &amp; ISM · Chamonix</p>
+                <p>Ski-mountaineering and glaciology background. Runs the Haute Route week and our Arctic programme out of Tromsø.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="faqTitle">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4" data-reveal>
+              <p class="eyebrow"><span class="eyebrow__line"></span>Before you write</p>
+              <h2 class="display" id="faqTitle">Common <em>questions</em></h2>
+              <p class="lead-text">If your question is not here, put it in the form and a guide will answer it personally.</p>
+              <a class="btn btn-gold magnetic mt-3" href="guidelines.html"><span>Read the guidelines</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="col-lg-8" data-reveal style="--d:.1s">
+              <div class="accordion" id="faq">
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">I have never climbed. Is that a problem?</button></h3>
+                  <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Not at all — around half our guests arrive with no mountain experience. Our introductory Alpine course needs only walking fitness and a willingness to learn; your guide will fit crampons and teach every skill before it is needed on the mountain.</div></div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">What fitness do I actually need?</button></h3>
+                  <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">For trekking peaks, three or four hours of walking a day for a week. For technical 6,000ers you should be able to carry a 12 kg pack uphill for four hours. Our guidelines page has a twelve-week training plan to suit either.</div></div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Do I need my own equipment?</button></h3>
+                  <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Technical hardware — crampons, axe, harness, helmet, ropes and glacier kit — is provided on all technical trips and fitted for you in person. You will need your own boots, clothing layers, sleeping bag and personal items; we publish a full gear list per expedition.</div></div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">What about insurance?</button></h3>
+                  <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Insurance covering mountaineering to your maximum altitude, including helicopter evacuation and repatriation, is mandatory on every trip. We check your policy before departure and will ask for the certificate; if you need a recommendation we can point you to specialists.</div></div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">What happens if the weather turns?</button></h3>
+                  <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Every itinerary holds reserve days, and the summit is always optional. Your guide makes the call on the mountain, not the wish list: if the window closes we wait, we change the route, or we go home. Nobody has ever been left behind because of weather on our trips.</div></div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">Can my family or group join?</button></h3>
+                  <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Yes. We run private departures for couples, families and corporate groups, and can split a team so that less experienced members climb with a dedicated guide on the same mountain.</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" aria-label="Site footer">
+      <div class="container">
+        <div class="row g-5 footer-top">
+          <div class="col-lg-4">
+            <a class="brand mb-3" href="index.html"><img src="images/logo-mark.svg" width="44" height="44" alt="" /><span class="brand__word">ALPINE <b>ASCENTS</b></span></a>
+            <p class="footer-blurb">Premium guided mountaineering since 1998. Safe, challenging and unforgettable expeditions on the world&rsquo;s great peaks.</p>
+            <div class="socials" aria-label="Social media">
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Alpine Ascents on Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Alpine Ascents on YouTube"><i class="bi bi-youtube"></i></a>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Alpine Ascents on Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Alpine Ascents on X"><i class="bi bi-twitter-x"></i></a>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2">
+            <h3 class="footer-h">Explore</h3>
+            <ul class="footer-links list-unstyled"><li><a href="expeditions.html">Expeditions</a></li><li><a href="history.html">History</a></li><li><a href="types.html">Types</a></li><li><a href="techniques.html">Techniques</a></li><li><a href="records.html">Records</a></li></ul>
+          </div>
+          <div class="col-6 col-md-3 col-lg-2">
+            <h3 class="footer-h">Prepare</h3>
+            <ul class="footer-links list-unstyled"><li><a href="sheltering.html">Sheltering</a></li><li><a href="hazards.html">Hazards</a></li><li><a href="guidelines.html">Guidelines</a></li><li><a href="clubs.html">Clubs &amp; Map</a></li><li><a href="stories.html">Stories</a></li></ul>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <h3 class="footer-h">The Summit Letter</h3>
+            <p class="footer-blurb small">Quarterly notes from the mountains: new expeditions, route reports and safety advice.</p>
+            <form class="newsletter" id="newsletterForm" novalidate>
+              <label for="nlEmail" class="visually-hidden">Email address</label>
+              <div class="input-group">
+                <input type="email" class="form-control" id="nlEmail" placeholder="Your email address" autocomplete="email" required />
+                <button class="btn btn-gold" type="submit" aria-label="Subscribe"><i class="bi bi-arrow-right"></i></button>
+              </div>
+              <p class="form-note mt-2 mb-0" id="nlNote" role="status"></p>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="mb-0">&copy; <span id="year">2026</span> Alpine Ascents. All rights reserved. Photography via <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a>.</p>
+          <a href="#main" class="to-top" data-scroll aria-label="Back to top"><span>Back to top</span><i class="bi bi-arrow-up"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="ticker" id="ticker" role="region" aria-label="Current date, time and your location">
+      <div class="ticker__track" id="tickerTrack"></div>
+    </div>
+
+    <div class="toast-container position-fixed top-0 end-0 p-3 offline-toast">
+      <div id="offlineToast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+        <div class="toast-body"><i class="bi bi-wifi-off me-2"></i>Our server is unreachable. Showing saved content; forms are temporarily unavailable.<button type="button" class="btn-close btn-close-white ms-2" data-bs-dismiss="toast" aria-label="Close"></button></div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="filmModal" tabindex="-1" aria-labelledby="filmTitle" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered"><div class="modal-content">
+        <div class="modal-header border-0"><h2 class="modal-title h5" id="filmTitle">Alpine Ascents &middot; The film</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+        <div class="modal-body p-0"><div class="ratio ratio-16x9" id="filmFrame"></div></div>
+      </div></div>
+    </div>
+
+    <div class="modal fade" id="newsModal" tabindex="-1" aria-labelledby="newsModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"><div class="modal-content" id="newsModalContent"></div></div>
+    </div>
+
+    <div class="modal fade lightbox" id="lightbox" tabindex="-1" aria-label="Image viewer" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen"><div class="modal-content">
+        <button type="button" class="btn-close lightbox__close" data-bs-dismiss="modal" aria-label="Close viewer"></button>
+        <button type="button" class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+        <figure class="lightbox__stage" id="lbStage"><img id="lbImg" alt="" /><figcaption id="lbCaption"></figcaption></figure>
+        <button type="button" class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+        <p class="lightbox__count" id="lbCount" aria-live="polite"></p>
+      </div></div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="vendor/leaflet/leaflet.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

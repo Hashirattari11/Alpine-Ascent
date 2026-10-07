@@ -1,0 +1,122 @@
+[
+  {
+    "id": "everest-base-camp",
+    "expedition": "Everest Base Camp Trek",
+    "year": 2026,
+    "name": "Grace Adeyemi",
+    "role": "Teacher, Manchester",
+    "quote": "I had never trekked in my life. Twenty days from Lukla to base camp and back, my daughter and I walked past glaciers, monasteries and villages. It changed how I see effort.",
+    "result": "Completed 18-day trek · First-timer",
+    "image": "milky-way"
+  },
+  {
+    "id": "skills-week",
+    "expedition": "Alpine Skills Week",
+    "year": 2025,
+    "name": "Samuel Ndlovu",
+    "role": "Software engineer, Cape Town",
+    "quote": "Seven days of rope work, crampons and crevasse rescue in the Mont Blanc massif. On day three I led my own pitch for the first time, badly, and my guide did not say a word until I asked.",
+    "result": "Completed 5-day skills course · Beginner to PD",
+    "image": "canada-lake"
+  },
+  {
+    "id": "haute-route-two",
+    "expedition": "Haute Route Ski Traverse",
+    "year": 2025,
+    "name": "Pieter & Anneke de Vries",
+    "role": "Retired couple, Utrecht",
+    "quote": "At sixty-eight and seventy-one we crossed from Chamonix to Zermatt on skis. By day four the fear was gone and the mountains felt like our own garden.",
+    "result": "Completed 7-day traverse · Two guests, 60+",
+    "image": "ski-air"
+  },
+  {
+    "id": "denali-west",
+    "expedition": "Denali West Buttress",
+    "year": 2024,
+    "name": "Farhan Iqbal",
+    "role": "Emergency physician, Dubai",
+    "quote": "Twenty days hauling sleds in the dark, two storms, and a summit ridge at 20,000 feet. My training saved climbers; the mountain taught me patience.",
+    "result": "Summited 6,190 m · 23-day expedition",
+    "image": "snow-forest"
+  },
+  {
+    "id": "aconcagua",
+    "expedition": "Aconcagua Normal Route",
+    "year": 2025,
+    "name": "Beatriz Colombo",
+    "role": "Anaesthetist, Buenos Aires",
+    "quote": "Two rotations to let my body find the altitude, then a 4 a.m. start up the Canaleta. My knees gave out at 6,000 m. I walked to the top of the Americas anyway.",
+    "result": "Summited 6,961 m · Advanced trekking",
+    "image": "patagonia-lake"
+  },
+  {
+    "id": "kids-course",
+    "expedition": "Family Intro to Climbing",
+    "year": 2026,
+    "name": "The Okonkwo Family",
+    "role": "Family of four, Dublin",
+    "quote": "We brought two teenagers who were sure they would hate it. They learned to belay each other, argued about who had the best belay, and asked when we could come back.",
+    "result": "Family course · Ages 13 to 17",
+    "image": "rock-climber"
+  },
+  {
+    "id": "ama-dablam",
+    "expedition": "Ama Dablam Summit Expedition",
+    "year": 2025,
+    "name": "Claire Moreau",
+    "role": "Software engineer, Lyon",
+    "quote": "I had been climbing for six years, but Ama Dablam taught me what it means to trust a team completely. At the summit at dawn I could see Everest and Lhotse glowing, and I wept.",
+    "result": "Summited 6,812 m · 12-person team · 100% safe return",
+    "image": "everest-ama"
+  },
+  {
+    "id": "mont-blanc",
+    "expedition": "Mont Blanc Camp & Ascent",
+    "year": 2024,
+    "name": "Daniel Okafor",
+    "role": "First-time mountaineer, London",
+    "quote": "I arrived having never worn crampons. Four days later I stood on the summit of Western Europe. The guides made the impossible feel like a series of small, achievable steps.",
+    "result": "Summited 4,808 m · Introductory programme",
+    "image": "sunrise-clouds"
+  },
+  {
+    "id": "patagonia",
+    "expedition": "Patagonia Torres Traverse",
+    "year": 2025,
+    "name": "Marta Alvarez",
+    "role": "Physician, Madrid",
+    "quote": "Wind, rain, then a break in the clouds that revealed the Towers. Our guide's patience and judgement turned a hard day into the best of my life.",
+    "result": "Completed 10-day traverse · Mixed-ability group",
+    "image": "patagonia-torres"
+  },
+  {
+    "id": "denali",
+    "expedition": "Denali West Buttress",
+    "year": 2023,
+    "name": "Tom & Eliza Brandt",
+    "role": "Father and daughter, Colorado",
+    "quote": "Twenty days on the mountain. We hauled sleds, dug in through two storms and shared a summit I'll never forget. Alpine Ascents' planning was flawless.",
+    "result": "Summited 6,190 m · 21-day expedition",
+    "image": "above-clouds"
+  },
+  {
+    "id": "island-peak",
+    "expedition": "Island Peak & Everest Base Camp",
+    "year": 2024,
+    "name": "Hiroshi Tanaka",
+    "role": "Architect, Osaka",
+    "quote": "The Khumbu in silence at 5 a.m., my Sherpa climbing partner humming softly ahead of me. I learned more about patience in those days than in ten years of work.",
+    "result": "Summited 6,189 m · EBC & Island Peak combo",
+    "image": "himalaya-snow"
+  },
+  {
+    "id": "haute-route",
+    "expedition": "Haute Route Ski Traverse",
+    "year": 2026,
+    "name": "Nina Lindqvist",
+    "role": "Ski instructor, Stockholm",
+    "quote": "Seven days from Chamonix to Zermatt: huts, glaciers, powder, and a Matterhorn sunrise as our finale. The most coherent trip I've ever done.",
+    "result": "Completed 7-day traverse · Ski mountaineering",
+    "image": "ski-jump"
+  }
+]

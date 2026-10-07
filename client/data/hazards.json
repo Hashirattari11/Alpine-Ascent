@@ -1,0 +1,147 @@
+[
+  {
+    "id": "avalanche",
+    "title": "Avalanches",
+    "icon": "cloud-snow",
+    "image": "snow-forest",
+    "risk": 5,
+    "riskLabel": "Severe",
+    "likelihood": 4,
+    "severity": 5,
+    "summary": "Slab avalanches are the leading natural cause of death for backcountry travellers. Most are triggered by the victim or their party.",
+    "signs": ["Recent heavy snowfall or rapid warming", "Whumpf sounds and shooting cracks", "Wind-loaded slopes between 30° and 45°"],
+    "tips": [
+      "Read the avalanche bulletin every day, and match the terrain to the danger rating.",
+      "Carry a transceiver, probe and shovel, and practise rescue until it is fast and calm.",
+      "Cross suspect slopes one at a time; regroup only in safe zones.",
+      "Avalanche airbags help, but they are never a substitute for good decisions."
+    ]
+  },
+  {
+    "id": "altitude",
+    "title": "Altitude Sickness",
+    "icon": "wind",
+    "image": "above-clouds",
+    "risk": 4,
+    "riskLabel": "High",
+    "likelihood": 4,
+    "severity": 5,
+    "summary": "Acute Mountain Sickness (AMS) can progress to life-threatening High Altitude Pulmonary Edema (HAPE) or Cerebral Edema (HACE). Anyone can be affected above 2,500 m.",
+    "signs": ["AMS: headache, nausea, fatigue, dizziness", "HAPE: breathlessness at rest, wet cough", "HACE: confusion, ataxia, drowsiness"],
+    "tips": [
+      "Ascend gradually and sleep low; build in rest days.",
+      "Descend at the first signs of HAPE or HACE: descent is the definitive treatment.",
+      "Carry and know how to use dexamethasone, nifedipine and oxygen where guidelines allow.",
+      "Never ascend with symptoms of AMS."
+    ]
+  },
+  {
+    "id": "crevasse",
+    "title": "Crevasses",
+    "icon": "bezier",
+    "image": "winter-lake",
+    "risk": 4,
+    "riskLabel": "High",
+    "likelihood": 3,
+    "severity": 5,
+    "summary": "Glaciers flow, and as they flex they crack. Snow bridges can hide crevasses tens of metres deep and give no warning until they collapse.",
+    "signs": ["Sagging or depressed lines in the snow", "Colour changes in the surface", "Warmer temperatures after midday"],
+    "tips": [
+      "Always rope up on glaciers; keep the rope taut and spaced properly.",
+      "Travel early, when snow bridges are still frozen.",
+      "Practise crevasse rescue (pulley systems, Z-pulley, drop-loop) before you need it.",
+      "Probe doubtful areas and cross bridges at right angles."
+    ]
+  },
+  {
+    "id": "weather",
+    "title": "Weather",
+    "icon": "cloud-lightning-rain",
+    "image": "aurora",
+    "risk": 4,
+    "riskLabel": "High",
+    "likelihood": 5,
+    "severity": 4,
+    "summary": "Mountain weather changes rapidly. Wind, whiteouts, lightning and sudden storms are involved in a large proportion of serious mountaineering incidents.",
+    "signs": ["Rapid pressure drops on an altimeter watch", "Lenticular clouds over summits", "Build-up of cumulus before noon"],
+    "tips": [
+      "Study multiple forecasts; add a mountain-specific forecast for the exact summit elevation.",
+      "Start early, so you are descending before afternoon convection builds.",
+      "Set a firm turnaround time, and be willing to retreat.",
+      "In an electrical storm, move off exposed ridges and keep away from metal gear."
+    ]
+  },
+  {
+    "id": "rockfall",
+    "title": "Rockfall",
+    "icon": "exclamation-triangle",
+    "image": "peak-dark",
+    "risk": 3,
+    "riskLabel": "Moderate",
+    "likelihood": 4,
+    "severity": 4,
+    "summary": "Warming temperatures free rocks locked in ice, and climbers above can dislodge stones. A helmet is the most basic and effective protection you can wear.",
+    "signs": ["Fresh debris at the base of gullies", "Whistling or crack sounds above", "Mid-day thaw after a cold night"],
+    "tips": [
+      "Always wear a helmet, even on approaches.",
+      "Avoid gullies and the fall line of parties above you.",
+      "Shout 'Rock!' immediately and flatten to the face if something comes down.",
+      "Climb early while the ice still glues the mountain together."
+    ]
+  },
+  {
+    "id": "serac",
+    "title": "Sérac Collapse",
+    "icon": "exclamation-triangle",
+    "image": "snow-aerial",
+    "risk": 4,
+    "riskLabel": "High",
+    "likelihood": 3,
+    "severity": 5,
+    "summary": "Blocks of glacier ice up to the size of houses calve without warning. They are the biggest objective hazard on glaciated routes and have killed entire teams instantly.",
+    "signs": ["Blue ice and recent collapse debris below", "Crevasses opening around a sérac", "Meltwater streams feeding a bergschrund"],
+    "tips": [
+      "Cross glacier zones quickly and never linger below an icefall or a hanging glacier.",
+      "Camp well away from sérac faces and beneath obvious avalanche paths.",
+      "Follow the route of the last collapse debris and treat any ground above it as suspect.",
+      "Spread out in exposed zones so one collapse does not take the whole team."
+    ]
+  },
+  {
+    "id": "snowblindness",
+    "title": "Snow Blindness",
+    "icon": "exclamation-triangle",
+    "image": "milky-way",
+    "risk": 3,
+    "riskLabel": "Moderate",
+    "likelihood": 4,
+    "severity": 3,
+    "summary": "Snow blindness is sunburn of the cornea. It is entirely preventable, painfully easy to get, and the cause of many otherwise avoidable descents.",
+    "signs": ["Burning or gritty eyes after a bright ascent", "Watery eyes and photophobia", "Blurred or haloed vision"],
+    "tips": [
+      "Wear category 4 glacier glasses whenever there is snow on the ground, cloud or not.",
+      "Wear them while the eyes are closed or asleep: snow blindness often happens overnight.",
+      "Carry a spare pair. A broken or lost pair of glacier glasses is a genuine emergency.",
+      "If the eyes are affected, rest in shade, do not rub, and expect full recovery in 24–48 hours."
+    ]
+  },
+  {
+    "id": "hypothermia",
+    "title": "Hypothermia & Frostbite",
+    "icon": "thermometer-snow",
+    "image": "milky-way",
+    "risk": 3,
+    "riskLabel": "Moderate",
+    "likelihood": 3,
+    "severity": 4,
+    "summary": "Cold is a slow and silent adversary. Wind chill, wet clothing and exhaustion can drop core temperature, and exposed skin freezes quickly at altitude.",
+    "signs": ["Shivering, slurred speech, fumbling hands", "White, waxy, numb skin", "Loss of coordination and judgement"],
+    "tips": [
+      "Layer for moisture management: wicking base, insulating mid, windproof shell.",
+      "Keep hands, feet and face covered; spare mitts weigh almost nothing.",
+      "Eat and drink regularly; the body burns fuel to stay warm.",
+      "Warm gently, never rub frostbitten skin, and avoid refreezing."
+    ]
+  }
+]
+

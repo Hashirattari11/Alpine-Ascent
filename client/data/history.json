@@ -1,0 +1,155 @@
+[
+  {
+    "id": "mont-blanc-1786",
+    "year": "1786",
+    "title": "Mont Blanc: the birth of alpinism",
+    "place": "Chamonix, France · 4,808 m",
+    "people": "Jacques Balmat & Michel-Gabriel Paccard",
+    "text": "On 8 August 1786 a local crystal hunter and a village doctor reached the summit of Western Europe's highest peak. Their ascent, prompted by a prize offered by the Genevan scientist Horace-Bénédict de Saussure, is widely regarded as the founding moment of modern mountaineering: the first time a mountain was climbed for its own sake and for knowledge rather than necessity.",
+    "image": "sunrise-clouds"
+  },
+  {
+    "id": "matterhorn-1865",
+    "year": "1865",
+    "title": "The Matterhorn and the end of the Golden Age",
+    "place": "Zermatt, Switzerland · 4,478 m",
+    "people": "Edward Whymper's party",
+    "text": "On 14 July 1865 Edward Whymper and six companions made the first ascent of the Matterhorn via the Hörnli Ridge. On the descent a rope parted and four of the party fell to their deaths. The tragedy shocked Victorian society, sparked fierce debate about the ethics of risk, and closed the so-called Golden Age of Alpinism, during which most major Alpine summits were first climbed.",
+    "image": "hero-matterhorn"
+  },
+  {
+    "id": "everest-1924",
+    "year": "1924",
+    "title": "Mallory and Irvine vanish on Everest",
+    "place": "North Face, Tibet · 8,849 m",
+    "people": "George Mallory & Andrew Irvine",
+    "text": "On 8 June 1924 George Mallory and Andrew Irvine were last seen climbing strongly high on Everest's northeast ridge, before cloud closed in. Mallory's body was found in 1999 at 8,155 m. Whether they reached the summit remains one of mountaineering's great unanswered questions. Mallory's reply to why climb Everest, 'Because it's there', has become the sport's most quoted line.",
+    "image": "everest-ama"
+  },
+  {
+    "id": "eiger-1932",
+    "year": "1932",
+    "title": "Toni Kurz and the Eiger north face",
+    "place": "Interlaken, Switzerland · 3,970 m",
+    "people": "Toni Kurz",
+    "text": "In the winter of 1932 a young German electrician, Toni Kurz, climbed the Eiger's north face alone in brutal conditions. He fell to his death a few days later, and his death became the bitter emblem of the great alpine tragedy literature. The Nordwand would remain the most sought-after and most feared route in the Alps for decades.",
+    "image": "valley-light"
+  },
+  {
+    "id": "kangchenjunga-1955",
+    "year": "1955",
+    "title": "Joe Brown and George Band climb Kangchenjunga",
+    "place": "Nepal / India · 8,586 m",
+    "people": "Joe Brown & George Band",
+    "text": "On 25 May 1955 two British climbers reached the summit of the world's third-highest mountain after a final three-day push along a knife-edge ridge. Rather than descend the route they had climbed, they descended an unmapped ridge north to the glacier below. It remains the finest Himalayan ridge descent on record.",
+    "image": "teal-range"
+  },
+  {
+    "id": "gasherbrum-1958",
+    "year": "1958",
+    "title": "The first ascent of Gasherbrum I",
+    "place": "Karakoram, Pakistan · 8,080 m",
+    "people": "Pete Schoening & Andy Kauffman",
+    "text": "Gasherbrum I, the Hidden Peak, fell to an American expedition led by Fritz Wiessner on 5 July 1958. Wiessner and Andy Kauffman were injured by falling ice while high on the mountain and Peter Schoening, with almost no oxygen, returned alone and climbed to the summit the next day.",
+    "image": "karakoram-dawn"
+  },
+  {
+    "id": "dhaulagiri-1960",
+    "year": "1960",
+    "title": "Dhaulagiri opens the era of American eight-thousanders",
+    "place": "Nepal · 8,167 m",
+    "people": "American Dhaulagiri Expedition",
+    "text": "In 1960 a United States expedition made the first ascent of Dhaulagiri, the easternmost of the fourteen eight-thousanders, and with it the last of the great Himalayan problems. Within a decade Americans had climbed Everest, Lhotse, Makalu and Cho Oyu, and the 'American Golden Age' of Himalayan mountaineering was well underway.",
+    "image": "peak-dark"
+  },
+  {
+    "id": "everest-1963",
+    "year": "1963",
+    "title": "Jim Whittaker, the first American on Everest",
+    "place": "Everest · 8,849 m",
+    "people": "Jim Whittaker & the American Everest Expedition",
+    "text": "On 1 May 1963, James Whittaker became the first American to stand on the summit of Everest, planting the flag of the United States after a climb of nine days above Camp 9. His success completed the first wave of national expeditions to the summit of the twentieth century.",
+    "image": "himalaya-snow"
+  },
+  {
+    "id": "annapurna-1970",
+    "year": "1970",
+    "title": "The Whillans-Bonington line on Annapurna",
+    "place": "Nepal · 7,700 m south face",
+    "people": "Whillans, Bonington, Scott, Harding & Estcourt",
+    "text": "The 1970 south face of Annapurna is still talked about as the hardest big-wall problem ever climbed on snow and ice. Don Whillans, Chris Bonington, Doug Scott, John Harding and Nick Estcourt reached the summit after nine weeks of siege, bivouacs and storms, in an ascent that remains a byword for fast-and-light British climbing.",
+    "image": "snow-aerial"
+  },
+  {
+    "id": "seven-summits-1997",
+    "year": "1997",
+    "title": "Chantal Mauduit completes the Seven Summits in one year",
+    "place": "Aconcagua · 6,961 m",
+    "people": "Chantal Mauduit",
+    "text": "The French climber Chantal Mauduit became the first woman to climb the Seven Summits inside a single calendar year when she topped out on Aconcagua on 23 December 1997. Her year-long achievement set a standard for speed that the 7 Summits series has been chasing ever since.",
+    "image": "fuji"
+  },
+  {
+    "id": "project-possible-2019",
+    "year": "2019",
+    "title": "Nirmal Purja climbs all fourteen 8,000ers in 6 months",
+    "place": "Everest · 8,849 m (his 14th summit)",
+    "people": "Nirmal Purja",
+    "text": "On 9 October 2019 Nirmal Purja completed all fourteen eight-thousanders in 6 months and 6 days, finishing on Everest. The former British Army sergeant's 'Project Possible' shattered the previous record of just under eight years and was recognised with an Olympic gold medal on the Paris 2024 range.",
+    "image": "everest-ama"
+  },
+  {
+    "id": "annapurna-1950",
+    "year": "1950",
+    "title": "Annapurna: the first 8,000-metre summit",
+    "place": "Nepal Himalaya · 8,091 m",
+    "people": "Maurice Herzog & Louis Lachenal",
+    "text": "On 3 June 1950 the French expedition led by Maurice Herzog stood on Annapurna I, the first of the fourteen 8,000-metre peaks to be climbed. The retreat was an ordeal: severe frostbite cost both summiteers fingers and toes. Herzog's account, Annapurna, became one of the best-selling mountaineering books of all time.",
+    "image": "himalaya-snow"
+  },
+  {
+    "id": "everest-1953",
+    "year": "1953",
+    "title": "Hillary and Tenzing summit Everest",
+    "place": "South Col route · 8,849 m",
+    "people": "Edmund Hillary & Tenzing Norgay",
+    "text": "At 11:30 on 29 May 1953, as part of a British expedition led by John Hunt, Edmund Hillary of New Zealand and Sherpa Tenzing Norgay became the first confirmed climbers to stand on top of the world. The news reached London on the morning of Queen Elizabeth II's coronation. The partnership has come to symbolise the bond between Western climbers and Himalayan mountain people.",
+    "image": "ama-closeup"
+  },
+  {
+    "id": "k2-1954",
+    "year": "1954",
+    "title": "K2 falls to an Italian expedition",
+    "place": "Karakoram, Pakistan · 8,611 m",
+    "people": "Lino Lacedelli & Achille Compagnoni",
+    "text": "On 31 July 1954 Lino Lacedelli and Achille Compagnoni reached the summit of K2, the 'Savage Mountain', at the end of an expedition led by Ardito Desio. Hunza porter Amir Mehdi and Walter Bonatti played pivotal roles in supplying the high camp, and the aftermath of the climb generated decades of controversy. K2 remains statistically the most dangerous of the 8,000ers.",
+    "image": "karakoram-dawn"
+  },
+  {
+    "id": "tabei-1975",
+    "year": "1975",
+    "title": "Junko Tabei: first woman on Everest",
+    "place": "Everest · 8,849 m",
+    "people": "Junko Tabei",
+    "text": "Eleven days after being buried by an avalanche at Camp II, Japan's Junko Tabei reached the summit of Everest on 16 May 1975, becoming the first woman to do so. She went on to complete the Seven Summits and founded the Ladies Climbing Club in Japan, opening the mountains to a generation of women who were told they did not belong there.",
+    "image": "above-clouds"
+  },
+  {
+    "id": "messner-1978",
+    "year": "1978",
+    "title": "Everest without supplemental oxygen",
+    "place": "Everest · 8,849 m",
+    "people": "Reinhold Messner & Peter Habeler",
+    "text": "On 8 May 1978 Reinhold Messner and Peter Habeler reached the summit of Everest without bottled oxygen, a feat many physiologists had declared impossible. Two years later Messner returned to climb Everest solo and, again, without supplemental oxygen. In 1986 he became the first person to summit all fourteen 8,000-metre peaks.",
+    "image": "summit-sunrise"
+  },
+  {
+    "id": "k2-winter-2021",
+    "year": "2021",
+    "title": "K2 climbed in winter at last",
+    "place": "Karakoram, Pakistan · 8,611 m",
+    "people": "A ten-member Nepali team",
+    "text": "On 16 January 2021 a team of ten Nepali climbers, led by Nirmal Purja, Mingma G and Mingma David Sherpa, stood together on the summit of K2, completing the first winter ascent of the last 8,000-metre peak to be climbed in the coldest season. It marked a defining moment for Sherpa and Nepali climbers, long cast in supporting roles, as the leading force in high-altitude mountaineering.",
+    "image": "patagonia-torres"
+  }
+]

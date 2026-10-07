@@ -1,0 +1,22 @@
+      <section class="page-head" aria-labelledby="pageTitle">
+        <span class="page-head__bg" aria-hidden="true"><img src="images/nz-peaks-sm.webp" alt="" loading="eager" /></span>
+        <div class="container page-head__inner">
+          <p class="eyebrow" data-reveal><span class="eyebrow__line"></span><span class="eyebrow__num">07</span> Clubs &amp; Map</p>
+          <h1 class="display" id="pageTitle" data-reveal>A worldwide <em>community of climbers</em></h1>
+          <p class="lead-text" data-reveal style="--d:.1s">Find the mountaineering clubs and organisations that look after the world&rsquo;s ranges. Filter by region, or let us find the clubs nearest to you.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Club map">
+        <div class="container">
+          <div class="map-controls" data-reveal>
+            <div class="chips" id="regionFilters" role="group" aria-label="Filter clubs by region"></div>
+            <button type="button" class="btn btn-ghost btn-sm" id="nearMeBtn"><i class="bi bi-geo-alt"></i><span>Find clubs near me</span></button>
+          </div>
+          <p class="map-status" id="mapStatus" role="status" aria-live="polite"></p>
+          <div class="row g-4 map-layout">
+            <div class="col-lg-8 order-lg-2"><div class="map-box"><div id="clubMap" role="application" aria-label="Interactive map of mountaineering clubs"></div></div></div>
+            <div class="col-lg-4 order-lg-1"><ul class="club-list list-unstyled" id="clubList" aria-label="Clubs list"></ul></div>
+          </div>
+        </div>
+      </section>

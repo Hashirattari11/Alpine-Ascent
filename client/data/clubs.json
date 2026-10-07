@@ -1,0 +1,244 @@
+[
+  {
+    "id": "fedme", "name": "Federación Española de Deportes de Montaña", "short": "FEDME", "country": "Spain", "city": "Madrid", "region": "Europe",
+    "lat": 40.4168, "lng": -3.7038, "founded": 1922, "members": "46,000",
+    "url": "https://www.fedme.es", "email": "info@fedme.es",
+    "description": "Spain's national mountain federation, home base for the Pyrenees and the gateway to the 3,000 m peaks of the Andalusian and Picos ranges.",
+    "image": "dolomites",
+    "upcoming": [
+      { "title": "Pyrenees Traverse Week", "date": "2027-07-05", "duration": "7 days", "difficulty": "Challenging" },
+      { "title": "Beginner Mountaineering Course", "date": "2027-06-07", "duration": "4 days", "difficulty": "Moderate" }
+    ]
+  },
+  {
+    "id": "dav", "name": "Deutscher Alpenverein", "short": "DAV", "country": "Germany", "city": "Munich", "region": "Europe",
+    "lat": 48.1351, "lng": 11.582, "founded": 1869, "members": "790,000",
+    "url": "https://www.alpenverein.de", "email": "info@alpenverein.de",
+    "description": "Europe's largest mountaineering association, with 2,500 huts, a mountain rescue service staffed by volunteers, and the Wetterstein, Zugspitze and Wetterwand routes of the Northern Limestone.",
+    "image": "nz-lake",
+    "upcoming": [
+      { "title": "Zugspitze Summit Run", "date": "2027-07-11", "duration": "2 days", "difficulty": "Moderate" },
+      { "title": "Alpine Clinic for Newcomers", "date": "2027-06-21", "duration": "3 days", "difficulty": "Easy" }
+    ]
+  },
+  {
+    "id": "nortind", "name": "NORTIND — Norwegian Mountaineering Association", "short": "NORTIND", "country": "Norway", "city": "Oslo", "region": "Europe",
+    "lat": 59.9139, "lng": 10.7522, "founded": 1868, "members": "27,000",
+    "url": "https://www.nortind.no", "email": "felles@nortind.no",
+    "description": "The backbone of Norwegian mountain life: huts and cabins from the Lyngen Alps to Jotunheimen, plus the Norwegian Mountain Touring Society's cabin network.",
+    "image": "red-peaks",
+    "upcoming": [
+      { "title": "Jotunheimen Ski Expedition", "date": "2027-04-18", "duration": "8 days", "difficulty": "Challenging" },
+      { "title": "Lyngen Arctic Ski Safari", "date": "2027-03-20", "duration": "7 days", "difficulty": "Challenging" }
+    ]
+  },
+  {
+    "id": "smc", "name": "Scottish Mountaineering Club", "short": "SMC", "country": "United Kingdom", "city": "Glasgow", "region": "Europe",
+    "lat": 55.8642, "lng": -4.2518, "founded": 1898, "members": "2,200",
+    "url": "https://www.smc.org.uk", "email": "info@smc.org.uk",
+    "description": "The curator of Britain's winter climbing heritage and the custodian of the SMC hut on Ben Nevis, built in 1923.",
+    "image": "larch",
+    "upcoming": [
+      { "title": "Ben Nevis Winter Skills", "date": "2027-02-06", "duration": "3 days", "difficulty": "Moderate" },
+      { "title": "Ski Touring the Highlands", "date": "2027-03-13", "duration": "5 days", "difficulty": "Moderate" }
+    ]
+  },
+  {
+    "id": "ui-chile", "name": "Unión de Andinistas y Escaladores de Chile", "short": "UI", "country": "Chile", "city": "Santiago", "region": "South America",
+    "lat": -33.4489, "lng": -70.6693, "founded": 1942, "members": "3,100",
+    "url": "https://www.ureg.cl", "email": "info@ureg.cl",
+    "description": "Stewards of the Patagonian icefields and the Andes, from Torres del Paine's free routes to the high cordilleras of Aconcagua.",
+    "image": "patagonia-torres",
+    "upcoming": [
+      { "title": "Torres del Paine Free Traverse", "date": "2027-01-24", "duration": "9 days", "difficulty": "Challenging" },
+      { "title": "Aconcagua Polish Traverse", "date": "2027-02-14", "duration": "16 days", "difficulty": "Expert" }
+    ]
+  },
+  {
+    "id": "iceland", "name": "Icelandic Alpine Club", "short": "Ís félkið", "country": "Iceland", "city": "Reykjavík", "region": "Europe",
+    "lat": 64.1466, "lng": -21.9426, "founded": 1946, "members": "900",
+    "url": "https://www.isveif", "email": "info@isveif.is",
+    "description": "The guardians of Icelandic highland routes, opening the Fimmvörðuháls and Eyjafjallajökull routes each summer.",
+    "image": "aurora",
+    "upcoming": [
+      { "title": "Highland Crossing, Landmannalaugar", "date": "2027-07-01", "duration": "6 days", "difficulty": "Moderate" },
+      { "title": "Winter on Eyjafjallajökull", "date": "2027-02-20", "duration": "5 days", "difficulty": "Challenging" }
+    ]
+  },
+  {
+    "id": "pttk", "name": "Polskie Towarzystwo Turystyczno-Krajoznawcze", "short": "PTTK", "country": "Poland", "city": "Warsaw", "region": "Europe",
+    "lat": 52.2297, "lng": 21.0122, "founded": 1900, "members": "35,000",
+    "url": "https://www.pttk.pl", "email": "biuro@pttk.pl",
+    "description": "Poland's national tourist and sightseeing society, keeper of High Tatras hut trails and one of Europe's oldest mountain rescue organisations.",
+    "image": "snow-forest",
+    "upcoming": [
+      { "title": "High Tatras Winter Ascent of Giewont", "date": "2027-02-12", "duration": "3 days", "difficulty": "Challenging" },
+      { "title": "Tatra Ridge Traverse", "date": "2027-07-08", "duration": "6 days", "difficulty": "Challenging" }
+    ]
+  },
+  {
+    "id": "nma", "name": "Nepal Mountaineering Association", "short": "NMA", "country": "Nepal", "city": "Kathmandu", "region": "Asia",
+    "lat": 27.7172, "lng": 85.324, "founded": 1973, "members": "1,800",
+    "url": "https://www.nepalmountaineering.org", "email": "info@nepalmountaineering.org",
+    "description": "The national body that licenses expeditions on 33 'trekking peaks' and supports Sherpa and Nepali guides.",
+    "image": "everest-ama",
+    "upcoming": [
+      { "title": "Island Peak (6,189 m) Expedition", "date": "2027-04-12", "duration": "18 days", "difficulty": "Challenging" },
+      { "title": "Mera Peak Acclimatisation Trek", "date": "2026-11-02", "duration": "16 days", "difficulty": "Moderate" }
+    ]
+  },
+  {
+    "id": "acp", "name": "Alpine Club of Pakistan", "short": "ACP", "country": "Pakistan", "city": "Islamabad", "region": "Asia",
+    "lat": 33.6844, "lng": 73.0479, "founded": 1974, "members": "950",
+    "url": "https://www.alpineclubofpakistan.com", "email": "info@alpineclubofpakistan.com",
+    "description": "Gateway to the Karakoram, with 5 of the world's 14 eight-thousanders, including K2, within its range.",
+    "image": "karakoram-dawn",
+    "upcoming": [
+      { "title": "Concordia & K2 Base Camp Trek", "date": "2027-06-20", "duration": "22 days", "difficulty": "Challenging" },
+      { "title": "Spantik (7,027 m) Expedition", "date": "2027-07-15", "duration": "24 days", "difficulty": "Expert" }
+    ]
+  },
+  {
+    "id": "sac", "name": "Swiss Alpine Club", "short": "SAC", "country": "Switzerland", "city": "Bern", "region": "Europe",
+    "lat": 46.948, "lng": 7.4474, "founded": 1863, "members": "170,000",
+    "url": "https://www.sac-cas.ch", "email": "info@sac-cas.ch",
+    "description": "Operates over 150 mountain huts across Switzerland and maintains the country's alpine trail network.",
+    "image": "hero-matterhorn",
+    "upcoming": [
+      { "title": "Matterhorn via Hörnli Ridge", "date": "2027-07-08", "duration": "5 days", "difficulty": "Expert" },
+      { "title": "Haute Route Ski Traverse", "date": "2027-03-27", "duration": "7 days", "difficulty": "Challenging" }
+    ]
+  },
+  {
+    "id": "ffcam", "name": "Club Alpin Français (FFCAM)", "short": "FFCAM", "country": "France", "city": "Chamonix", "region": "Europe",
+    "lat": 45.9237, "lng": 6.8694, "founded": 1874, "members": "90,000",
+    "url": "https://www.ffcam.fr", "email": "contact@ffcam.fr",
+    "description": "Operates a network of refuges in the Mont Blanc massif and runs courses for aspiring alpinists.",
+    "image": "sunrise-clouds",
+    "upcoming": [
+      { "title": "Mont Blanc via Goûter Route", "date": "2027-07-19", "duration": "4 days", "difficulty": "Challenging" },
+      { "title": "Arête des Cosmiques Intro Course", "date": "2027-06-14", "duration": "3 days", "difficulty": "Moderate" }
+    ]
+  },
+  {
+    "id": "cai", "name": "Club Alpino Italiano", "short": "CAI", "country": "Italy", "city": "Milan", "region": "Europe",
+    "lat": 45.4642, "lng": 9.19, "founded": 1863, "members": "330,000",
+    "url": "https://www.cai.it", "email": "sede.centrale@cai.it",
+    "description": "Italy's national alpine club, steward of over 700 huts and mountain guardian of the Dolomites and Monte Rosa.",
+    "image": "dolomites",
+    "upcoming": [
+      { "title": "Dolomites Via Ferrata Week", "date": "2027-06-28", "duration": "7 days", "difficulty": "Moderate" },
+      { "title": "Gran Paradiso (4,061 m) Ascent", "date": "2027-07-06", "duration": "3 days", "difficulty": "Moderate" }
+    ]
+  },
+  {
+    "id": "aac", "name": "American Alpine Club", "short": "AAC", "country": "United States", "city": "Golden, Colorado", "region": "North America",
+    "lat": 39.7555, "lng": -105.2211, "founded": 1902, "members": "30,000",
+    "url": "https://americanalpineclub.org", "email": "info@americanalpineclub.org",
+    "description": "Publishes the American Alpine Journal and funds rescue, research and conservation across the Americas.",
+    "image": "snow-forest",
+    "upcoming": [
+      { "title": "Denali West Buttress Expedition", "date": "2027-05-30", "duration": "21 days", "difficulty": "Expert" },
+      { "title": "Colorado 14ers Skills Camp", "date": "2027-06-12", "duration": "4 days", "difficulty": "Moderate" }
+    ]
+  },
+  {
+    "id": "acc", "name": "Alpine Club of Canada", "short": "ACC", "country": "Canada", "city": "Canmore, Alberta", "region": "North America",
+    "lat": 51.0884, "lng": -115.3479, "founded": 1906, "members": "25,000",
+    "url": "https://www.alpineclubofcanada.ca", "email": "info@alpineclubofcanada.ca",
+    "description": "Runs the Canadian Rockies hut network and the celebrated General Mountaineering Camps.",
+    "image": "moraine",
+    "upcoming": [
+      { "title": "Rockies General Mountaineering Camp", "date": "2027-07-24", "duration": "8 days", "difficulty": "Challenging" },
+      { "title": "Rogers Pass Ski Touring", "date": "2027-03-13", "duration": "5 days", "difficulty": "Challenging" }
+    ]
+  },
+  {
+    "id": "cab", "name": "Club Andino Bariloche", "short": "CAB", "country": "Argentina", "city": "San Carlos de Bariloche", "region": "South America",
+    "lat": -41.1335, "lng": -71.3103, "founded": 1931, "members": "4,000",
+    "url": "https://clubandino.org", "email": "info@clubandino.org",
+    "description": "Patagonia's oldest mountain club, with refuges in the Nahuel Huapi range and guided ascents of Tronador.",
+    "image": "patagonia-lake",
+    "upcoming": [
+      { "title": "Cerro Tronador Ascent", "date": "2027-01-18", "duration": "4 days", "difficulty": "Challenging" },
+      { "title": "Fitz Roy Trek & Camp", "date": "2027-02-08", "duration": "10 days", "difficulty": "Moderate" }
+    ]
+  },
+  {
+    "id": "nzac", "name": "New Zealand Alpine Club", "short": "NZAC", "country": "New Zealand", "city": "Christchurch", "region": "Oceania",
+    "lat": -43.5321, "lng": 172.6362, "founded": 1891, "members": "5,500",
+    "url": "https://www.alpineclub.org.nz", "email": "info@alpineclub.org.nz",
+    "description": "Hillary's own club. Runs more than 50 huts and an extensive guide-led programme in the Southern Alps.",
+    "image": "nz-peaks",
+    "upcoming": [
+      { "title": "Aoraki / Mt Cook Summit Climb", "date": "2027-01-22", "duration": "6 days", "difficulty": "Expert" },
+      { "title": "Southern Alps Introductory Course", "date": "2026-12-05", "duration": "5 days", "difficulty": "Moderate" }
+    ]
+  },
+  {
+    "id": "imf", "name": "Indian Mountaineering Foundation", "short": "IMF", "country": "India", "city": "New Delhi", "region": "Asia",
+    "lat": 28.5836, "lng": 77.174, "founded": 1961, "members": "2,200",
+    "url": "https://www.indmount.org", "email": "imf@indmount.org",
+    "description": "India's apex body that grants permits for Himalayan peaks, from Stok Kangri to Kangchenjunga.",
+    "image": "teal-range",
+    "upcoming": [
+      { "title": "Stok Kangri (6,153 m) Summit", "date": "2027-07-10", "duration": "10 days", "difficulty": "Challenging" },
+      { "title": "Nanda Devi East Expedition", "date": "2027-05-24", "duration": "28 days", "difficulty": "Expert" }
+    ]
+  },
+  {
+    "id": "jac", "name": "Japanese Alpine Club", "short": "JAC", "country": "Japan", "city": "Tokyo", "region": "Asia",
+    "lat": 35.6762, "lng": 139.6503, "founded": 1905, "members": "12,000",
+    "url": "https://www.jac.or.jp", "email": "info@jac.or.jp",
+    "description": "One of Asia's oldest alpine clubs. Pioneers of the Japanese Alps and the Himalayan big-wall tradition.",
+    "image": "fuji",
+    "upcoming": [
+      { "title": "Northern Alps Traverse", "date": "2027-08-04", "duration": "9 days", "difficulty": "Challenging" },
+      { "title": "Mount Fuji Winter Ascent", "date": "2027-02-20", "duration": "3 days", "difficulty": "Moderate" }
+    ]
+  },
+  {
+    "id": "mck", "name": "Mountain Club of Kenya", "short": "MCK", "country": "Kenya", "city": "Nairobi", "region": "Africa",
+    "lat": -1.3165, "lng": 36.804, "founded": 1949, "members": "1,500",
+    "url": "https://www.mck.or.ke", "email": "info@mck.or.ke",
+    "description": "Guardians of Mount Kenya's rock routes and the classic ascents of Batian and Nelion.",
+    "image": "summit-sunrise",
+    "upcoming": [
+      { "title": "Mount Kenya: Point Lenana Trek", "date": "2027-01-15", "duration": "5 days", "difficulty": "Moderate" },
+      { "title": "Kilimanjaro Machame Route", "date": "2027-02-03", "duration": "8 days", "difficulty": "Moderate" }
+    ]
+  },
+  {
+    "id": "ac-uk", "name": "The Alpine Club", "short": "AC", "country": "United Kingdom", "city": "London", "region": "Europe",
+    "lat": 51.5074, "lng": -0.1278, "founded": 1857, "members": "1,500",
+    "url": "https://www.alpine-club.org.uk", "email": "office@alpine-club.org.uk",
+    "description": "The world's first mountaineering club, founded in 1857 and still home to one of the finest alpine libraries.",
+    "image": "larch",
+    "upcoming": [
+      { "title": "Alpine Meet: Saas-Fee", "date": "2027-07-17", "duration": "7 days", "difficulty": "Challenging" },
+      { "title": "Annual Dinner & Lecture", "date": "2026-12-04", "duration": "1 evening", "difficulty": "Easy" }
+    ]
+  },
+  {
+    "id": "oeav", "name": "Österreichischer Alpenverein", "short": "ÖAV", "country": "Austria", "city": "Innsbruck", "region": "Europe",
+    "lat": 47.2692, "lng": 11.4041, "founded": 1862, "members": "680,000",
+    "url": "https://www.alpenverein.at", "email": "info@alpenverein.at",
+    "description": "Austria's largest alpine club, maintaining 230 huts and 26,000 km of trails across the Eastern Alps.",
+    "image": "valley-light",
+    "upcoming": [
+      { "title": "Grossglockner (3,798 m) Ascent", "date": "2027-07-30", "duration": "3 days", "difficulty": "Challenging" },
+      { "title": "Ötztal Ski Tour Week", "date": "2027-04-04", "duration": "6 days", "difficulty": "Challenging" }
+    ]
+  },
+  {
+    "id": "mazamas", "name": "Mazamas", "short": "Mazamas", "country": "United States", "city": "Portland, Oregon", "region": "North America",
+    "lat": 45.5152, "lng": -122.6784, "founded": 1894, "members": "3,500",
+    "url": "https://mazamas.org", "email": "info@mazamas.org",
+    "description": "Founded on the summit of Mount Hood, with a legendary Basic Climbing Education Program.",
+    "image": "peak-teal",
+    "upcoming": [
+      { "title": "Mount Hood South Side", "date": "2027-05-22", "duration": "1 day", "difficulty": "Moderate" },
+      { "title": "Mount Rainier via Disappointment Cleaver", "date": "2027-06-26", "duration": "3 days", "difficulty": "Challenging" }
+    ]
+  }
+]

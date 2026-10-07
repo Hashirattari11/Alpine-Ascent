@@ -1,0 +1,29 @@
+# dependencies
+node_modules/
+
+# logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# vercel
+.vercel
+
+# runtime data written by the API (visitors.json seed IS tracked)
+server/data/enquiries.json
+server/data/newsletter.json
+server/data/*.tmp
+
+# downloaded/optimised imagery IS committed (npm run images regenerates it)
+# client/images/ is deliberately tracked so a fresh deploy has its photography
+
+# tooling artefact
+.freebuff/
+
+# OS temp
+tmp/

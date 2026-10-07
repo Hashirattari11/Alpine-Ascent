@@ -1,0 +1,23 @@
+{
+  "$schema": "https://openvercel.vercel.app/vercel.json",
+  "framework": null,
+  "installCommand": "npm install --prefix client",
+  "buildCommand": "npm run pages && npm --prefix client run setup",
+  "outputDirectory": "client",
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/images/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/vendor/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }]
+    },
+    {
+      "source": "/(.*).html",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }]
+    }
+  ]
+}

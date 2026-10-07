@@ -1,0 +1,122 @@
+[
+  {
+    "id": "alpine",
+    "title": "Alpine Climbing",
+    "tagline": "Mixed terrain, fast and light",
+    "summary": "The classic discipline: combining snow, ice and rock on high mountains, usually in a day or a few days, with minimal equipment and rapid movement. Ideal for objectives such as Mont Blanc, the Matterhorn and the great North Faces of the Alps.",
+    "image": "hero-matterhorn",
+    "difficulty": 4,
+    "season": "June – September",
+    "gradeSystem": "Alpine (F – ED) + UIAA/French rock grades",
+    "skills": ["Glacier travel", "Short-roping & simul-climbing", "Mixed climbing", "Weather judgement"],
+    "iconic": ["Matterhorn · Switzerland", "Mont Blanc · France/Italy", "Eiger North Face · Switzerland"]
+  },
+  {
+    "id": "viaferrata",
+    "title": "Via Ferrata",
+    "tagline": "Ladders, cables and iron in the rock",
+    "summary": "Austrian and Italian mountain paths fitted with steel ladders, cables and anchors through steep terrain. Developed in the First World War for troop movement, now the most approachable way to experience serious alpine exposure safely.",
+    "image": "teal-range",
+    "difficulty": 2,
+    "season": "June – October",
+    "gradeSystem": "Ferrata difficulty scale (1–5)",
+    "skills": ["Steep walking", "Height exposure", "Helmet & lanyard use"],
+    "iconic": ["Ferrata delle Guglie · Dolomites", "Stuibweg · Alps", "Highline 179 · Austria"]
+  },
+  {
+    "id": "winter",
+    "title": "Winter Mountaineering",
+    "tagline": "The coldest season, the purest light",
+    "summary": "Everything is harder and far quieter: spindrift, whiteouts and temperatures below -25 °C. Winter ascents are the ultimate expression of alpinism and demand the very best technical and psychological standards.",
+    "image": "winter-lake",
+    "difficulty": 5,
+    "season": "December – March",
+    "gradeSystem": "Winter routes, plus extreme cold ratings",
+    "skills": ["Multi-day bivouac", "Cold injury prevention", "Extended stove use"],
+    "iconic": ["Eiger north face in winter", "Hardangervidda · Norway", "Denali winter · Alaska"]
+  },
+  {
+    "id": "bigwall",
+    "title": "Big Wall",
+    "tagline": "Multi-week vertical expeditions",
+    "summary": "Enormous faces climbed over weeks with fixed ropes, haul bags, porters and siege tactics. Big-wall climbing is as much a logistical art as a physical one, living and working on a hanging rope.",
+    "image": "snow-aerial",
+    "difficulty": 5,
+    "season": "May – September",
+    "gradeSystem": "Big wall grades (A0 – A5)",
+    "skills": ["Free climbing to 5.12a", "Hauling systems", "Wall campcraft"],
+    "iconic": ["El Capitan · Yosemite", "Trango Tower · Karakoram", "Nanga Parbat · Himalaya"]
+  },
+  {
+    "id": "rock",
+    "title": "Rock Climbing",
+    "tagline": "Movement on stone",
+    "summary": "From single-pitch sport crags to multi-day big walls. Rock climbing builds the footwork, balance and rope skills that underpin every other form of mountaineering, and is the best place to begin.",
+    "image": "rock-climber",
+    "difficulty": 3,
+    "season": "Year-round (region dependent)",
+    "gradeSystem": "French, YDS, UIAA",
+    "skills": ["Belaying & lowering", "Lead climbing", "Anchor building", "Multi-pitch systems"],
+    "iconic": ["Yosemite · USA", "Dolomites · Italy", "Verdon Gorge · France"]
+  },
+  {
+    "id": "ice",
+    "title": "Ice Climbing",
+    "tagline": "Frozen waterfalls and glacial walls",
+    "summary": "Using ice axes and front-pointing crampons to climb frozen waterfalls, gullies and glaciers. A discipline of rhythm and precision that demands sound judgement of ice quality, temperature and avalanche exposure.",
+    "image": "snow-aerial",
+    "difficulty": 4,
+    "season": "December – March",
+    "gradeSystem": "WI 1 – 7 (water ice), AI (alpine ice)",
+    "skills": ["Swinging tools", "Screw placement", "V-thread abalakov anchors", "Ice assessment"],
+    "iconic": ["Ouray · USA", "Rjukan · Norway", "Cogne · Italy"]
+  },
+  {
+    "id": "expedition",
+    "title": "Expedition Style",
+    "tagline": "Siege the great ranges",
+    "summary": "Long, logistically complex climbs on the world's greatest peaks: fixed ropes, staged camps, acclimatisation rotations and a team of guides and high-altitude support. Expeditions to peaks such as Denali, Aconcagua, Manaslu and Everest take three to nine weeks.",
+    "image": "everest-ama",
+    "difficulty": 5,
+    "season": "Peak-specific windows",
+    "gradeSystem": "Overall commitment & altitude",
+    "skills": ["Acclimatisation strategy", "Camp craft", "Supplemental oxygen use", "Team management"],
+    "iconic": ["Everest · Nepal/Tibet", "Denali · Alaska", "Aconcagua · Argentina"]
+  },
+  {
+    "id": "bouldering",
+    "title": "Bouldering",
+    "tagline": "Short, powerful, ropeless",
+    "summary": "Climbing short problems on boulders over crash pads. Bouldering concentrates on strength, technique and problem solving, and is a superb way to train finger strength and body tension for bigger objectives.",
+    "image": "peak-dark",
+    "difficulty": 2,
+    "season": "Autumn – Spring",
+    "gradeSystem": "V-scale (V0–V17), Fontainebleau (3–9A)",
+    "skills": ["Falling safely", "Spotting", "Body positioning", "Dynamic movement"],
+    "iconic": ["Fontainebleau · France", "Rocklands · South Africa", "Hueco Tanks · USA"]
+  },
+  {
+    "id": "trekking",
+    "title": "Trekking Peaks",
+    "tagline": "Your first great summit",
+    "summary": "Non-technical or moderately technical peaks between 5,000 and 6,500 m that make perfect first Himalayan summits. Peaks such as Island Peak, Mera Peak and Lobuche East blend a classic trek with a real mountaineering objective.",
+    "image": "trekkers",
+    "difficulty": 3,
+    "season": "April – May, October – November",
+    "gradeSystem": "PD to AD",
+    "skills": ["Fixed-line ascending", "Crampon technique", "Altitude pacing", "Basic glacier safety"],
+    "iconic": ["Island Peak · Nepal", "Mera Peak · Nepal", "Stok Kangri · India"]
+  },
+  {
+    "id": "ski",
+    "title": "Ski Mountaineering",
+    "tagline": "Ascend on skins, descend in powder",
+    "summary": "Travelling uphill on skis fitted with climbing skins, then descending untracked slopes. Ski mountaineering unites the freedom of the backcountry with serious alpine skills, and is also an Olympic sport from Milano Cortina 2026.",
+    "image": "ski-jump",
+    "difficulty": 4,
+    "season": "February – May",
+    "gradeSystem": "Toponeige, Volopress",
+    "skills": ["Avalanche rescue", "Skinning & kick-turns", "Glacier navigation", "Ski cramponing"],
+    "iconic": ["Haute Route · France/Switzerland", "Lyngen Alps · Norway", "Hokkaido · Japan"]
+  }
+]

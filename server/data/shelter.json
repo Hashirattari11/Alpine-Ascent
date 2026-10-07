@@ -1,0 +1,99 @@
+[
+  {
+    "id": "bivouac",
+    "title": "Bivouac",
+    "icon": "moon-stars",
+    "image": "night-camp",
+    "summary": "A minimalist overnight stop with a bivy sack, a tarp or no shelter at all. The traditional choice of fast-and-light alpinists who prefer to carry less and move more.",
+    "stats": { "warmth": 2, "weight": 1, "buildTime": "5 min" },
+    "tips": [
+      "Choose a site protected from wind and out of the path of rockfall or spindrift.",
+      "Insulate from below: a foam pad and your rope or pack under your legs is worth as much as a sleeping bag.",
+      "Eat and drink before settling in; the body generates heat by digesting food.",
+      "Keep boots, gas and water bottle inside your bag to prevent freezing."
+    ]
+  },
+  {
+    "id": "tents",
+    "title": "Mountain Tents",
+    "icon": "triangle",
+    "image": "tent-view",
+    "summary": "Four-season tents with strong poles, low profiles and snow valances withstand storms at altitude. The workhorse of every expedition from Denali to Everest.",
+    "stats": { "warmth": 4, "weight": 3, "buildTime": "15 min" },
+    "tips": [
+      "Pitch with the door leeward and the narrowest end into the wind.",
+      "Build snow walls and use deadman anchors; stakes alone do not hold in soft snow.",
+      "Ventilate: condensation soaks sleeping bags and can freeze overnight.",
+      "Never cook in a closed tent. Carbon monoxide kills silently, so keep a vent open at all times."
+    ]
+  },
+  {
+    "id": "snowcave",
+    "title": "Snow Caves",
+    "icon": "snow2",
+    "image": "snow-aerial",
+    "summary": "Dug into a deep, consolidated drift, a snow cave is silent, windproof and holds a steady temperature around 0 °C regardless of the storm outside.",
+    "stats": { "warmth": 4, "weight": 1, "buildTime": "1.5 – 3 h" },
+    "tips": [
+      "Dig the entrance below the sleeping platform so warm air is trapped; the sleeping shelf should be higher than the door.",
+      "Poke a ventilation hole in the roof and keep it open; mark the outside with an ice axe.",
+      "Keep the ceiling domed so meltwater runs down the walls instead of dripping.",
+      "Wear waterproofs while digging to stay dry, and keep your shovel inside with you at night."
+    ]
+  },
+  {
+    "id": "igloo",
+    "title": "Igloos",
+    "icon": "house",
+    "image": "winter-lake",
+    "summary": "Built from blocks of wind-packed snow, an igloo is a structural masterpiece that can sleep a team in comfort where no deep drift exists to dig into.",
+    "stats": { "warmth": 5, "weight": 2, "buildTime": "2 – 4 h" },
+    "tips": [
+      "Cut blocks from firm, uniform wind slab with a snow saw; the quarry becomes the floor.",
+      "Spiral the blocks inwards in a continuous ramp, bevelling each so they lean on their neighbours.",
+      "Seal gaps with loose snow; the walls will sinter and strengthen as they cure.",
+      "Build the entrance tunnel lower than the sleeping platform to create a cold sink."
+    ]
+  },
+  {
+    "id": "tarp",
+    "title": "Tarp & Bivy",
+    "icon": "bezier2",
+    "summary": "The lightest realistic shelter. Under a taut tarp on a trekking pole, or simply wrapped in a bivy, it keeps off the wind and most of the precipitation for very little weight.",
+    "stats": { "warmth": 2, "weight": 1, "buildTime": "10 min" },
+    "tips": [
+      "Pitch high and pitch tight: a taut tarp sheds rain where a slack one gathers weight and collapses.",
+      "Choose a sheltered spot below an obvious rock or ice feature; never pitch under a cornice.",
+      "Keep the windward side low and the leeward side slightly open for ventilation.",
+      "A bright inner layer bounces your body heat back and cuts the wind chill dramatically."
+    ]
+  },
+  {
+    "id": "snow-well",
+    "title": "Snow Wells & Trenches",
+    "icon": "snow2",
+    "summary": "When there is no deep drift to dig a cave into, you dig down instead. A snow well or trench uses the insulative snow layer below the surface.",
+    "stats": { "warmth": 3, "weight": 1, "buildTime": "30 – 60 min" },
+    "tips": [
+      "Dig where the snow is deep and wind-free: a trench on the lee side of a mound is ideal.",
+      "Make the walls high and the roof domed; cut an entrance lower than the sleeping platform.",
+      "Pile the excavated snow on the roof as insulation, but keep the ceiling domed so meltwater runs off.",
+      "Label the entrance with an ice axe or a bamboo wand so nobody in the team walks in by mistake."
+    ]
+  },
+  {
+    "id": "huts",
+    "title": "Mountain Huts",
+    "icon": "building",
+    "image": "valley-light",
+    "summary": "From the Refuge du Goûter to the Hörnlihütte, staffed or unstaffed huts provide warm meals, dry beds and a base for summit days. They are the backbone of European alpine culture.",
+    "stats": { "warmth": 5, "weight": 1, "buildTime": "None" },
+    "tips": [
+      "Book well ahead; popular huts on Mont Blanc and the Matterhorn fill months in advance.",
+      "Carry a hut sleeping liner, earplugs and a headtorch; lights go out early and alarms ring before dawn.",
+      "Respect hut etiquette: boots off at the door, quiet after 21:00, tidy gear away.",
+      "Check the opening season and weather conditions; winter rooms are often basic and unheated."
+    ]
+  }
+]
+

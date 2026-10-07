@@ -1,0 +1,126 @@
+      <section class="page-head" aria-labelledby="pageTitle">
+        <span class="page-head__bg" aria-hidden="true"><img src="images/aurora-sm.webp" alt="" loading="eager" /></span>
+        <div class="container page-head__inner">
+          <p class="eyebrow" data-reveal><span class="eyebrow__line"></span><span class="eyebrow__num">12</span> Contact</p>
+          <h1 class="display" id="pageTitle" data-reveal>Begin your <em>ascent</em></h1>
+          <p class="lead-text" data-reveal style="--d:.1s">Tell us about the mountain in your mind. A guide, not a call centre, will reply within one working day.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Contact form">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-5" data-reveal>
+              <p class="eyebrow"><span class="eyebrow__line"></span>Where to find us</p>
+              <h2 class="display">Geneva base,<br /><em>worldwide routes</em></h2>
+              <ul class="contact-list list-unstyled">
+                <li><i class="bi bi-geo-alt"></i><span>Rue du Mont-Blanc 14<br />1201 Geneva, Switzerland</span></li>
+                <li><i class="bi bi-telephone"></i><a href="tel:+41225550142">+41 22 555 0142</a></li>
+                <li><i class="bi bi-envelope"></i><a href="mailto:expeditions@alpineascents.example">expeditions@alpineascents.example</a></li>
+                <li><i class="bi bi-clock"></i><span>Mon&ndash;Fri 08:00&ndash;18:00 CET</span></li>
+              </ul>
+              <div class="mt-4 pt-4" style="border-top:1px solid var(--line)">
+                <p class="footer-blurb small mb-2">Planning a Himalayan or Patagonian trip? Include your dates and experience level, and we will suggest an itinerary.</p>
+                <a class="link-arrow" href="clubs.html"><span>Find a local club</span><i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="col-lg-7" data-reveal style="--d:.12s">
+              <div class="form-card">
+                <form id="enquiryForm" novalidate>
+                  <div class="row g-3">
+                    <div class="col-md-6"><div class="field"><input type="text" class="form-control" id="fName" name="name" placeholder=" " autocomplete="name" required minlength="2" maxlength="80" /><label for="fName">Full name</label><div class="invalid-feedback" id="eName"></div></div></div>
+                    <div class="col-md-6"><div class="field"><input type="email" class="form-control" id="fEmail" name="email" placeholder=" " autocomplete="email" required maxlength="120" /><label for="fEmail">Email address</label><div class="invalid-feedback" id="eEmail"></div></div></div>
+                    <div class="col-md-6"><div class="field"><input type="tel" class="form-control" id="fPhone" name="phone" placeholder=" " autocomplete="tel" maxlength="24" /><label for="fPhone">Phone (optional)</label><div class="invalid-feedback" id="ePhone"></div></div></div>
+                    <div class="col-md-6"><div class="field"><select class="form-select" id="fInterest" name="interest" required><option value="" selected disabled>Choose an expedition</option></select><label for="fInterest" class="is-select">Expedition interest</label><div class="invalid-feedback" id="eInterest"></div></div></div>
+                    <div class="col-12"><div class="field"><textarea class="form-control" id="fMessage" name="message" rows="5" placeholder=" " required minlength="10" maxlength="2000"></textarea><label for="fMessage">Your message</label><div class="field__count"><span id="msgCount">0</span>/2000</div><div class="invalid-feedback" id="eMessage"></div></div></div>
+                    <div class="d-none" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
+                    <div class="col-12 d-flex flex-wrap align-items-center gap-3">
+                      <button type="submit" class="btn btn-gold magnetic" id="submitBtn"><span>Send enquiry</span><i class="bi bi-send"></i></button>
+                      <p class="form-note mb-0" id="formNote" role="alert"></p>
+                    </div>
+                  </div>
+                </form>
+                <div class="form-success" id="formSuccess" hidden role="status">
+                  <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="36" pathLength="1" /><path d="M24 41 L35 52 L57 28" pathLength="1" /></svg>
+                  <h3>Enquiry received</h3>
+                  <p id="successMsg">Thank you. A guide will reply within one working day.</p>
+                  <button type="button" class="btn btn-ghost btn-sm" id="againBtn">Send another</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" aria-labelledby="teamTitle">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <p class="eyebrow"><span class="eyebrow__line"></span><span class="eyebrow__num">13</span> The guides</p>
+            <h2 class="display" id="teamTitle">You climb <em>with these people</em></h2>
+            <p class="lead-text">Our guides are IFMGA-certified, average fourteen seasons in the field, and are hand-picked for judgement rather than photographs.</p>
+          </header>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-3" data-reveal>
+              <div class="card-lux guide-card"><div class="img-wrap" style="aspect-ratio:3/4"><img src="images/ridge-hiker-sm.webp" alt="Portrait of Marc Dubois" loading="lazy" /></div>
+                <div class="card-lux__body"><h3>Marc Dubois</h3><p class="small mb-2" style="color:var(--ice);letter-spacing:.14em;text-transform:uppercase;font-size:.66rem">IFMGA · Chamonix</p>
+                <p>Nineteen seasons in the Alps and eleven on Everest. Specialises in fast-and-light alpine routes and coaching first 4,000ers.</p></div></div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-reveal style="--d:.1s">
+              <div class="card-lux guide-card"><div class="img-wrap" style="aspect-ratio:3/4"><img src="images/rock-climber-sm.webp" alt="Portrait of Sofia Ricci" loading="lazy" /></div>
+                <div class="card-lux__body"><h3>Sofia Ricci</h3><p class="small mb-2" style="color:var(--ice);letter-spacing:.14em;text-transform:uppercase;font-size:.66rem">IFMGA · Aosta</p>
+                <p>Alpine and rock specialist, nine-season guide, with a talent for making first-time climbers feel genuinely safe on steep ground.</p></div></div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-reveal style="--d:.2s">
+              <div class="card-lux guide-card"><div class="img-wrap" style="aspect-ratio:3/4"><img src="images/trekkers-sm.webp" alt="Portrait of Pemba Sherpa" loading="lazy" /></div>
+                <div class="card-lux__body"><h3>Pemba Sherpa</h3><p class="small mb-2" style="color:var(--ice);letter-spacing:.14em;text-transform:uppercase;font-size:.66rem">IFMGA · Khumbu</p>
+                <p>Twelve seasons guiding in the Khumbu, four on K2, and a former national icefall rescuer. Leads all our Himalaya trips.</p></div></div>
+            </div>
+            <div class="col-md-6 col-lg-3" data-reveal style="--d:.3s">
+              <div class="card-lux guide-card"><div class="img-wrap" style="aspect-ratio:3/4"><img src="images/ski-air-sm.webp" alt="Portrait of Anne Lindberg" loading="lazy" /></div>
+                <div class="card-lux__body"><h3>Anne Lindberg</h3><p class="small mb-2" style="color:var(--ice);letter-spacing:.14em;text-transform:uppercase;font-size:.66rem">IFMGA &amp; ISM · Chamonix</p>
+                <p>Ski-mountaineering and glaciology background. Runs the Haute Route week and our Arctic programme out of Tromsø.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="faqTitle">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4" data-reveal>
+              <p class="eyebrow"><span class="eyebrow__line"></span>Before you write</p>
+              <h2 class="display" id="faqTitle">Common <em>questions</em></h2>
+              <p class="lead-text">If your question is not here, put it in the form and a guide will answer it personally.</p>
+              <a class="btn btn-gold magnetic mt-3" href="guidelines.html"><span>Read the guidelines</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="col-lg-8" data-reveal style="--d:.1s">
+              <div class="accordion" id="faq">
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">I have never climbed. Is that a problem?</button></h3>
+                  <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Not at all — around half our guests arrive with no mountain experience. Our introductory Alpine course needs only walking fitness and a willingness to learn; your guide will fit crampons and teach every skill before it is needed on the mountain.</div></div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">What fitness do I actually need?</button></h3>
+                  <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">For trekking peaks, three or four hours of walking a day for a week. For technical 6,000ers you should be able to carry a 12 kg pack uphill for four hours. Our guidelines page has a twelve-week training plan to suit either.</div></div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Do I need my own equipment?</button></h3>
+                  <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Technical hardware — crampons, axe, harness, helmet, ropes and glacier kit — is provided on all technical trips and fitted for you in person. You will need your own boots, clothing layers, sleeping bag and personal items; we publish a full gear list per expedition.</div></div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">What about insurance?</button></h3>
+                  <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Insurance covering mountaineering to your maximum altitude, including helicopter evacuation and repatriation, is mandatory on every trip. We check your policy before departure and will ask for the certificate; if you need a recommendation we can point you to specialists.</div></div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">What happens if the weather turns?</button></h3>
+                  <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Every itinerary holds reserve days, and the summit is always optional. Your guide makes the call on the mountain, not the wish list: if the window closes we wait, we change the route, or we go home. Nobody has ever been left behind because of weather on our trips.</div></div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">Can my family or group join?</button></h3>
+                  <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Yes. We run private departures for couples, families and corporate groups, and can split a team so that less experienced members climb with a dedicated guide on the same mountain.</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

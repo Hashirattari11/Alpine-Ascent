@@ -1,0 +1,98 @@
+      <!-- HERO -->
+      <section id="home" class="hero" aria-label="Introduction">
+        <div class="hero__slides" id="heroSlides" data-parallax="0.28">
+          <div class="hero__slide is-active"><img src="images/hero-matterhorn.webp" srcset="images/hero-matterhorn-sm.webp 720w, images/hero-matterhorn.webp 2200w" sizes="100vw" alt="A climber in a red jacket stands on a snowy ridge looking at the Matterhorn at dawn" fetchpriority="high" decoding="async" /></div>
+          <div class="hero__slide" data-src="everest-ama" data-alt="Ama Dablam glowing gold at sunset above the Khumbu valley in Nepal"></div>
+          <div class="hero__slide" data-src="patagonia-torres" data-alt="The granite towers of Torres del Paine in Patagonia lit by first light"></div>
+        </div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__mist" aria-hidden="true"><span></span><span></span></div>
+        <canvas class="hero__snow" id="snow" aria-hidden="true"></canvas>
+
+        <div class="container hero__content">
+          <p class="eyebrow hero__eyebrow"><span class="eyebrow__line"></span>Alpine Ascents &middot; Est. 1998</p>
+          <h1 class="hero__title">
+            <span class="line"><span>Where the</span></span>
+            <span class="line"><span>Sky <em>Begins</em></span></span>
+          </h1>
+          <p class="hero__sub">Quality, challenging, safe and joyful expeditions for climbers at every level, led by guides who have spent their lives in the world&rsquo;s greatest ranges.</p>
+          <div class="hero__cta">
+            <a href="expeditions.html" class="btn btn-gold magnetic"><span>Explore Expeditions</span><i class="bi bi-arrow-right"></i></a>
+            <button type="button" class="btn btn-ghost magnetic" data-bs-toggle="modal" data-bs-target="#filmModal"><i class="bi bi-play-circle"></i><span>Watch Film</span></button>
+          </div>
+        </div>
+
+        <div class="hero__foot">
+          <div class="container hero__foot-inner">
+            <p class="hero__coords" id="heroCoords">27.9881&deg; N, 86.9250&deg; E <span>&middot; Everest 8,849 m</span></p>
+            <a href="#about" class="scroll-cue" data-scroll aria-label="Scroll to introduction"><span>Scroll</span><i></i></a>
+            <div class="hero__dots" id="heroDots" role="tablist" aria-label="Hero images"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section section--about" aria-labelledby="aboutTitle">
+        <div class="section__bg" aria-hidden="true"><img src="images/sunset-ridges-sm.webp" alt="" loading="lazy" data-parallax="0.12" /></div>
+        <div class="container position-relative">
+          <div class="row g-5 align-items-end">
+            <div class="col-lg-7" data-reveal>
+              <p class="eyebrow"><span class="eyebrow__line"></span>Our Mission</p>
+              <h2 class="display" id="aboutTitle">Climb with purpose.<br /><em>Return with perspective.</em></h2>
+            </div>
+            <div class="col-lg-5" data-reveal style="--d:.15s">
+              <p class="lead-text mb-0">Alpine Ascents is a leader in mountaineering and climbing, offering expeditions that are challenging, safe and genuinely fun, from your first glacier walk to the roof of the world. We keep our teams small, pay our guides and porters fairly, and treat every mountain as a privilege.</p>
+            </div>
+          </div>
+          <ul class="pillars row g-4 list-unstyled" data-reveal-group>
+            <li class="col-md-4" data-reveal><i class="bi bi-shield-check"></i><h2>Safety, always</h2><p>Certified guides, redundant communications and a turnaround-time culture. The summit is optional; coming home is mandatory.</p></li>
+            <li class="col-md-4" data-reveal><i class="bi bi-people"></i><h2>Small teams</h2><p>Guide ratios as low as 1:2 on technical peaks, so every climber receives genuine coaching and attention.</p></li>
+            <li class="col-md-4" data-reveal><i class="bi bi-globe-europe-africa"></i><h2>Local partnership</h2><p>Every expedition is co-led with local mountain people, and a share of each booking supports community projects.</p></li>
+          </ul>
+          <div class="stats row g-0" id="stats" aria-label="Alpine Ascents in numbers"></div>
+        </div>
+      </section>
+
+      <!-- SIGNATURE EXPEDITIONS -->
+      <section id="signature" class="section section--alt section--photo" aria-labelledby="signatureTitle">
+        <div class="section__bg" aria-hidden="true"><img src="images/everest-ama-sm.webp" alt="" loading="lazy" data-parallax="0.12" /></div>
+        <div class="container position-relative">
+          <header class="section-head" data-reveal>
+            <p class="eyebrow"><span class="eyebrow__line"></span><span class="eyebrow__num">01</span> Signature Expeditions</p>
+            <h2 class="display" id="signatureTitle">Six objectives we <em>guide every year</em></h2>
+            <p class="lead-text">From a first alpine summit on Mont Blanc to a winter attempt on the Matterhorn: the trips our guides return to, year after year.</p>
+          </header>
+          <div class="row g-4" id="expGrid"></div>
+          <div class="text-center mt-5" data-reveal>
+            <a href="expeditions.html" class="btn btn-gold magnetic"><span>See all ten expeditions</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- THE TEAM / PHILOSOPHY -->
+      <section id="why" class="section" aria-labelledby="whyTitle">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6" data-reveal>
+              <p class="eyebrow"><span class="eyebrow__line"></span><span class="eyebrow__num">02</span> Why Alpine Ascents</p>
+              <h2 class="display" id="whyTitle">Small teams,<br /><em>experienced guides</em></h2>
+              <p class="lead-text">Our IFMGA guides average fourteen seasons in the field. On most trips we run one guide for every three guests, and on the big objectives one to two — so every climber gets coaching rather than queueing.</p>
+              <ul class="tip-list mt-4">
+                <li>Certified guides with a minimum of ten seasons, most with twenty or more.</li>
+                <li>Redundant safety systems: satellite messaging, radios, transceivers and a written emergency plan for every route.</li>
+                <li>Fair pay and progression for local high-altitude porters and Sherpa guides, with a share of each booking going to their communities.</li>
+                <li>A hard turnaround-time culture. The summit is optional; coming home is not.</li>
+              </ul>
+              <a class="link-arrow mt-4" href="guidelines.html"><span>Read our safety guidelines</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="col-lg-6" data-reveal style="--d:.12s">
+              <div class="row g-3">
+                <div class="col-6"><span class="img-wrap" style="aspect-ratio:3/4"><img src="images/rock-climber-sm.webp" alt="A climber on a steep rock face" loading="lazy" /></span></div>
+                <div class="col-6 mt-4"><span class="img-wrap" style="aspect-ratio:3/4"><img src="images/trekkers-sm.webp" alt="Trekkers walking towards snow peaks" loading="lazy" /></span></div>
+                <div class="col-6 mt-4"><span class="img-wrap" style="aspect-ratio:3/4"><img src="images/tent-view-sm.webp" alt="A tent in a mountain valley" loading="lazy" /></span></div>
+                <div class="col-6"><span class="img-wrap" style="aspect-ratio:3/4"><img src="images/summit-sunrise-sm.webp" alt="A climber on a ridge at sunrise" loading="lazy" /></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
