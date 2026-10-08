@@ -55,11 +55,13 @@
 @media (min-width: 1600px) { .nav-list a { font-size: 0.82rem; } }
 
 /* ---------- Mobile menu ---------- */
-.mobile-menu { position: fixed; inset: 0; z-index: 1400; display: flex; flex-direction: column; justify-content: center; padding: calc(var(--nav-h) + 1rem) 1.5rem calc(var(--ticker-h) + 1.5rem); overflow-y: auto; visibility: hidden; opacity: 0; transition: opacity 0.5s ease, visibility 0s 0.6s; }
-.mobile-menu.is-open { visibility: visible; opacity: 1; transition: opacity 0.5s ease, visibility 0s; }
-.mobile-menu__bg { position: fixed; inset: 0; z-index: -1; background: radial-gradient(1200px 700px at 80% -10%, rgba(143, 184, 216, 0.14), transparent 60%), radial-gradient(900px 600px at 0% 110%, rgba(201, 169, 97, 0.12), transparent 60%), #080b10; clip-path: circle(0% at calc(100% - 40px) 38px); transition: clip-path 0.8s var(--ease); }
+.mobile-menu { position: fixed; inset: 0; z-index: 1400; display: flex; flex-direction: column; justify-content: flex-start; padding: calc(var(--nav-h) + .75rem) 1.25rem calc(var(--ticker-h) + 1rem); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; visibility: hidden; opacity: 0; pointer-events: none; transition: opacity 0.5s ease, visibility 0s 0.6s; }
+.mobile-menu.is-open { visibility: visible; opacity: 1; pointer-events: auto; transition: opacity 0.5s ease, visibility 0s; }
+/* Translucent + blurred so the page stays visible behind the menu instead of vanishing. */
+.mobile-menu__bg { position: fixed; inset: 0; z-index: -1; background: radial-gradient(1200px 700px at 80% -10%, rgba(143, 184, 216, .16), transparent 60%), radial-gradient(900px 600px at 0% 110%, rgba(201, 169, 97, .14), transparent 60%), rgba(8, 11, 16, .93); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); clip-path: circle(0% at calc(100% - 40px) 38px); transition: clip-path 0.8s var(--ease); }
 .mobile-menu.is-open .mobile-menu__bg { clip-path: circle(150% at calc(100% - 40px) 38px); }
-.mobile-menu__list { list-style: none; margin: 0 auto; padding: 0; width: min(100%, 560px); display: grid; grid-template-columns: 1fr 1fr; gap: 0.1rem 1.25rem; }
+/* auto top/bottom margins centre the list when it fits and never push it off-screen when it does not */
+.mobile-menu__list { list-style: none; margin: auto 0; padding: 0; width: min(100%, 560px); display: grid; grid-template-columns: 1fr 1fr; gap: 0.1rem 1.25rem; }
 .mobile-menu__list li { opacity: 0; transform: translateY(26px); transition: opacity 0.5s ease, transform 0.7s var(--ease); }
 .mobile-menu.is-open .mobile-menu__list li { opacity: 1; transform: none; transition-delay: calc(0.18s + var(--i) * 0.05s); }
 .mobile-menu a[data-nav] { display: block; width: 100%; padding: 0.55rem 0; border-bottom: 1px solid var(--line); font-family: var(--ff-display); font-size: clamp(1.35rem, 5vw, 2rem); letter-spacing: 0; color: var(--text); }
@@ -70,6 +72,19 @@
 .mobile-menu.is-open .mobile-menu__foot { opacity: 1; }
 .mobile-menu__foot a { color: var(--gold); }
 @media (min-width: 576px) { .mobile-menu__list { grid-template-columns: 1fr; } .mobile-menu a[data-nav] { text-align: center; padding-block: 0.35rem; border: 0; } }
+/* Short viewports (landscape phones, browser chrome taking space): compact the menu so it still fits. */
+@media (max-height: 780px) {
+  .mobile-menu { padding-top: calc(var(--nav-h) + .5rem); padding-bottom: calc(var(--ticker-h) + .6rem); }
+  .mobile-menu a[data-nav] { font-size: clamp(1.05rem, 3.4vw, 1.5rem); padding-block: .2rem; }
+  .mobile-menu a[data-nav] small { font-size: .55rem; margin-right: .4rem; }
+  .mobile-menu__list { gap: 0 1rem; }
+  .mobile-menu__foot { margin-top: 1rem; font-size: .68rem; }
+}
+@media (max-height: 560px) {
+  .mobile-menu a[data-nav] { font-size: 1rem; padding-block: .05rem; }
+  .mobile-menu a[data-nav] small { display: none; }
+  .mobile-menu__foot { display: none; }
+}
 @media (min-width: 1280px) { .mobile-menu { display: none; } }
 body.menu-open { overflow: hidden; }
 
