@@ -47,12 +47,39 @@
 
 @media (min-width: 576px) { .visitor-badge__label { display: inline; } .brand__word { font-size: 1.2rem; } }
 @media (max-width: 380px) { .brand__word { letter-spacing: 0.2em; font-size: 0.95rem; } .visitor-badge { padding-inline: 0.65rem; } .brand img { width: 32px; height: 32px; } }
-@media (min-width: 1280px) {
+/* ---------- Desktop menu sizing ----------
+   The 14-item menu is only shown where it genuinely fits, in three measured tiers
+   (px): tier A needs 834, tier B 983, tier C 1069. Breakpoint is 1360px because
+   below that the brand, menu and visitor badge start colliding on laptops. */
+@media (min-width: 1360px) {
   .site-nav__menu { display: block; }
   .burger { display: none; }
 }
-@media (min-width: 1280px) and (max-width: 1599px) { .visitor-badge__label { display: none; } .brand__word { letter-spacing: 0.26em; font-size: 1.05rem; } }
-@media (min-width: 1600px) { .nav-list a { font-size: 0.82rem; } }
+/* Tier A - 1360 to 1599px (13" / 14" laptops) */
+@media (min-width: 1360px) and (max-width: 1599px) {
+  .brand img { width: 36px; height: 36px; }
+  .brand__word { font-size: 1.02rem; letter-spacing: 0.2em; }
+  .nav-list { gap: 0.5rem; }
+  .nav-list a { font-size: 0.72rem; letter-spacing: 0.025em; }
+  .visitor-badge__label { display: none; }
+  .visitor-badge { padding: 0.3rem 0.7rem; font-size: 0.64rem; }
+}
+/* Tier B - 1600 to 1799px */
+@media (min-width: 1600px) and (max-width: 1799px) {
+  .brand img { width: 38px; height: 38px; }
+  .brand__word { font-size: 1.1rem; letter-spacing: 0.26em; }
+  .nav-list { gap: 0.75rem; }
+  .nav-list a { font-size: 0.8rem; letter-spacing: 0.04em; }
+  .visitor-badge__label { display: none; }
+}
+/* Tier C - 1800px and up, full-size treatment */
+@media (min-width: 1800px) {
+  .brand img { width: 44px; height: 44px; }
+  .brand__word { font-size: 1.2rem; letter-spacing: 0.34em; }
+  .nav-list { gap: 1rem; }
+  .nav-list a { font-size: 0.82rem; letter-spacing: 0.05em; }
+  .visitor-badge__label { display: inline; }
+}
 
 /* ---------- Mobile menu ---------- */
 .mobile-menu { position: fixed; inset: 0; z-index: 1400; display: flex; flex-direction: column; justify-content: flex-start; padding: calc(var(--nav-h) + .75rem) 1.25rem calc(var(--ticker-h) + 1rem); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; visibility: hidden; opacity: 0; pointer-events: none; transition: opacity 0.5s ease, visibility 0s 0.6s; }
@@ -85,7 +112,7 @@
   .mobile-menu a[data-nav] small { display: none; }
   .mobile-menu__foot { display: none; }
 }
-@media (min-width: 1280px) { .mobile-menu { display: none; } }
+@media (min-width: 1360px) { .mobile-menu { display: none; } }
 body.menu-open { overflow: hidden; }
 
 /* ---------- Hero ---------- */
