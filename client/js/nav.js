@@ -75,7 +75,7 @@ export function initNav() {
       else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus() }
     }
   })
-  window.matchMedia('(min-width: 1360px)').addEventListener('change', (m) => m.matches && menuOpen && setMenu(false))
+  /* the overlay is the only navigation at every width, so no resize handler is needed */
 
   /* ---- link clicks update the active colour immediately ---- */
   $(document).on('click', '.nav-list a, .mobile-menu a[data-nav]', function () {

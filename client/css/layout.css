@@ -20,7 +20,8 @@
 .brand__word { font-family: var(--ff-display); font-weight: 500; font-size: 1.1rem; letter-spacing: 0.34em; line-height: 1; white-space: nowrap; }
 .brand__word b { color: var(--gold); font-weight: 500; }
 
-.site-nav__menu { display: none; flex: 1; min-width: 0; }
+/* never shown: the hamburger overlay is the only navigation at every width */
+.site-nav__menu { display: none; }
 .nav-list { display: flex; justify-content: center; gap: clamp(0.65rem, 1.05vw, 1.55rem); margin: 0 auto; padding: 0; list-style: none; }
 .nav-list a, .mobile-menu a[data-nav] { position: relative; display: inline-block; padding: 0.5rem 0.1rem; color: rgba(244, 247, 250, 0.82); font-size: 0.775rem; font-weight: 400; letter-spacing: 0.06em; white-space: nowrap; transition: color 0.35s ease; }
 .nav-list a::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0.1rem; height: 1px; background: var(--gold); transform: scaleX(0); transform-origin: 0 50%; transition: transform 0.5s var(--ease); }
@@ -47,39 +48,14 @@
 
 @media (min-width: 576px) { .visitor-badge__label { display: inline; } .brand__word { font-size: 1.2rem; } }
 @media (max-width: 380px) { .brand__word { letter-spacing: 0.2em; font-size: 0.95rem; } .visitor-badge { padding-inline: 0.65rem; } .brand img { width: 32px; height: 32px; } }
-/* ---------- Desktop menu sizing ----------
-   The 14-item menu is only shown where it genuinely fits, in three measured tiers
-   (px): tier A needs 834, tier B 983, tier C 1069. Breakpoint is 1360px because
-   below that the brand, menu and visitor badge start colliding on laptops. */
-@media (min-width: 1360px) {
-  .site-nav__menu { display: block; }
-  .burger { display: none; }
-}
-/* Tier A - 1360 to 1599px (13" / 14" laptops) */
-@media (min-width: 1360px) and (max-width: 1599px) {
-  .brand img { width: 36px; height: 36px; }
-  .brand__word { font-size: 1.02rem; letter-spacing: 0.2em; }
-  .nav-list { gap: 0.5rem; }
-  .nav-list a { font-size: 0.72rem; letter-spacing: 0.025em; }
-  .visitor-badge__label { display: none; }
-  .visitor-badge { padding: 0.3rem 0.7rem; font-size: 0.64rem; }
-}
-/* Tier B - 1600 to 1799px */
-@media (min-width: 1600px) and (max-width: 1799px) {
-  .brand img { width: 38px; height: 38px; }
-  .brand__word { font-size: 1.1rem; letter-spacing: 0.26em; }
-  .nav-list { gap: 0.75rem; }
-  .nav-list a { font-size: 0.8rem; letter-spacing: 0.04em; }
-  .visitor-badge__label { display: none; }
-}
-/* Tier C - 1800px and up, full-size treatment */
-@media (min-width: 1800px) {
-  .brand img { width: 44px; height: 44px; }
-  .brand__word { font-size: 1.2rem; letter-spacing: 0.34em; }
-  .nav-list { gap: 1rem; }
-  .nav-list a { font-size: 0.82rem; letter-spacing: 0.05em; }
-  .visitor-badge__label { display: inline; }
-}
+/* ---------- Navigation ----------
+   One hamburger at every screen width. Fourteen links cannot sit beside the brand
+   without colliding on ordinary laptops, so the inline list (see .site-nav__menu
+   above) is never shown and the overlay menu is the single entry point on phones,
+   laptops and desktops alike. The burger is the primary control, so give it presence. */
+.burger { width: 52px; height: 52px; }
+.burger span { width: 20px; }
+@media (max-width: 380px) { .burger { width: 44px; height: 44px; } .burger span { width: 17px; } }
 
 /* ---------- Mobile menu ---------- */
 .mobile-menu { position: fixed; inset: 0; z-index: 1400; display: flex; flex-direction: column; justify-content: flex-start; padding: calc(var(--nav-h) + .75rem) 1.25rem calc(var(--ticker-h) + 1rem); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; visibility: hidden; opacity: 0; pointer-events: none; transition: opacity 0.5s ease, visibility 0s 0.6s; }
@@ -99,6 +75,13 @@
 .mobile-menu.is-open .mobile-menu__foot { opacity: 1; }
 .mobile-menu__foot a { color: var(--gold); }
 @media (min-width: 576px) { .mobile-menu__list { grid-template-columns: 1fr; } .mobile-menu a[data-nav] { text-align: center; padding-block: 0.35rem; border: 0; } }
+/* Desktop overlay: two columns so it reads as a deliberate menu, not a stretched phone one. */
+@media (min-width: 900px) {
+  .mobile-menu { padding-inline: clamp(2rem, 6vw, 6rem); }
+  .mobile-menu__list { grid-template-columns: 1fr 1fr; gap: 0.15rem 3.5rem; width: min(100%, 1000px); }
+  .mobile-menu a[data-nav] { display: flex; align-items: baseline; gap: 0.75rem; padding: 0.55rem 0; border-bottom: 1px solid var(--line); font-size: clamp(1.15rem, 1.35vw, 1.6rem); }
+  .mobile-menu a[data-nav] small { flex-shrink: 0; font-size: 0.66rem; margin-right: 0; }
+}
 /* Short viewports (landscape phones, browser chrome taking space): compact the menu so it still fits. */
 @media (max-height: 780px) {
   .mobile-menu { padding-top: calc(var(--nav-h) + .5rem); padding-bottom: calc(var(--ticker-h) + .6rem); }
@@ -112,7 +95,7 @@
   .mobile-menu a[data-nav] small { display: none; }
   .mobile-menu__foot { display: none; }
 }
-@media (min-width: 1360px) { .mobile-menu { display: none; } }
+@media (min-width: 900px) and (max-height: 780px) { .mobile-menu a[data-nav] { padding-block: 0.3rem; } }
 body.menu-open { overflow: hidden; }
 
 /* ---------- Hero ---------- */
