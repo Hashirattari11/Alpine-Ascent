@@ -31,6 +31,19 @@
       window.__errs = []
       window.addEventListener('error', (e) => window.__errs.push(`${e.message} @ ${e.filename}:${e.lineno}`))
       window.addEventListener('unhandledrejection', (e) => window.__errs.push('rejected: ' + (e.reason && e.reason.message ? e.reason.message : e.reason)))
+      // Safety net: never leave the visitor staring at the preloader, even if a script fails.
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          var p = document.getElementById('preloader')
+          if (p) { p.classList.add('is-done'); p.setAttribute('aria-hidden', 'true') }
+          document.body.classList.remove('is-loading')
+          document.body.classList.add('is-ready')
+        }, 5000)
+      })
+      setTimeout(function () {
+        document.body.classList.remove('is-loading')
+        document.body.classList.add('is-ready')
+      }, 8000)
     </script>
     <script type="application/ld+json">
       { "@context": "https://schema.org", "@type": "Organization", "name": "Alpine Ascents", "description": "Premium guided mountaineering and expedition company.", "slogan": "Where the Sky Begins", "sameAs": ["https://www.instagram.com/", "https://www.youtube.com/", "https://www.facebook.com/"] }

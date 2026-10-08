@@ -1,7 +1,12 @@
-// Navbar: transparent at top → blurred glass on scroll, hides on scroll down / shows on scroll up,
-// scroll-spy + click active state, full-screen mobile overlay with staggered links, keyboard accessible.
+// Navbar: transparent at the top, blurred glass once you scroll, always visible.
+// Auto-hide on scroll was removed on purpose: a navbar that hides (or gets stuck hidden)
+// is worse than one that simply stays. Mobile overlay menu, active/click state and
+// scroll-spy are all kept.
 import { scrollToId } from './utils.js'
 import { onScrollFrame } from './effects.js'
+
+const HIDE_AFTER = 320 // px: never hide near the top of the page
+const HIDE_DELTA = 10 // px: only hide on a deliberate downward flick
 
 let current = null
 let lockTimer = null
@@ -28,27 +33,28 @@ export function initNav() {
   const $menu = $('#mobileMenu')
   let lastY = window.scrollY
   let menuOpen = false
+  let scrollTimer = null
 
-  /* ---- glass background + hide/show on scroll direction ---- */
+  const showNav = () => $nav.removeClass('is-hidden')
+
+  /* ---- glass background only: the bar itself stays put and is never hidden ---- */
   onScrollFrame(() => {
     const y = window.scrollY
-    $nav.toggleClass('is-glass', y > 24)
     const delta = y - lastY
-    if (Math.abs(delta) > 6) {
-      const hide = delta > 0 && y > 240 && !menuOpen && !$nav[0].matches(':focus-within')
-      $nav.toggleClass('is-hidden', hide)
-      lastY = y
-    }
-    if (y < 110) $nav.removeClass('is-hidden')
+    $nav.toggleClass('is-glass', y > 24)
+    if (Math.abs(delta) > 2) lastY = y
+    if (y < 200) showNav()
+    clearTimeout(scrollTimer)
+    scrollTimer = setTimeout(showNav, 160)
   })
-  $nav.on('focusin', () => $nav.removeClass('is-hidden'))
+  window.addEventListener('scroll', showNav, { passive: true })
+  $nav.on('focusin', showNav)
 
   /* ---- mobile menu: full-screen overlay, staggered links, focus trap, Esc ---- */
   const setMenu = (open) => {
     menuOpen = open
     $menu.toggleClass('is-open', open).attr('aria-hidden', String(!open))
-    $burger.attr({ 'aria-expanded': String(open), 'aria-label': open ? 'Close menu' : 'Open menu' })
-      .toggleClass('is-open', open)
+    $burger.attr({ 'aria-expanded': String(open), 'aria-label': open ? 'Close menu' : 'Open menu' }).toggleClass('is-open', open)
     $('body').toggleClass('menu-open', open)
     $nav.removeClass('is-hidden').addClass('is-glass')
     $menu.find('a').attr('tabindex', open ? '0' : '-1')
@@ -71,7 +77,7 @@ export function initNav() {
   })
   window.matchMedia('(min-width: 1280px)').addEventListener('change', (m) => m.matches && menuOpen && setMenu(false))
 
-  /* ---- link clicks update the active colour immediately (also after click, not just hover) ---- */
+  /* ---- link clicks update the active colour immediately ---- */
   $(document).on('click', '.nav-list a, .mobile-menu a[data-nav]', function () {
     lock(this.dataset.nav)
     if (menuOpen) setMenu(false)
@@ -82,10 +88,9 @@ export function initNav() {
     e.preventDefault()
     scrollToId(id)
   })
-  // any manual scroll/wheel releases the click lock
   $(window).on('wheel touchstart keydown', () => { if (current) { clearTimeout(lockTimer); current = null } })
 
-  /* ---- scroll-spy: only useful when a page has more than one section ---- */
+  /* ---- scroll-spy only where a page has more than one section ---- */
   const sections = $('main section[id]').toArray()
   const page = document.documentElement.dataset.page || 'home'
   if (sections.length > 1) {

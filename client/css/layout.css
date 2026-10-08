@@ -9,7 +9,8 @@
   border-bottom: 1px solid transparent;
 }
 .site-nav.is-glass { background: var(--glass); -webkit-backdrop-filter: blur(18px) saturate(140%); backdrop-filter: blur(18px) saturate(140%); border-bottom-color: rgba(201, 169, 97, 0.25); }
-.site-nav.is-hidden { transform: translateY(-105%); opacity: 0; }
+/* The navbar never hides: the auto-hide was removed so it can never get stuck off-screen. */
+.site-nav.is-hidden { transform: none; opacity: 1; }
 .site-nav__inner { height: 100%; max-width: 1760px; margin-inline: auto; padding-inline: clamp(1rem, 2.6vw, 2.5rem); display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 
 .brand { display: inline-flex; align-items: center; gap: 0.7rem; color: var(--text); flex-shrink: 0; }
