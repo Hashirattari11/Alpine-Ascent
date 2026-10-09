@@ -14,7 +14,10 @@ Thumbs.db
 # vercel
 .vercel
 
-# runtime data written by the API (visitors.json seed IS tracked)
+# runtime data written by the API. Never tracked: the visitor counter changes on
+# every single visit, and a git checkout during deploy would overwrite the live file.
+# The API creates these on first use (store.js readJson falls back when missing).
+server/data/visitors.json
 server/data/enquiries.json
 server/data/newsletter.json
 server/data/*.tmp
