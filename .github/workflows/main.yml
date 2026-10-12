@@ -1,0 +1,30 @@
+name: Deploy Static Website
+
+on:
+  push:
+    branches:
+      - main  # Jab bhi aap main branch par push karenge, yeh deploy hoga
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' # Agar aapki HTML files kisi folder ke andar hain toh '.' ki jagah folder ka naam likhein (e.g., './dist' ya './public')
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
