@@ -32,13 +32,17 @@ const card = (t, i) => `
     </div>
   </div>`
 
+// The block is reused on the home page (which has a #contact section) and on its own
+// page (which does not), so the destination has to be resolved at render time.
+const contactHref = () => (document.getElementById('contact') ? '#contact' : 'contact.html')
+
 const cta = `
   <div class="col-md-6 col-xl-3" data-reveal style="--d:.3s">
     <div class="type-cta">
       <p class="eyebrow"><span class="eyebrow__line"></span>Not sure?</p>
       <h3>Not sure where to start?</h3>
       <p>Tell us your experience and ambitions. A guide will design an itinerary, from your first glacier walk to an 8,000-metre peak.</p>
-      <div><a href="#contact" class="btn btn-gold magnetic"><span>Talk to a guide</span><i class="bi bi-arrow-right"></i></a></div>
+      <div><a href="${contactHref()}" class="btn btn-gold magnetic"><span>Talk to a guide</span><i class="bi bi-arrow-right"></i></a></div>
     </div>
   </div>`
 

@@ -26,11 +26,19 @@ export const imgRatio = (key) => {
   return (m.w / m.h).toFixed(4)
 }
 
+// Any key that is not in data/images.json resolves to this, so a typo or a missing
+// asset in the data can never render a broken or blank card.
+export const FALLBACK_IMAGE = 'hero-matterhorn'
+export const safeImageKey = (key) => (key && imageMeta[key] ? key : FALLBACK_IMAGE)
+
 /** Returns markup for a responsive, lazy, blur-up image. The wrapper's size is controlled by CSS. */
 export function picture(key, alt = '', { eager = false, sizes = '(min-width: 992px) 33vw, 100vw', cls = '' } = {}) {
-  const m = imgMeta(key)
+  const k = safeImageKey(key)
+  const m = imgMeta(k)
   const bg = m.lqip ? `background-image:url(${m.lqip})` : ''
-  return `<span class="img-wrap ${cls}" style="${bg}"><img src="images/${key}-sm.webp" srcset="images/${key}-sm.webp 720w, images/${key}.webp 1600w" sizes="${sizes}" width="${m.w}" height="${m.h}" alt="${esc(alt)}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"></span>`
+  // last-resort net: if the file itself 404s at runtime, swap to the fallback instead of showing a hole
+  const swap = k === FALLBACK_IMAGE ? '' : ` onerror="this.onerror=null;this.src='images/${FALLBACK_IMAGE}-sm.webp'"`
+  return `<span class="img-wrap ${cls}" style="${bg}"><img src="images/${k}-sm.webp" srcset="images/${k}-sm.webp 720w, images/${k}.webp 1600w" sizes="${sizes}" width="${m.w}" height="${m.h}" alt="${esc(alt)}"${swap} ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async"></span>`
 }
 
 /** Wires up load/error handling for images inside `root` (blur-up fade, gradient fallback). */

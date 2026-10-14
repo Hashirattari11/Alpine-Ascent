@@ -1,5 +1,5 @@
 import { mount } from '../core.js'
-import { esc, picture, skeleton, fmtDate } from '../utils.js'
+import { esc, picture, skeleton, fmtDate, hydrateImages } from '../utils.js'
 
 const paragraphs = (body) => body.split(/\n+/).map((p) => `<p>${esc(p)}</p>`).join('')
 let articles = []
@@ -28,16 +28,19 @@ export function initNews() {
       $('#newsGrid').on('click', '[data-news]', function () {
         const n = articles.find((x) => x.id === this.dataset.news)
         if (!n) return
-        $('#newsModalContent').html(`
-          <div class="position-relative">
-            ${picture(n.image, n.title, { sizes: '100vw' })}
-            <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+        const $content = $('#newsModalContent')
+        $content.html(`
+          <div class="position-relative news-modal__hero">
+            ${picture(n.image, n.title, { sizes: '100vw', eager: true })}
+            <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close article"></button>
           </div>
           <div class="news-article">
             <div class="news-meta"><span class="cat">${esc(n.category)}</span><time datetime="${n.date}">${fmtDate(n.date)}</time></div>
             <h2 id="newsModalTitle">${esc(n.title)}</h2>
             ${paragraphs(n.body)}
           </div>`)
+        // the hero is injected after boot, so it needs the blur-up wiring applied here
+        hydrateImages($content[0])
         window.bootstrap.Modal.getOrCreateInstance(document.getElementById('newsModal')).show()
       })
     },

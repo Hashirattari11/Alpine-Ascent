@@ -198,6 +198,9 @@ body.cursor-hover .cursor-ring { width: 64px; height: 64px; margin: -32px 0 0 -3
 /* ---------- Bootstrap modal theming ---------- */
 .modal-content { background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius); color: var(--text); }
 .modal-backdrop { --bs-backdrop-bg: #04070a; --bs-backdrop-opacity: 0.88; }
+/* Once shown the dialog must sit flush: Bootstrap's enter transform is translateY(-50px),
+   which would push absolutely positioned controls (the video close button) off-screen. */
+.modal.show .modal-dialog { transform: none; }
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
