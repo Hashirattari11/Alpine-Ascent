@@ -1,10 +1,11 @@
 import { mount } from '../core.js'
-import { esc, skeleton } from '../utils.js'
+import { esc, picture, skeleton } from '../utils.js'
 import { replayCounters } from '../effects.js'
 
 const card = (r, i) => `
   <div class="col-md-6 col-lg-4" data-reveal style="--d:${(i % 3) * 0.1}s">
     <article class="card-lux record-card tilt">
+      ${picture(r.image, r.title, { sizes: '(min-width: 992px) 400px, 100vw' })}
       <div class="card-lux__body">
         <p class="eyebrow mb-0"><span class="eyebrow__line"></span>${esc(r.holder)}</p>
         <p class="record-num"><span data-count="${r.value}" ${r.plain ? 'data-plain="1"' : ''} ${r.suffix ? `data-suffix="${esc(r.suffix)}"` : ''}>0</span>${r.unit ? `<small>${esc(r.unit)}</small>` : ''}</p>

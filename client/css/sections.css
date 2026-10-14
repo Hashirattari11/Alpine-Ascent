@@ -150,8 +150,10 @@
 .pill-tabs .nav-link:hover { color: var(--text); border-color: var(--gold); }
 .pill-tabs .nav-link.active { background: var(--gold); border-color: var(--gold); color: var(--bg); }
 .records-intro { color: var(--muted); max-width: 62ch; margin-bottom: 2rem; }
-.record-card { position: relative; padding: 1.8rem; display: flex; flex-direction: column; }
-.record-card::before { content: ''; position: absolute; left: 1.8rem; top: 0; width: 48px; height: 2px; background: var(--gold); }
+/* Full-bleed photo on top; the padding moved to the body so the image is not inset. */
+.record-card { position: relative; padding: 0; display: flex; flex-direction: column; overflow: hidden; }
+.record-card .card-lux__body { padding: 1.8rem; display: flex; flex-direction: column; flex: 1; }
+.record-card::before { display: none; }
 .record-num { font-family: var(--ff-display); font-size: clamp(3rem, 5vw, 4.2rem); line-height: 1; color: var(--gold); font-weight: 500; font-variant-numeric: tabular-nums; margin: 0.6rem 0 0.2rem; }
 .record-num small { font-family: var(--ff-body); font-size: 0.8rem; letter-spacing: 0.18em; color: var(--ice); text-transform: uppercase; margin-left: 0.4rem; font-weight: 400; }
 .record-card h3 { font-size: 1.5rem; margin: 0.3rem 0 0.7rem; }
@@ -259,7 +261,10 @@
 .lightbox__stage img { max-width: 100%; max-height: 100%; min-height: 0; object-fit: contain; border-radius: 6px; transition: opacity 0.35s, transform 0.5s var(--ease); user-select: none; -webkit-user-drag: none; }
 .lightbox__stage img.is-swapping { opacity: 0; transform: scale(0.98); }
 .lightbox__stage figcaption { margin-top: 1rem; font-family: var(--ff-display); font-size: 1.25rem; color: var(--text); text-align: center; }
-.lightbox__close { position: absolute; z-index: 3; top: 1.2rem; right: 1.2rem; }
+/* Sits above the stage (and any YouTube iframe) so the film can always be dismissed.
+   Only the longhand background-color is set: the .btn-close shorthand carries the X glyph. */
+.lightbox__close { position: absolute; z-index: 5; top: 1rem; right: 1rem; width: 2.75rem; height: 2.75rem; padding: 0; border: 1px solid var(--line-strong); border-radius: 50%; background-color: rgba(11, 15, 20, 0.82); background-size: 1.05rem 1.05rem; opacity: 1; transition: background-color 0.3s var(--ease), border-color 0.3s var(--ease); }
+.lightbox__close:hover, .lightbox__close:focus-visible { background-color: var(--gold); border-color: var(--gold); opacity: 1; }
 .lightbox__nav { position: absolute; z-index: 3; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; border-radius: 50%; border: 1px solid var(--line-strong); background: rgba(11, 15, 20, 0.6); color: var(--text); display: grid; place-items: center; transition: all 0.3s var(--ease); }
 .lightbox__nav:hover { background: var(--gold); color: var(--bg); border-color: var(--gold); }
 .lightbox__nav--prev { left: 1rem; } .lightbox__nav--next { right: 1rem; }
@@ -276,6 +281,9 @@
 #newsModalContent .img-wrap { aspect-ratio: 16 / 7; }
 #newsModalContent .btn-close { position: absolute; z-index: 3; right: 1rem; top: 1rem; background-color: rgba(11, 15, 20, 0.6); border-radius: 50%; padding: 0.7rem; }
 .news-article { padding: clamp(1.4rem, 4vw, 2.6rem); }
+/* Cap the article hero so the headline and body stay on screen. */
+.news-modal__hero { aspect-ratio: 16 / 9; max-height: 46vh; overflow: hidden; }
+.news-modal__hero .img-wrap { height: 100%; }
 .news-article h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); margin: 0.4rem 0 1.2rem; }
 .news-article p { color: #cfd8e1; }
 

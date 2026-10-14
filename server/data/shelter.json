@@ -58,6 +58,7 @@
   {
     "id": "tarp",
     "title": "Tarp & Bivy",
+    "image": "red-tent",
     "icon": "bezier2",
     "summary": "The lightest realistic shelter. Under a taut tarp on a trekking pole, or simply wrapped in a bivy, it keeps off the wind and most of the precipitation for very little weight.",
     "stats": { "warmth": 2, "weight": 1, "buildTime": "10 min" },
@@ -71,6 +72,7 @@
   {
     "id": "snow-well",
     "title": "Snow Wells & Trenches",
+    "image": "snow-aerial",
     "icon": "snow2",
     "summary": "When there is no deep drift to dig a cave into, you dig down instead. A snow well or trench uses the insulative snow layer below the surface.",
     "stats": { "warmth": 3, "weight": 1, "buildTime": "30 – 60 min" },
