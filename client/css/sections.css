@@ -281,9 +281,13 @@
 #newsModalContent .img-wrap { aspect-ratio: 16 / 7; }
 #newsModalContent .btn-close { position: absolute; z-index: 3; right: 1rem; top: 1rem; background-color: rgba(11, 15, 20, 0.6); border-radius: 50%; padding: 0.7rem; }
 .news-article { padding: clamp(1.4rem, 4vw, 2.6rem); }
-/* Cap the article hero so the headline and body stay on screen. */
-.news-modal__hero { aspect-ratio: 16 / 9; max-height: 46vh; overflow: hidden; }
-.news-modal__hero .img-wrap { height: 100%; }
+/* Cap the article hero so the headline and body stay on screen.
+   flex: none stops the flex column from squeezing it into a letterbox strip. */
+.news-modal__hero { flex: none; aspect-ratio: 16 / 9; max-height: 42vh; overflow: hidden; }
+/* Needs the id selector to outrank `#newsModalContent .img-wrap`: combined with `height: 100%`
+   that 16/7 ratio made the browser derive the width from the height (465px inside a 799px hero).
+   Both dimensions are stated here so the wrapper fills the hero exactly. */
+#newsModalContent .news-modal__hero .img-wrap { width: 100%; height: 100%; aspect-ratio: 16 / 9; }
 .news-article h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); margin: 0.4rem 0 1.2rem; }
 .news-article p { color: #cfd8e1; }
 

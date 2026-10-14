@@ -207,9 +207,10 @@ body.cursor-hover .cursor-ring { width: 64px; height: 64px; margin: -32px 0 0 -3
 .modal { --bs-modal-zindex: 2100; z-index: 2100; }
 .modal-backdrop { --bs-backdrop-zindex: 2050; z-index: 2050; }
 /* A modal is a full-screen takeover: the bar and ticker must not sit over it or stay clickable.
-   No transition is declared here on purpose: .site-nav already transitions opacity, and
-   re-declaring it would drop its transform/backdrop-filter transitions. */
-body.modal-open .site-nav, body.modal-open .ticker { opacity: 0; pointer-events: none; }
+   `visibility` as well as opacity, so the bar can never be left painted over a dialog even if
+   its 0.45s opacity transition is interrupted. No transition is declared here on purpose:
+   .site-nav already transitions opacity, and re-declaring it would drop its other transitions. */
+body.modal-open .site-nav, body.modal-open .ticker { opacity: 0; visibility: hidden; pointer-events: none; }
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
