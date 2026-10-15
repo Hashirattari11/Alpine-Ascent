@@ -9,6 +9,22 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..')
 const PAGES_DIR = path.join(ROOT, 'client', 'pages')
 const OUT_DIR = path.join(ROOT, 'client')
 
+/**
+ * Mirror the live visitor count into the bundled data so the badge always has a real number
+ * to show, even before (or without) the API. Runs on every build.
+ */
+function syncVisitorMirror() {
+  const src = path.join(ROOT, 'server', 'data', 'visitors.json')
+  const dest = path.join(ROOT, 'client', 'data', 'visitors.json')
+  try {
+    const { count } = JSON.parse(fs.readFileSync(src, 'utf8'))
+    if (!Number.isFinite(count)) return
+    fs.writeFileSync(dest, `${JSON.stringify({ count }, null, 2)}\n`)
+  } catch {
+    // No live count yet (fresh checkout): leave any existing mirror alone.
+  }
+}
+
 /** Navigation model — single source of truth for the menu and footer links. */
 export const PAGES = [
   { slug: 'index', nav: 'home', label: 'Home', title: 'Alpine Ascents | Luxury Mountaineering Expeditions & Guided Climbs', desc: 'Alpine Ascents leads safe, challenging and unforgettable mountaineering expeditions for climbers of every level: Everest, Mont Blanc, Matterhorn, Denali and beyond.', og: 'hero-matterhorn' },
@@ -289,6 +305,7 @@ export function buildPages() {
     fs.writeFileSync(path.join(OUT_DIR, `${page.slug}.html`), shell({ page, content, apiBase }))
     count++
   }
+  syncVisitorMirror()
   console.log(`built ${count} pages -> ${path.relative(ROOT, OUT_DIR)}`)
 }
 
