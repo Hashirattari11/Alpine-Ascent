@@ -43,7 +43,9 @@ export function picture(key, alt = '', { eager = false, sizes = '(min-width: 992
 
 /** Wires up load/error handling for images inside `root` (blur-up fade, gradient fallback). */
 export function hydrateImages(root = document) {
-  $(root).find('img[width]:not([data-h])').each(function () {
+  // Every img inside .img-wrap needs wiring, including hand-written static markup that has no
+  // width attribute: without this they keep `opacity: 0` from .img-wrap > img and never appear.
+  $(root).find('.img-wrap img, img[width]').not('[data-h]').each(function () {
     const img = this
     img.dataset.h = '1'
     const done = () => img.classList.add('is-loaded')

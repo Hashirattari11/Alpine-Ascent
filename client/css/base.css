@@ -105,6 +105,15 @@ h3 { font-size: 1.65rem; }
 /* ---------- Sections ---------- */
 .section { position: relative; padding-block: clamp(5rem, 11vw, 9rem); isolation: isolate; }
 .section--alt { background: linear-gradient(180deg, var(--bg-2), var(--bg) 140%); }
+/* In-page section headings and the quick-jump links in a page hero. */
+.section-title { font-family: var(--ff-display); font-size: clamp(2.1rem, 4.4vw, 3.4rem); line-height: 1.1; color: var(--text); margin: 0 0 0.8rem; }
+.section-title em { font-style: italic; color: var(--gold); }
+.section-lead { max-width: 62ch; margin: 0 0 clamp(2rem, 4vw, 3.2rem); color: var(--muted); font-size: 1.02rem; }
+.page-jump { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.8rem; }
+.page-jump a { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.55rem 1.1rem; border: 1px solid var(--line-strong); border-radius: 100px; color: var(--text); font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; transition: border-color 0.3s, background-color 0.3s, color 0.3s; }
+.page-jump a:hover, .page-jump a:focus-visible { border-color: var(--gold); background: rgba(201, 169, 97, 0.1); color: var(--gold); }
+/* Anchor targets sit below the fixed bar instead of under it. */
+.section[id] { scroll-margin-top: calc(var(--nav-h) + 1rem); }
 .section::before { /* thin gold divider on top of each section */
   content: ''; position: absolute; top: 0; left: 50%; width: min(1240px, calc(100% - 2.5rem)); height: 1px; transform: translateX(-50%);
   background: linear-gradient(90deg, transparent, rgba(201, 169, 97, 0.45), transparent);

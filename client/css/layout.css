@@ -20,16 +20,43 @@
 .brand__word { font-family: var(--ff-display); font-weight: 500; font-size: 1.1rem; letter-spacing: 0.34em; line-height: 1; white-space: nowrap; }
 .brand__word b { color: var(--gold); font-weight: 500; }
 
-/* never shown: the hamburger overlay is the only navigation at every width */
+/* ---------- Navigation ----------
+   Compact dropdown bar from 900px up; the full-screen hamburger overlay below that.
+   Five top-level entries only, so the bar can never crowd the brand on a laptop. */
 .site-nav__menu { display: none; }
-.nav-list { display: flex; justify-content: center; gap: clamp(0.65rem, 1.05vw, 1.55rem); margin: 0 auto; padding: 0; list-style: none; }
-.nav-list a, .mobile-menu a[data-nav] { position: relative; display: inline-block; padding: 0.5rem 0.1rem; color: rgba(244, 247, 250, 0.82); font-size: 0.775rem; font-weight: 400; letter-spacing: 0.06em; white-space: nowrap; transition: color 0.35s ease; }
-.nav-list a::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0.1rem; height: 1px; background: var(--gold); transform: scaleX(0); transform-origin: 0 50%; transition: transform 0.5s var(--ease); }
-.nav-list a:hover, .nav-list a:focus-visible { color: var(--ice); }
-.nav-list a:active { color: var(--gold-2); }
-.nav-list a.is-active { color: var(--gold); }
+
+.nav-list { display: flex; align-items: center; justify-content: center; gap: clamp(0.25rem, 0.7vw, 0.9rem); margin: 0 auto; padding: 0; list-style: none; }
+.nav-list > li { position: relative; }
+.nav-list a, .nav-list button, .mobile-menu a[data-nav] { position: relative; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.55rem 0.55rem; background: none; border: 0; color: rgba(244, 247, 250, 0.82); font-family: inherit; font-size: 0.8rem; font-weight: 400; letter-spacing: 0.05em; white-space: nowrap; cursor: pointer; transition: color 0.3s ease; }
+.nav-list a::after, .nav-list button::after { content: ''; position: absolute; left: 0.55rem; right: 0.55rem; bottom: 0.3rem; height: 1px; background: var(--gold); transform: scaleX(0); transform-origin: 0 50%; transition: transform 0.45s var(--ease); }
+.nav-list a:hover, .nav-list button:hover, .nav-list a:focus-visible, .nav-list button:focus-visible { color: var(--ice); }
+.nav-list a.is-active, .nav-list .is-open-current > .nav-toggle { color: var(--gold); }
 .nav-list a:hover::after, .nav-list a:focus-visible::after, .nav-list a.is-active::after { transform: scaleX(1); }
-.nav-list a.is-active:hover { color: var(--gold-2); }
+
+/* the chevron rotates while its flyout is open */
+.nav-toggle i { font-size: 0.62rem; transition: transform 0.3s var(--ease); }
+.nav-item.is-open > .nav-toggle i { transform: rotate(180deg); }
+
+/* Flyout: hidden by default, revealed on hover (pointer) and on click (keyboard/touch). */
+.nav-flyout { position: absolute; top: calc(100% + 0.4rem); left: 50%; transform: translate(-50%, 0.5rem); min-width: 15rem; padding: 0.5rem; border: 1px solid var(--line-strong); border-radius: var(--radius-sm, 10px); background: rgba(9, 13, 18, 0.97); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.28s ease, transform 0.28s var(--ease), visibility 0s 0.28s; }
+.nav-flyout ul { list-style: none; margin: 0; padding: 0; }
+.nav-flyout a { display: block; width: 100%; padding: 0.6rem 0.75rem; border-radius: 8px; font-size: 0.82rem; letter-spacing: 0.02em; }
+.nav-flyout a::after { display: none; }
+.nav-flyout a:hover, .nav-flyout a:focus-visible { background: rgba(244, 247, 250, 0.07); color: var(--ice); }
+.nav-flyout a.is-active { background: rgba(201, 169, 97, 0.12); color: var(--gold); }
+
+@media (hover: hover) and (pointer: fine) {
+  .nav-item--has-menu:hover .nav-flyout, .nav-item--has-menu:focus-within .nav-flyout { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0); transition: opacity 0.28s ease, transform 0.28s var(--ease), visibility 0s; }
+}
+/* click / keyboard / touch path, driven by JS adding .is-open */
+.nav-item--has-menu.is-open .nav-flyout { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0); transition: opacity 0.28s ease, transform 0.28s var(--ease), visibility 0s; }
+.nav-item--has-menu.is-open > .nav-toggle { color: var(--ice); }
+.nav-item--has-menu.is-open > .nav-toggle::after { transform: scaleX(1); }
+
+/* keyboard users can tab into the flyout only while it is open */
+.nav-flyout a { visibility: inherit; }
+
+@media (min-width: 900px) { .site-nav__menu { display: block; } }
 
 .site-nav__right { display: flex; align-items: center; gap: 0.9rem; flex-shrink: 0; }
 .visitor-badge { position: relative; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.9rem; border: 1px solid var(--line-strong); border-radius: 100px; background: rgba(244, 247, 250, 0.05); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
@@ -56,6 +83,8 @@
 .burger { width: 52px; height: 52px; }
 .burger span { width: 20px; }
 @media (max-width: 380px) { .burger { width: 44px; height: 44px; } .burger span { width: 17px; } }
+/* From 900px the dropdown bar takes over, so the hamburger steps aside. */
+@media (min-width: 900px) { .burger { display: none; } }
 
 /* ---------- Mobile menu ---------- */
 .mobile-menu { position: fixed; inset: 0; z-index: 1400; display: flex; flex-direction: column; justify-content: flex-start; padding: calc(var(--nav-h) + .75rem) 1.25rem calc(var(--ticker-h) + 1rem); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; visibility: hidden; opacity: 0; pointer-events: none; transition: opacity 0.5s ease, visibility 0s 0.6s; }

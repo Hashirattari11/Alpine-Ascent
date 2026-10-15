@@ -29,15 +29,57 @@ export const PAGES = [
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
+// The dropdown bar: five top-level entries instead of fourteen links, so nothing ever collides.
+const NAV_GROUPS = [
+  { label: 'Expeditions', nav: 'expeditions', pages: ['expeditions', 'types'] },
+  { label: 'Learn', nav: 'techniques', pages: ['techniques', 'history'] },
+  { label: 'Safety', nav: 'hazards', pages: ['hazards', 'sheltering', 'guidelines'] },
+  { label: 'Explore', nav: 'gallery', pages: ['gallery', 'clubs', 'stories'] },
+  { label: 'More', nav: null, pages: ['records', 'latest'] },
+]
+
+const bySlug = (slug) => PAGES.find((p) => p.slug === slug)
+
 const navLink = (p, active, cls = 'nav-list') => {
   const on = p.nav === active
   return `<li><a href="${p.slug}.html" data-nav="${p.nav}"${on ? ' class="is-active" aria-current="page"' : ''}>${esc(p.label)}</a></li>`
 }
 
+/** One top-level item: a plain link, or a dropdown button with a flyout of child pages. */
+const navItem = (g, active) => {
+  const kids = g.pages.map(bySlug).filter(Boolean)
+  const inGroup = kids.some((p) => p.nav === active)
+  const on = g.nav === active
+  const label = esc(g.label)
+
+  if (g.nav === null || kids.length < 2) {
+    // single destination, render a plain link
+    const p = kids[0]
+    return `<li class="nav-item"><a class="nav-link${on ? ' is-active' : ''}" href="${p.slug}.html" data-nav="${p.nav}"${on ? ' aria-current="page"' : ''}>${label}</a></li>`
+  }
+
+  return `<li class="nav-item nav-item--has-menu${inGroup ? ' is-open-current' : ''}">
+            <button type="button" class="nav-link nav-toggle" aria-expanded="false" aria-haspopup="true" data-menu-toggle>${label}<i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+            <div class="nav-flyout">
+              <ul>${kids.map((p) => `<li><a href="${p.slug}.html" data-nav="${p.nav}"${p.nav === active ? ' class="is-active" aria-current="page"' : ''}>${esc(p.label)}</a></li>`).join('')}</ul>
+            </div>
+          </li>`
+}
+
+const navBar = (active) => NAV_GROUPS.map((g) => navItem(g, active)).join('\n            ')
+
 const shell = ({ page, content, apiBase }) => {
   const active = page.nav
-  const nav = PAGES.map((p) => navLink(p, active)).join('\n            ')
-  const mobile = PAGES.map((p, i) => `<li style="--i:${i}"><a href="${p.slug}.html" data-nav="${p.nav}"${p.nav === active ? ' class="is-active" aria-current="page"' : ''}><small>${String(i + 1).padStart(2, '0')}</small>${esc(p.label)}</a></li>`).join('')
+  const nav = navBar(active)
+  // Mobile overlay mirrors the same five groups, so the two navigations never drift apart.
+  const mobile = [
+    `<li style="--i:0"><a href="index.html" data-nav="home"${active === 'home' ? ' class="is-active" aria-current="page"' : ''}><small>01</small>Home</a></li>`,
+    ...NAV_GROUPS.flatMap((g) => {
+      const kids = g.pages.map(bySlug).filter(Boolean)
+      return kids.map((p, j) => `<li style="--i:${j + 1}"><a href="${p.slug}.html" data-nav="${p.nav}"${p.nav === active ? ' class="is-active" aria-current="page"' : ''}><small>${esc(g.label.slice(0, 2).toUpperCase())}</small>${esc(p.label)}</a></li>`)
+    }),
+    `<li style="--i:9"><a href="contact.html" data-nav="contact"${active === 'contact' ? ' class="is-active" aria-current="page"' : ''}><small>CO</small>Contact</a></li>`,
+  ].join('')
   const explore = ['expeditions', 'history', 'types', 'techniques', 'records']
   const prepare = ['sheltering', 'hazards', 'guidelines', 'clubs', 'stories']
   const link = (n) => PAGES.find((p) => p.nav === n)
@@ -196,7 +238,7 @@ ${content}
 
     <div class="toast-container position-fixed top-0 end-0 p-3 offline-toast">
       <div id="offlineToast" class="toast" role="status" aria-live="polite" aria-atomic="true">
-        <div class="toast-body"><i class="bi bi-wifi-off me-2"></i>Our server is unreachable. Showing saved content; forms are temporarily unavailable.<button type="button" class="btn-close btn-close-white ms-2" data-bs-dismiss="toast" aria-label="Close"></button></div>
+        <div class="toast-body"><i class="bi bi-cloud-slash me-2"></i>Enquiries are offline right now &mdash; you are seeing saved content, and we cannot receive messages until the server is back.<button type="button" class="btn-close btn-close-white ms-2" data-bs-dismiss="toast" aria-label="Close"></button></div>
       </div>
     </div>
 

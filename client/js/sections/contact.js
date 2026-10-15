@@ -1,5 +1,5 @@
 // Contact form + newsletter: client-side validation, server save, success animation.
-import { postEnquiry, postNewsletter, getInterests } from '../api.js'
+import { postEnquiry, postNewsletter, getInterests, raiseOfflineToast } from '../api.js'
 
 const emailOk = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)
 
@@ -60,6 +60,8 @@ export function initContact() {
       $('#formNote').addClass('is-error').text(res.data.error || 'Please correct the highlighted fields.')
     } else {
       $('#formNote').addClass('is-error').text(res.status === 0 ? 'The server appears to be offline. Your message was not saved — please try again shortly.' : (res.data.error || 'Something went wrong. Please try again.'))
+      // only now is an offline notice relevant to the visitor
+      if (res.status === 0 || res.status >= 502) raiseOfflineToast()
     }
   })
 
@@ -73,7 +75,10 @@ export function initContact() {
     if (!emailOk(email)) { note.addClass('is-error').text('Please enter a valid email address.'); return }
     const res = await postNewsletter(email)
     if (res.ok) { note.addClass('is-ok').text(res.data.message || 'You are on the list.'); this.reset() }
-    else note.addClass('is-error').text(res.data.error || 'Unable to subscribe right now.')
+    else {
+      note.addClass('is-error').text(res.data.error || 'Unable to subscribe right now.')
+      if (res.status === 0 || res.status >= 502) raiseOfflineToast()
+    }
   })
 
   // sensible behaviour after "Send another"

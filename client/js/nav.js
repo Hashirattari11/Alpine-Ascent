@@ -19,6 +19,14 @@ function setActive(id) {
     if (on) this.setAttribute('aria-current', 'page')
     else this.removeAttribute('aria-current')
   })
+  // Mark the dropdown button whose flyout contains the current page.
+  $('.nav-item--has-menu').each(function () {
+    const $item = $(this)
+    const contains = $item.find(`.nav-flyout a[data-nav="${id}"]`).length > 0
+    $item.toggleClass('is-open-current', contains)
+    if (!contains) $item.removeAttr('data-current')
+    else $item.attr('data-current', id)
+  })
 }
 
 const lock = (id, ms = 2500) => {
@@ -75,7 +83,42 @@ export function initNav() {
       else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus() }
     }
   })
-  /* the overlay is the only navigation at every width, so no resize handler is needed */
+  /* ---- dropdown menus: click, hover, keyboard, Escape, outside click ---- */
+  const $items = $nav.find('.nav-item--has-menu')
+  const closeMenus = (except) => {
+    $items.each(function () {
+      if (this === except) return
+      $(this).removeClass('is-open').find('.nav-toggle').attr('aria-expanded', 'false')
+    })
+  }
+  const closeAll = () => closeMenus(null)
+
+  $nav.on('click', '[data-menu-toggle]', function (e) {
+    e.preventDefault()
+    e.stopPropagation()
+    const $item = $(this).closest('.nav-item--has-menu')
+    const opening = !$item.hasClass('is-open')
+    closeMenus($item[0])
+    $item.toggleClass('is-open', opening).find('.nav-toggle').attr('aria-expanded', String(opening))
+  })
+
+  // Hover is handled in CSS; this only syncs aria and closes any sibling that is open.
+  $items.on('mouseenter', function () { closeMenus(this) })
+
+  $nav.on('keydown', '.nav-flyout a, .nav-toggle', (e) => {
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return
+    const $item = $(e.target).closest('.nav-item--has-menu')
+    const links = $item.find('.nav-flyout a').toArray()
+    if (!links.length) return
+    e.preventDefault()
+    const i = links.indexOf(e.target)
+    const next = e.key === 'ArrowDown' ? (i + 1) % links.length : (i - 1 + links.length) % links.length
+    links[next].focus()
+  })
+
+  $(document).on('click', (e) => { if (!$(e.target).closest('.site-nav').length) closeAll() })
+  $(document).on('keydown', (e) => { if (e.key === 'Escape') { closeAll(); $nav.find('.nav-toggle[aria-expanded="true"]').first().trigger('focus') } })
+  $(window).on('resize', () => { if (window.innerWidth < 900) closeAll() })
 
   /* ---- link clicks update the active colour immediately ---- */
   $(document).on('click', '.nav-list a, .mobile-menu a[data-nav]', function () {

@@ -5,12 +5,21 @@ const cache = new Map()
 
 export const apiState = { offline: false }
 
+// Reading saved content while the API is down is a perfectly good state, not an error to
+// shout about on every page load. The notice is kept quiet: the .is-offline class is what
+// styles things, and the toast is only raised when the visitor actually tries to submit a form.
 function notifyOffline() {
   if (apiState.offline) return
   apiState.offline = true
   document.documentElement.classList.add('is-offline')
+  raiseOfflineToast()
+}
+
+/** Called by the forms when a submission fails, so the message arrives when it is relevant. */
+export function raiseOfflineToast() {
   const el = document.getElementById('offlineToast')
-  if (el && window.bootstrap) bootstrap.Toast.getOrCreateInstance(el, { autohide: true, delay: 9000 }).show()
+  if (!el || !window.bootstrap) return
+  bootstrap.Toast.getOrCreateInstance(el, { autohide: true, delay: 6000 }).show()
 }
 
 /** GET /api/<name> with automatic offline fallback. Resolves { data, offline }. Results are cached. */

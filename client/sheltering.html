@@ -77,20 +77,31 @@
 
         <nav class="site-nav__menu" aria-label="Primary">
           <ul class="nav-list" id="navList">
-            <li><a href="index.html" data-nav="home">Home</a></li>
-            <li><a href="expeditions.html" data-nav="expeditions">Expeditions</a></li>
-            <li><a href="history.html" data-nav="history">History</a></li>
-            <li><a href="types.html" data-nav="types">Types</a></li>
-            <li><a href="techniques.html" data-nav="techniques">Techniques</a></li>
-            <li><a href="sheltering.html" data-nav="sheltering" class="is-active" aria-current="page">Sheltering</a></li>
-            <li><a href="hazards.html" data-nav="hazards">Hazards</a></li>
-            <li><a href="records.html" data-nav="records">Records</a></li>
-            <li><a href="clubs.html" data-nav="clubs">Clubs &amp; Map</a></li>
-            <li><a href="stories.html" data-nav="stories">Stories</a></li>
-            <li><a href="gallery.html" data-nav="gallery">Gallery</a></li>
-            <li><a href="latest.html" data-nav="latest">Latest</a></li>
-            <li><a href="guidelines.html" data-nav="guidelines">Guidelines</a></li>
-            <li><a href="contact.html" data-nav="contact">Contact</a></li>
+            <li class="nav-item nav-item--has-menu">
+            <button type="button" class="nav-link nav-toggle" aria-expanded="false" aria-haspopup="true" data-menu-toggle>Expeditions<i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+            <div class="nav-flyout">
+              <ul><li><a href="expeditions.html" data-nav="expeditions">Expeditions</a></li><li><a href="types.html" data-nav="types">Types</a></li></ul>
+            </div>
+          </li>
+            <li class="nav-item nav-item--has-menu">
+            <button type="button" class="nav-link nav-toggle" aria-expanded="false" aria-haspopup="true" data-menu-toggle>Learn<i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+            <div class="nav-flyout">
+              <ul><li><a href="techniques.html" data-nav="techniques">Techniques</a></li><li><a href="history.html" data-nav="history">History</a></li></ul>
+            </div>
+          </li>
+            <li class="nav-item nav-item--has-menu is-open-current">
+            <button type="button" class="nav-link nav-toggle" aria-expanded="false" aria-haspopup="true" data-menu-toggle>Safety<i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+            <div class="nav-flyout">
+              <ul><li><a href="hazards.html" data-nav="hazards">Hazards</a></li><li><a href="sheltering.html" data-nav="sheltering" class="is-active" aria-current="page">Sheltering</a></li><li><a href="guidelines.html" data-nav="guidelines">Guidelines</a></li></ul>
+            </div>
+          </li>
+            <li class="nav-item nav-item--has-menu">
+            <button type="button" class="nav-link nav-toggle" aria-expanded="false" aria-haspopup="true" data-menu-toggle>Explore<i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+            <div class="nav-flyout">
+              <ul><li><a href="gallery.html" data-nav="gallery">Gallery</a></li><li><a href="clubs.html" data-nav="clubs">Clubs &amp; Map</a></li><li><a href="stories.html" data-nav="stories">Stories</a></li></ul>
+            </div>
+          </li>
+            <li class="nav-item"><a class="nav-link" href="records.html" data-nav="records">More</a></li>
           </ul>
         </nav>
 
@@ -109,7 +120,7 @@
 
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Site menu">
       <div class="mobile-menu__bg" aria-hidden="true"></div>
-      <nav aria-label="Mobile primary"><ul class="mobile-menu__list" id="mobileList"><li style="--i:0"><a href="index.html" data-nav="home"><small>01</small>Home</a></li><li style="--i:1"><a href="expeditions.html" data-nav="expeditions"><small>02</small>Expeditions</a></li><li style="--i:2"><a href="history.html" data-nav="history"><small>03</small>History</a></li><li style="--i:3"><a href="types.html" data-nav="types"><small>04</small>Types</a></li><li style="--i:4"><a href="techniques.html" data-nav="techniques"><small>05</small>Techniques</a></li><li style="--i:5"><a href="sheltering.html" data-nav="sheltering" class="is-active" aria-current="page"><small>06</small>Sheltering</a></li><li style="--i:6"><a href="hazards.html" data-nav="hazards"><small>07</small>Hazards</a></li><li style="--i:7"><a href="records.html" data-nav="records"><small>08</small>Records</a></li><li style="--i:8"><a href="clubs.html" data-nav="clubs"><small>09</small>Clubs &amp; Map</a></li><li style="--i:9"><a href="stories.html" data-nav="stories"><small>10</small>Stories</a></li><li style="--i:10"><a href="gallery.html" data-nav="gallery"><small>11</small>Gallery</a></li><li style="--i:11"><a href="latest.html" data-nav="latest"><small>12</small>Latest</a></li><li style="--i:12"><a href="guidelines.html" data-nav="guidelines"><small>13</small>Guidelines</a></li><li style="--i:13"><a href="contact.html" data-nav="contact"><small>14</small>Contact</a></li></ul></nav>
+      <nav aria-label="Mobile primary"><ul class="mobile-menu__list" id="mobileList"><li style="--i:0"><a href="index.html" data-nav="home"><small>01</small>Home</a></li><li style="--i:1"><a href="expeditions.html" data-nav="expeditions"><small>EX</small>Expeditions</a></li><li style="--i:2"><a href="types.html" data-nav="types"><small>EX</small>Types</a></li><li style="--i:1"><a href="techniques.html" data-nav="techniques"><small>LE</small>Techniques</a></li><li style="--i:2"><a href="history.html" data-nav="history"><small>LE</small>History</a></li><li style="--i:1"><a href="hazards.html" data-nav="hazards"><small>SA</small>Hazards</a></li><li style="--i:2"><a href="sheltering.html" data-nav="sheltering" class="is-active" aria-current="page"><small>SA</small>Sheltering</a></li><li style="--i:3"><a href="guidelines.html" data-nav="guidelines"><small>SA</small>Guidelines</a></li><li style="--i:1"><a href="gallery.html" data-nav="gallery"><small>EX</small>Gallery</a></li><li style="--i:2"><a href="clubs.html" data-nav="clubs"><small>EX</small>Clubs &amp; Map</a></li><li style="--i:3"><a href="stories.html" data-nav="stories"><small>EX</small>Stories</a></li><li style="--i:1"><a href="records.html" data-nav="records"><small>MO</small>Records</a></li><li style="--i:2"><a href="latest.html" data-nav="latest"><small>MO</small>Latest</a></li><li style="--i:9"><a href="contact.html" data-nav="contact"><small>CO</small>Contact</a></li></ul></nav>
       <p class="mobile-menu__foot">Where the sky begins &middot; <a href="contact.html" data-nav="contact">Plan your ascent</a></p>
     </div>
 
@@ -177,7 +188,7 @@
 
     <div class="toast-container position-fixed top-0 end-0 p-3 offline-toast">
       <div id="offlineToast" class="toast" role="status" aria-live="polite" aria-atomic="true">
-        <div class="toast-body"><i class="bi bi-wifi-off me-2"></i>Our server is unreachable. Showing saved content; forms are temporarily unavailable.<button type="button" class="btn-close btn-close-white ms-2" data-bs-dismiss="toast" aria-label="Close"></button></div>
+        <div class="toast-body"><i class="bi bi-cloud-slash me-2"></i>Enquiries are offline right now &mdash; you are seeing saved content, and we cannot receive messages until the server is back.<button type="button" class="btn-close btn-close-white ms-2" data-bs-dismiss="toast" aria-label="Close"></button></div>
       </div>
     </div>
 
