@@ -1,14 +1,6 @@
 const BASE = window.AA_API_BASE || '/api'
 const TIMEOUT = 6000
 const cache = new Map()
-export const apiState = { offline: false }
-
-function notifyOffline() {
-  if (apiState.offline) return
-  apiState.offline = true
-  document.documentElement.classList.add('is-offline')
-  raiseOfflineToast()
-}
 
 export function raiseOfflineToast() {
   const el = document.getElementById('offlineToast')
@@ -23,7 +15,7 @@ export function getResource(name, { force = false } = {}) {
       .done((data) => resolve({ data, offline: false }))
       .fail(() => {
         $.ajax({ url: `data/${name}.json`, dataType: 'json', timeout: TIMEOUT })
-          .done((data) => { notifyOffline(); resolve({ data, offline: true }) })
+          .done((data) => resolve({ data, offline: true }))
           .fail(() => reject(new Error(`Could not load ${name}`)))
       })
   })
@@ -34,7 +26,7 @@ function send(method, path, body) {
   return new Promise((resolve) => {
     $.ajax({ url: `${BASE}${path}`, method, contentType: 'application/json', dataType: 'json', data: body ? JSON.stringify(body) : undefined, timeout: TIMEOUT })
       .done((data, _s, xhr) => resolve({ ok: true, status: xhr.status, data }))
-      .fail((xhr) => { if (xhr.status === 0 || xhr.status >= 502) notifyOffline(); resolve({ ok: false, status: xhr.status, data: xhr.responseJSON || {} }) })
+      .fail((xhr) => resolve({ ok: false, status: xhr.status, data: xhr.responseJSON || {} }))
   })
 }
 

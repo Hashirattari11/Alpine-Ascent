@@ -38,6 +38,7 @@ export function initTypes() {
   const card = (t, i) => `
     <div class="col-md-6 col-xl-3" data-reveal style="--d:${(i % 4) * 0.1}s">
       <div class="type-card zoom" data-type="${esc(t.id)}">
+        <div class="type-card__inner">
         <div class="type-face type-face--front">
           ${picture(t.image, `${t.title}: ${t.tagline}`, { sizes: '(min-width: 1200px) 300px, 100vw' })}
           <div class="type-front__body"><span class="type-front__num">${pad(i + 1)} · ${pips(t.difficulty)}</span>
