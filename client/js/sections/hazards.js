@@ -4,7 +4,7 @@ import { esc, picture, skeleton } from '../utils.js'
 const level = (r) => (r >= 5 ? 'r3' : r === 4 ? 'r2' : 'r1')
 
 const card = (h, i) => `
-  <div class="col-md-6 col-lg-4" data-reveal style="--d:${(i % 3) * 0.12}s">
+  <div class="card-grid-item" data-reveal style="--d:${(i % 4) * 0.08}s">
     <article class="card-lux hazard-card tilt zoom ${level(h.risk)}" data-reveal="none">
       <div class="badge-wrap">
         ${picture(h.image, `${h.title}: mountain hazard`, { sizes: '(min-width: 992px) 400px, 100vw' })}
@@ -28,7 +28,7 @@ const card = (h, i) => `
 
 export function initHazards() {
   return mount('#hazardGrid', 'hazards', (list) => list.map(card).join(''), {
-    skeleton: skeleton(3, 'col-md-6 col-lg-4', 560),
+    skeleton: skeleton(3, 'card-grid-item', 560),
     label: 'hazard information',
     after: ($g) => {
       // bar animation is keyed off .is-in on the card

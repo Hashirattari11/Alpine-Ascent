@@ -103,6 +103,25 @@
 /* ---------- Shelter ---------- */
 .shelter-card, .hazard-card, .news-card, .guide-card, .record-card { height: 100%; }
 .card-lux { height: 100%; display: flex; flex-direction: column; background: linear-gradient(180deg, rgba(20, 28, 37, 0.85), rgba(12, 17, 23, 0.9)); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform 0.55s var(--ease), border-color 0.4s, box-shadow 0.5s; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); will-change: transform; }
+
+/* ---------- Card grids ----------
+   Bootstrap columns leave a ragged last row when the item count is not a multiple of the
+   column count (a lone card stranded bottom-left). This flex grid keeps all cards equal
+   width and centres the short last row; .card-grid--three caps XL at 3 columns so counts
+   like 6 or 9 always land on complete rows. */
+.card-grid { --aa-cols: 1; display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 1.5rem; }
+.card-grid > * { flex: 0 0 auto; width: calc((100% - (var(--aa-cols) - 1) * 1.5rem) / var(--aa-cols)); min-width: 0; display: flex; flex-direction: column; }
+.card-grid > * > .card-lux, .card-grid > * > article { flex: 1 1 auto; }
+@media (min-width: 576px) { .card-grid { --aa-cols: 2; } }
+@media (min-width: 992px) { .card-grid, .card-grid--three { --aa-cols: 3; } }
+@media (min-width: 1200px) { .card-grid { --aa-cols: 4; } .card-grid--three { --aa-cols: 3; } }
+/* Full-width children (e.g. the checklist reset row) must outgrow the equal-card track. */
+.card-grid > .col-12 { width: 100%; }
+/* Tilt: the JS drives transform every mousemove, so kill the 550ms card transition while
+   the card is tilting (otherwise it lags mushily); on leave the class drops and the card
+   eases back on the normal transform transition. */
+.tilt.is-tilting { transition: none; }
+
 .card-lux:hover { border-color: rgba(201, 169, 97, 0.55); box-shadow: 0 30px 60px -28px rgba(0, 0, 0, 0.9); }
 .card-lux .img-wrap { aspect-ratio: 16 / 10; }
 .card-lux__body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
@@ -320,8 +339,18 @@
 .exp-title { font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 0.7rem; }
 .exp-card .card-lux__body > p { color: var(--muted); }
 .exp-tags { margin-top: 0.9rem; }
-.exp-detail { display: grid; gap: 1.6rem; margin-top: 1.4rem; padding-top: 1.4rem; border-top: 1px solid var(--line); }
+/* Collapsed itinerary block opened by the card's arrow button: grid-template-rows 0fr -> 1fr
+   keeps the easing fully animatable without measuring heights. */
+.exp-more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.55s var(--ease); }
+.exp-card--open .exp-more { grid-template-rows: 1fr; }
+.exp-more__inner { overflow: hidden; min-height: 0; }
+.exp-toggle { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; margin: 1.1rem 0 0; padding: 0.95rem 0 0; border: 0; border-top: 1px solid var(--line); background: none; color: var(--text); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; text-align: left; cursor: pointer; transition: color 0.3s var(--ease); }
+.exp-toggle i { color: var(--gold); transition: transform 0.45s var(--ease); }
+.exp-toggle:hover, .exp-toggle:focus-visible { color: var(--gold); }
+.exp-toggle.is-open i { transform: rotate(180deg); }
+.exp-detail { display: grid; gap: 1.6rem; padding-top: 1.2rem; padding-bottom: 0.4rem; }
 @media (min-width: 768px) { .exp-detail { grid-template-columns: 1.35fr 1fr; gap: 2rem; } }
+.exp-more + .exp-foot { border-top: 0; padding-top: 0.4rem; }
 .exp-col h3 { font-family: var(--ff-body); font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 0.9rem; }
 .mini-itins { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.9rem; }
 .mini-itins li { display: grid; grid-template-columns: 74px 1fr; gap: 0.9rem; align-items: start; }

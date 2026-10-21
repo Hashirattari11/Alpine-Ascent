@@ -8,7 +8,7 @@ const save = (v) => localStorage.setItem(LS, JSON.stringify(v))
 const card = (c, i, checks) => {
   const done = c.items.filter((_, k) => checks[`${c.id}:${k}`]).length
   return `
-  <div class="col-md-6 col-lg-4" data-reveal style="--d:${(i % 3) * 0.12}s">
+  <div class="card-grid-item" data-reveal style="--d:${(i % 4) * 0.08}s">
     <article class="card-lux guide-card" data-guide="${esc(c.id)}">
       <div class="card-lux__body">
         <span class="icon-circle"><i class="bi bi-${esc(c.icon)}" aria-hidden="true"></i></span>
@@ -30,11 +30,11 @@ export function initGuidelines() {
     const hasChecks = Object.values(checks).some(Boolean)
     return `
       ${g.cards.map((c, i) => card(c, i, checks)).join('')}
-      <div class="col-12" data-reveal>
-        <p class="text-end"><button type="button" class="btn btn-ghost btn-sm" id="resetChecks" ${hasChecks ? '' : 'hidden'}><i class="bi bi-arrow-counterclockwise"></i><span>Reset checklist</span></button></p>
+      <div class="col-12" data-reveal ${hasChecks ? '' : 'hidden'}>
+        <p class="text-end"><button type="button" class="btn btn-ghost btn-sm" id="resetChecks"><i class="bi bi-arrow-counterclockwise"></i><span>Reset checklist</span></button></p>
       </div>`
   }, {
-    skeleton: skeleton(3, 'col-md-6 col-lg-4', 460),
+    skeleton: `<div class="card-grid">${skeleton(3, 'card-grid-item', 460)}</div>`,
     label: 'the guidelines',
     after: ($el, g) => {
       $el.on('change', 'input[type="checkbox"]', function () {
@@ -47,7 +47,7 @@ export function initGuidelines() {
         const done = g.cards.find((c) => c.id === gid).items.filter((_, idx) => all[`${gid}:${idx}`]).length
         cardEl.querySelector('[data-count-label]').textContent = `${done}/${total} ready`
         cardEl.querySelector('.guide-progress span i').style.transform = `scaleX(${done / total})`
-        $('#resetChecks').prop('hidden', false)
+        $('#resetChecks').closest('.col-12').prop('hidden', false)
       })
       $el.on('click', '#resetChecks', () => {
         localStorage.removeItem(LS)
@@ -57,7 +57,7 @@ export function initGuidelines() {
           cardEl.querySelector('[data-count-label]').textContent = `0/${c.items.length} ready`
           cardEl.querySelector('.guide-progress span i').style.transform = 'scaleX(0)'
         })
-        $('#resetChecks').prop('hidden', true)
+        $('#resetChecks').closest('.col-12').prop('hidden', true)
       })
 
       // gear banner

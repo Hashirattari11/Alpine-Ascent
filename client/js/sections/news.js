@@ -5,7 +5,7 @@ const paragraphs = (body) => body.split(/\n+/).map((p) => `<p>${esc(p)}</p>`).jo
 let articles = []
 
 const card = (n, i) => `
-  <div class="col-md-6 col-lg-4" data-reveal style="--d:${(i % 3) * 0.12}s">
+  <div class="card-grid-item" data-reveal style="--d:${(i % 4) * 0.08}s">
     <article class="card-lux news-card tilt zoom">
       ${picture(n.image, n.title, { sizes: '(min-width: 992px) 400px, 100vw' })}
       <div class="card-lux__body">
@@ -22,7 +22,7 @@ export function initNews() {
     articles = data
     return data.map(card).join('')
   }, {
-    skeleton: skeleton(3, 'col-md-6 col-lg-4', 400),
+    skeleton: skeleton(3, 'card-grid-item', 400),
     label: 'the latest news',
     after: () => {
       $('#newsGrid').on('click', '[data-news]', function () {

@@ -14,7 +14,7 @@ const money = (e) => `${e.currency} ${e.priceFrom.toLocaleString('en-US')}`
 const dots = (n) => `<span class="dots" role="img" aria-label="Difficulty ${n} of 5">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= n ? 'on' : ''}"></i>`).join('')}</span>`
 
 const card = (e, i, full) => `
-  <div class="col-lg-6" data-reveal style="--d:${(i % 2) * 0.12}s">
+  <div class="card-grid-item" data-reveal style="--d:${(i % 3) * 0.1}s">
     <article class="card-lux exp-card tilt" id="exp-${esc(e.id)}">
       <div class="badge-wrap">
         ${picture(e.image, `${e.name}${e.height ? ` — ${e.peak}, ${e.height.toLocaleString('en-US')} m` : ''}`, { sizes: full ? '(min-width: 992px) 620px, 100vw' : '(min-width: 992px) 40vw, 100vw' })}
@@ -31,7 +31,12 @@ const card = (e, i, full) => `
         <p>${esc(e.summary)}</p>
         <ul class="tag-list exp-tags">${e.highlights.slice(0, 3).map((h) => `<li>${esc(h)}</li>`).join('')}</ul>
         ${full ? `
-        <div class="exp-detail">
+        <button type="button" class="exp-toggle" aria-expanded="false" aria-controls="expd-${esc(e.id)}">
+          <span>Itinerary &amp; full details</span><i class="bi bi-chevron-down" aria-hidden="true"></i>
+        </button>
+        <div class="exp-more" id="expd-${esc(e.id)}">
+          <div class="exp-more__inner">
+            <div class="exp-detail">
           <div class="exp-col">
             <h3>Day by day</h3>
             <ol class="mini-itins">
@@ -45,6 +50,8 @@ const card = (e, i, full) => `
             <ul class="tip-list">${e.skills.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>
             <p class="small mt-3 mb-0" style="color:var(--muted)"><strong style="color:var(--text)">Grade:</strong> ${esc(e.grade)}</p>
           </div>
+        </div>
+          </div>
         </div>` : ''}
         <div class="exp-foot">
           <div><small>From</small><strong>${esc(money(e))}</strong><small>per person</small></div>
@@ -56,7 +63,7 @@ const card = (e, i, full) => `
 
 export function initExpeditionsGrid() {
   return mount('#expGrid', 'expeditions', (list) => list.slice(0, 6).map((e, i) => card(e, i, false)).join(''), {
-    skeleton: skeleton(6, 'col-lg-6', 420),
+    skeleton: `<div class="card-grid">${skeleton(6, 'card-grid-item', 420)}</div>`,
     label: 'our signature expeditions',
   })
 }
@@ -78,6 +85,14 @@ export async function initExpeditions() {
     $count.text(`${shown.length} of ${all.length} expeditions shown`)
     afterRender($list[0])
   }
+
+  // Arrow toggle: collapsed itinerary/details open up on click, chevron flips with it.
+  $list.on('click', '.exp-toggle', function () {
+    const $btn = $(this)
+    const open = $btn.attr('aria-expanded') !== 'true'
+    $btn.attr('aria-expanded', String(open)).toggleClass('is-open', open)
+    $btn.closest('.exp-card').toggleClass('exp-card--open', open)
+  })
 
   const { data } = await getResource('expeditions')
   all = data

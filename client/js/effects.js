@@ -166,15 +166,18 @@ export function initPointerEffects() {
     })
     .on('mouseleave', '.magnetic', function () { this.style.transform = '' })
 
-  // custom cursor
+  // custom cursor: dot sits exactly under the pointer, the ring chases it with a lerp
+  // tight enough to feel attached but still eased. Skip frames where the pointer has not
+  // moved so the loop never fights its own stale values.
   const ring = document.getElementById('cursorRing')
   const dot = document.getElementById('cursorDot')
   let mx = 0, my = 0, rx = 0, ry = 0, raf = null
   const loop = () => {
-    rx += (mx - rx) * 0.16
-    ry += (my - ry) * 0.16
+    rx += (mx - rx) * 0.24
+    ry += (my - ry) * 0.24
+    if (Math.abs(mx - rx) < 0.05 && Math.abs(my - ry) < 0.05) { rx = mx; ry = my }
     ring.style.transform = `translate3d(${rx.toFixed(1)}px, ${ry.toFixed(1)}px, 0)`
-    raf = requestAnimationFrame(loop)
+    raf = Math.abs(mx - rx) < 0.05 && Math.abs(my - ry) < 0.05 ? null : requestAnimationFrame(loop)
   }
   window.addEventListener('mousemove', (e) => {
     mx = e.clientX; my = e.clientY

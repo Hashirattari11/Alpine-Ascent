@@ -16,14 +16,45 @@
     "guideRatio": "1:3",
     "image": "sunrise-clouds",
     "summary": "The classic first alpine summit: the Goûter route from Saint-Gervais, with a skills day on the Mer de Glace, an acclimatisation night at 3,842 m and a sunrise on the roof of Western Europe.",
-    "highlights": ["Mer de Glace ice workshop", "Refuge du Goûter night", "Aiguille du Midi cable car ascent", "Summit push between 04:00 and 09:00"],
-    "includes": ["Four days guiding", "Technical group equipment", "Refuge half-board", "Lift passes", "Geneva transfers"],
-    "skills": ["Hiking fitness", "First crampon use", "Rope team basics"],
+    "highlights": [
+      "Mer de Glace ice workshop",
+      "Refuge du Goûter night",
+      "Aiguille du Midi cable car ascent",
+      "Summit push between 04:00 and 09:00"
+    ],
+    "includes": [
+      "Four days guiding",
+      "Technical group equipment",
+      "Refuge half-board",
+      "Lift passes",
+      "Geneva transfers"
+    ],
+    "skills": [
+      "Hiking fitness",
+      "First crampon use",
+      "Rope team basics"
+    ],
     "itinerary": [
-      { "day": "Day 1", "title": "Chamonix · skills on the Mer de Glace", "detail": "Meet the group, kit check and crampon technique on a lower glacier of the Mer de Glace, then an evening briefing over a fondue." },
-      { "day": "Day 2", "title": "Aiguille du Midi · mixed ground", "detail": "Ride the cable car to 3,842 m, practise on mixed terrain and short roped climbing, and sleep high at the Albert 1er hut." },
-      { "day": "Day 3", "title": "Goûter route · summit day", "detail": "Cross the Grand Couloir roped before dawn, climb the Dôme du Goûter and reach the summit for sunrise. Descend to the Couvercle hut." },
-      { "day": "Day 4", "title": "Chamonix · debrief", "detail": "Walk out through the aiguilles, gear return and a closing dinner with your guide." }
+      {
+        "day": "Day 1",
+        "title": "Chamonix · skills on the Mer de Glace",
+        "detail": "Meet the group, kit check and crampon technique on a lower glacier of the Mer de Glace, then an evening briefing over a fondue."
+      },
+      {
+        "day": "Day 2",
+        "title": "Aiguille du Midi · mixed ground",
+        "detail": "Ride the cable car to 3,842 m, practise on mixed terrain and short roped climbing, and sleep high at the Albert 1er hut."
+      },
+      {
+        "day": "Day 3",
+        "title": "Goûter route · summit day",
+        "detail": "Cross the Grand Couloir roped before dawn, climb the Dôme du Goûter and reach the summit for sunrise. Descend to the Couvercle hut."
+      },
+      {
+        "day": "Day 4",
+        "title": "Chamonix · debrief",
+        "detail": "Walk out through the aiguilles, gear return and a closing dinner with your guide."
+      }
     ]
   },
   {
@@ -43,14 +74,44 @@
     "guideRatio": "1:1",
     "image": "hero-matterhorn",
     "summary": "Four days on the most photographed mountain in the world. The Hörnli ridge with fixed lines, an early start to beat the crowds and full crampon-and-axe technique on the Matterhornhorn.",
-    "highlights": ["Zermatt acclimatisation day", "Hörnli hut at 3,260 m", "Fixed-line ridge at dawn", "Optional Mönchs traversal"],
-    "includes": ["4 days guiding, 1:1 ratio", "Technical kit", "Hörnli hut half-board", "Zermatt transfers"],
-    "skills": ["Confident glacier travel", "Axe and crampon technique", "Head for heights"],
+    "highlights": [
+      "Zermatt acclimatisation day",
+      "Hörnli hut at 3,260 m",
+      "Fixed-line ridge at dawn",
+      "Optional Mönchs traversal"
+    ],
+    "includes": [
+      "4 days guiding, 1:1 ratio",
+      "Technical kit",
+      "Hörnli hut half-board",
+      "Zermatt transfers"
+    ],
+    "skills": [
+      "Confident glacier travel",
+      "Axe and crampon technique",
+      "Head for heights"
+    ],
     "itinerary": [
-      { "day": "Day 1", "title": "Zermatt · acclimatisation", "detail": "Weather briefing, rope work refresher and a 2,600 m ascent to the Trift glacier for movement on snow." },
-      { "day": "Day 2", "title": "Hörnli hut", "detail": "Train on the Trift glacier, then move to the Hörnli hut for an early night." },
-      { "day": "Day 3", "title": "Summit day", "detail": "Leave at 03:00, climb the fixed-line ridge and summit around 07:00 with the Matterhornhorn scramble at the top." },
-      { "day": "Day 4", "title": "Reserve day", "detail": "A full spare day held for weather, plus a descent clinic and an evening in Zermatt." }
+      {
+        "day": "Day 1",
+        "title": "Zermatt · acclimatisation",
+        "detail": "Weather briefing, rope work refresher and a 2,600 m ascent to the Trift glacier for movement on snow."
+      },
+      {
+        "day": "Day 2",
+        "title": "Hörnli hut",
+        "detail": "Train on the Trift glacier, then move to the Hörnli hut for an early night."
+      },
+      {
+        "day": "Day 3",
+        "title": "Summit day",
+        "detail": "Leave at 03:00, climb the fixed-line ridge and summit around 07:00 with the Matterhornhorn scramble at the top."
+      },
+      {
+        "day": "Day 4",
+        "title": "Reserve day",
+        "detail": "A full spare day held for weather, plus a descent clinic and an evening in Zermatt."
+      }
     ]
   },
   {
@@ -70,16 +131,55 @@
     "guideRatio": "1:4",
     "image": "himalaya-snow",
     "summary": "The Khumbu trek to base camp followed by a first 6,000 m summit: crampons, a glacier on the Lhotse face and a summit at dawn above the icefall.",
-    "highlights": ["Everest Base Camp trek", "Lukla flight and acclimatisation days", "Crampon training with a Sherpa guide", "Summit night in a four-season tent"],
-    "includes": ["18 days guiding", "Tea houses and full board in trek", "Four-season tent and expedition kit", "Lukla flights", "Sagarmatha permits"],
-    "skills": ["Strong trekking fitness", "Steep snow and step-through crampons", "Altitude experience helpful"],
+    "highlights": [
+      "Everest Base Camp trek",
+      "Lukla flight and acclimatisation days",
+      "Crampon training with a Sherpa guide",
+      "Summit night in a four-season tent"
+    ],
+    "includes": [
+      "18 days guiding",
+      "Tea houses and full board in trek",
+      "Four-season tent and expedition kit",
+      "Lukla flights",
+      "Sagarmatha permits"
+    ],
+    "skills": [
+      "Strong trekking fitness",
+      "Steep snow and step-through crampons",
+      "Altitude experience helpful"
+    ],
     "itinerary": [
-      { "day": "Day 1–3", "title": "Kathmandu to Namche", "detail": "Land in Kathmandu, then fly to Lukla and trek into the Khumbu with two acclimatisation nights in Namche Bazaar." },
-      { "day": "Day 4–8", "title": "Base camp", "detail": "Trek to Deboche and Everest Base Camp, with rest days at Namche and Dingboche." },
-      { "day": "Day 9–10", "title": "Crampon training", "detail": "Skills on the Chhukung glacier: front-pointing, axe placement and crampon walking in fixed lines." },
-      { "day": "Day 11–13", "title": "Island Peak base camp", "detail": "Cross the Lhotse La, establish base camp at 5,100 m and rest before the push." },
-      { "day": "Day 14–15", "title": "Summit", "detail": "The headwall at 6,000 m, a ridge crossing and a 06:00 summit, then back to base camp for a well-earned Everest beer." },
-      { "day": "Day 16–18", "title": "Out", "detail": "Retreat through Tengboche, fly out from Lukla and a final night in Kathmandu." }
+      {
+        "day": "Day 1–3",
+        "title": "Kathmandu to Namche",
+        "detail": "Land in Kathmandu, then fly to Lukla and trek into the Khumbu with two acclimatisation nights in Namche Bazaar."
+      },
+      {
+        "day": "Day 4–8",
+        "title": "Base camp",
+        "detail": "Trek to Deboche and Everest Base Camp, with rest days at Namche and Dingboche."
+      },
+      {
+        "day": "Day 9–10",
+        "title": "Crampon training",
+        "detail": "Skills on the Chhukung glacier: front-pointing, axe placement and crampon walking in fixed lines."
+      },
+      {
+        "day": "Day 11–13",
+        "title": "Island Peak base camp",
+        "detail": "Cross the Lhotse La, establish base camp at 5,100 m and rest before the push."
+      },
+      {
+        "day": "Day 14–15",
+        "title": "Summit",
+        "detail": "The headwall at 6,000 m, a ridge crossing and a 06:00 summit, then back to base camp for a well-earned Everest beer."
+      },
+      {
+        "day": "Day 16–18",
+        "title": "Out",
+        "detail": "Retreat through Tengboche, fly out from Lukla and a final night in Kathmandu."
+      }
     ]
   },
   {
@@ -99,15 +199,50 @@
     "guideRatio": "1:2",
     "image": "ama-closeup",
     "summary": "Considered the most beautiful mountain in the Himalaya and one of the most technical trekking peaks. A three-week climb with Sherpa guides on steep ice, mixed ground and the infamous summit ridge.",
-    "highlights": ["Yak camp at 4,600 m", "The 6,000 m ridge", "Ama Dablam glacier ice-climbing", "Summit across the Cambrian Arete"],
-    "includes": ["21 days guiding", "Full board in camp", "Technical and expedition kit", "All permits", "Khumbu flights"],
-    "skills": ["Solid multi-pitch rock", "Steep ice climbing to WI4", "Prior 6,000 m experience"],
+    "highlights": [
+      "Yak camp at 4,600 m",
+      "The 6,000 m ridge",
+      "Ama Dablam glacier ice-climbing",
+      "Summit across the Cambrian Arete"
+    ],
+    "includes": [
+      "21 days guiding",
+      "Full board in camp",
+      "Technical and expedition kit",
+      "All permits",
+      "Khumbu flights"
+    ],
+    "skills": [
+      "Solid multi-pitch rock",
+      "Steep ice climbing to WI4",
+      "Prior 6,000 m experience"
+    ],
     "itinerary": [
-      { "day": "Day 1–6", "title": "Approach to yak camp", "detail": "Fly to Lukla and trek the classic Khumbu route to a comfortable camp below the southwest face." },
-      { "day": "Day 7–10", "title": "Skills & acclimatisation", "detail": "Ice-climbing sessions below camp, rest days and a careful check of the weather window." },
-      { "day": "Day 11–13", "title": "Camp 1 and 2", "detail": "Move through fixed lines on the glacier to Camp 2 at 5,800 m." },
-      { "day": "Day 14–15", "title": "Summit push", "detail": "A 02:00 start, the mixed ground to 6,500 m and the summit ridge with the full south-east face beneath you." },
-      { "day": "Day 16–21", "title": "Reserve & exit", "detail": "Weather reserve, then descend through Namche and Lukla with a closing dinner in Kathmandu." }
+      {
+        "day": "Day 1–6",
+        "title": "Approach to yak camp",
+        "detail": "Fly to Lukla and trek the classic Khumbu route to a comfortable camp below the southwest face."
+      },
+      {
+        "day": "Day 7–10",
+        "title": "Skills & acclimatisation",
+        "detail": "Ice-climbing sessions below camp, rest days and a careful check of the weather window."
+      },
+      {
+        "day": "Day 11–13",
+        "title": "Camp 1 and 2",
+        "detail": "Move through fixed lines on the glacier to Camp 2 at 5,800 m."
+      },
+      {
+        "day": "Day 14–15",
+        "title": "Summit push",
+        "detail": "A 02:00 start, the mixed ground to 6,500 m and the summit ridge with the full south-east face beneath you."
+      },
+      {
+        "day": "Day 16–21",
+        "title": "Reserve & exit",
+        "detail": "Weather reserve, then descend through Namche and Lukla with a closing dinner in Kathmandu."
+      }
     ]
   },
   {
@@ -127,16 +262,55 @@
     "guideRatio": "1:3",
     "image": "snow-forest",
     "summary": "Twenty-three days of glaciated ridge, a 20,000 ft carry and one of the most serious mountain environments on earth. Support team, sled hauling and the full permit system managed for you.",
-    "highlights": ["Glacier travel school", "Sled and pack-hauling training", "Camp on the 14,000 ft ridge", "20,310 ft summit ridge"],
-    "includes": ["23 days guiding", "All permits and fees", "Sled, rope and full technical kit", "Talkeetna logistics", "Park support"],
-    "skills": ["25 kg sled hauling", "Multi-day polar experience", "Glacier travel competence"],
+    "highlights": [
+      "Glacier travel school",
+      "Sled and pack-hauling training",
+      "Camp on the 14,000 ft ridge",
+      "20,310 ft summit ridge"
+    ],
+    "includes": [
+      "23 days guiding",
+      "All permits and fees",
+      "Sled, rope and full technical kit",
+      "Talkeetna logistics",
+      "Park support"
+    ],
+    "skills": [
+      "25 kg sled hauling",
+      "Multi-day polar experience",
+      "Glacier travel competence"
+    ],
     "itinerary": [
-      { "day": "Day 1–2", "title": "Talkeetna · logistics", "detail": "Gear check, food packing into sleds and a final weather and rope briefing." },
-      { "day": "Day 3–6", "title": "Glacier skills", "detail": "Kahiltna glacier training: rope travel, crevasse rescue, sled techniques and a rest day." },
-      { "day": "Day 7–11", "title": "Kahiltna to 11,000 ft", "detail": "Carry loads up the glacier through icefall and onto the moraine." },
-      { "day": "Day 12–16", "title": "High camp", "detail": "Move to 14,000 ft on the west buttress, carrying the cache and setting the high camp." },
-      { "day": "Day 17–19", "title": "Summit window", "detail": "Push the ridge in a staged attempt with full crevasse-field discipline and oxygen reserve." },
-      { "day": "Day 20–23", "title": "Descent and pack-out", "detail": "Descend the buttress, break camp and leave the Denali valley with a debrief in Talkeetna." }
+      {
+        "day": "Day 1–2",
+        "title": "Talkeetna · logistics",
+        "detail": "Gear check, food packing into sleds and a final weather and rope briefing."
+      },
+      {
+        "day": "Day 3–6",
+        "title": "Glacier skills",
+        "detail": "Kahiltna glacier training: rope travel, crevasse rescue, sled techniques and a rest day."
+      },
+      {
+        "day": "Day 7–11",
+        "title": "Kahiltna to 11,000 ft",
+        "detail": "Carry loads up the glacier through icefall and onto the moraine."
+      },
+      {
+        "day": "Day 12–16",
+        "title": "High camp",
+        "detail": "Move to 14,000 ft on the west buttress, carrying the cache and setting the high camp."
+      },
+      {
+        "day": "Day 17–19",
+        "title": "Summit window",
+        "detail": "Push the ridge in a staged attempt with full crevasse-field discipline and oxygen reserve."
+      },
+      {
+        "day": "Day 20–23",
+        "title": "Descent and pack-out",
+        "detail": "Descend the buttress, break camp and leave the Denali valley with a debrief in Talkeetna."
+      }
     ]
   },
   {
@@ -156,15 +330,50 @@
     "guideRatio": "1:4",
     "image": "patagonia-torres",
     "summary": "The highest mountain outside Asia, climbed on the classic normal route with two acclimatisation rotations, mule-supported carries to base camp and a summit at the head of the Fluvial Valley.",
-    "highlights": ["Two high rotations", "Confluencia base camp", "Nido de Cóndores to summit", "Sunrise on the Valle de las Vacas"],
-    "includes": ["18 days guiding", "Mule support and park logistics", "High-altitude tents", "Meals on the mountain", "Permits"],
-    "skills": ["Sustained uphill trekking", "Altitude comfort above 5,000 m", "Good camp craft"],
+    "highlights": [
+      "Two high rotations",
+      "Confluencia base camp",
+      "Nido de Cóndores to summit",
+      "Sunrise on the Valle de las Vacas"
+    ],
+    "includes": [
+      "18 days guiding",
+      "Mule support and park logistics",
+      "High-altitude tents",
+      "Meals on the mountain",
+      "Permits"
+    ],
+    "skills": [
+      "Sustained uphill trekking",
+      "Altitude comfort above 5,000 m",
+      "Good camp craft"
+    ],
     "itinerary": [
-      { "day": "Day 1–4", "title": "Mendoza · trek to Plaza de Mulas", "detail": "Permits, mule loading and a slow approach up the Horcones valley to base camp at 4,300 m." },
-      { "day": "Day 5–9", "title": "First rotation", "detail": "Move to Camp 1 at 4,950 m, then rest and sleep high to test acclimatisation." },
-      { "day": "Day 10–14", "title": "Second rotation", "detail": "Move to Cólera at 5,200 m and Nido de Cóndores at 5,570 m, sleeping higher than ever before." },
-      { "day": "Day 15–16", "title": "Summit", "detail": "A 04:00 start, the Canaleta to the summit ridge and the traverse to 6,961 m with the whole Americas below." },
-      { "day": "Day 17–18", "title": "Descent", "detail": "Back down to Horcones and a celebratory asado in Mendoza." }
+      {
+        "day": "Day 1–4",
+        "title": "Mendoza · trek to Plaza de Mulas",
+        "detail": "Permits, mule loading and a slow approach up the Horcones valley to base camp at 4,300 m."
+      },
+      {
+        "day": "Day 5–9",
+        "title": "First rotation",
+        "detail": "Move to Camp 1 at 4,950 m, then rest and sleep high to test acclimatisation."
+      },
+      {
+        "day": "Day 10–14",
+        "title": "Second rotation",
+        "detail": "Move to Cólera at 5,200 m and Nido de Cóndores at 5,570 m, sleeping higher than ever before."
+      },
+      {
+        "day": "Day 15–16",
+        "title": "Summit",
+        "detail": "A 04:00 start, the Canaleta to the summit ridge and the traverse to 6,961 m with the whole Americas below."
+      },
+      {
+        "day": "Day 17–18",
+        "title": "Descent",
+        "detail": "Back down to Horcones and a celebratory asado in Mendoza."
+      }
     ]
   },
   {
@@ -184,14 +393,44 @@
     "guideRatio": "1:3",
     "image": "ski-jump",
     "summary": "Seven days across the high Alps on skis: glacier travel, couloirs, ski mountaineering skills and the Matterhorn north side as the finale.",
-    "highlights": ["Glacier and crevasse rescue training", "Skiing the couloirs of the Aiguille Verte", "Hut-to-hut with baggage transfer", "Matterhorn north face descent"],
-    "includes": ["7 days guiding", "Skins, avalanche kit and group equipment", "Hut half-board", "Baggage transfers"],
-    "skills": ["Off-piste skiing", "Ski touring and skinning", "Good downhill fitness"],
+    "highlights": [
+      "Glacier and crevasse rescue training",
+      "Skiing the couloirs of the Aiguille Verte",
+      "Hut-to-hut with baggage transfer",
+      "Matterhorn north face descent"
+    ],
+    "includes": [
+      "7 days guiding",
+      "Skins, avalanche kit and group equipment",
+      "Hut half-board",
+      "Baggage transfers"
+    ],
+    "skills": [
+      "Off-piste skiing",
+      "Ski touring and skinning",
+      "Good downhill fitness"
+    ],
     "itinerary": [
-      { "day": "Day 1", "title": "Chamonix · skills", "detail": "Avalanche rescue, rope work for glacier travel and the first skins on the Grands Montets." },
-      { "day": "Day 2–4", "title": "Aiguille Verte to Trient", "detail": "Three days of classic Haute Route skiing, long traverses and hut evenings." },
-      { "day": "Day 5–6", "title": "Stockji to Zermatt", "detail": "The technical heart of the route: Stecknibble, jumbled glacier and the historic Butaneen descent." },
-      { "day": "Day 7", "title": "Zermatt", "detail": "Optional Matterhorn north face descent, then gear return and après." }
+      {
+        "day": "Day 1",
+        "title": "Chamonix · skills",
+        "detail": "Avalanche rescue, rope work for glacier travel and the first skins on the Grands Montets."
+      },
+      {
+        "day": "Day 2–4",
+        "title": "Aiguille Verte to Trient",
+        "detail": "Three days of classic Haute Route skiing, long traverses and hut evenings."
+      },
+      {
+        "day": "Day 5–6",
+        "title": "Stockji to Zermatt",
+        "detail": "The technical heart of the route: Stecknibble, jumbled glacier and the historic Butaneen descent."
+      },
+      {
+        "day": "Day 7",
+        "title": "Zermatt",
+        "detail": "Optional Matterhorn north face descent, then gear return and après."
+      }
     ]
   },
   {
@@ -211,15 +450,49 @@
     "guideRatio": "1:3",
     "image": "canada-lake",
     "summary": "Our flagship beginner course. Five days of glacier travel, rope work, crampons and a guaranteed first summit day on a 4,000er if conditions allow — no prior mountain experience needed.",
-    "highlights": ["Crampon and axe technique", "Rope team travel on a glacier", "Belay, rappel and crevasse rescue", "First 4,000 m summit attempt"],
-    "includes": ["5 days guiding", "Technical equipment", "Hut half-board", "Lift passes", "Geneva transfers"],
-    "skills": ["Walking fitness", "No technical experience required"],
+    "highlights": [
+      "Crampon and axe technique",
+      "Rope team travel on a glacier",
+      "Belay, rappel and crevasse rescue",
+      "First 4,000 m summit attempt"
+    ],
+    "includes": [
+      "5 days guiding",
+      "Technical equipment",
+      "Hut half-board",
+      "Lift passes",
+      "Geneva transfers"
+    ],
+    "skills": [
+      "Walking fitness",
+      "No technical experience required"
+    ],
     "itinerary": [
-      { "day": "Day 1", "title": "Chamonix · kit and movement", "detail": "Fitting crampons and axe, then movement drills on easy glacier snow." },
-      { "day": "Day 2", "title": "Rope work and belaying", "detail": "Tying in, running belays and rappelling on the Mer de Glace." },
-      { "day": "Day 3", "title": "Glacier travel", "detail": "Roped travel, crevasse rescue systems and a navigation exercise in poor visibility." },
-      { "day": "Day 4", "title": "Summit attempt", "detail": "A 4,000 m peak chosen on the day by the guide, with a dawn start and a long descent." },
-      { "day": "Day 5", "title": "Wrap-up", "detail": "Debrief, next-steps advice and an evening in Chamonix." }
+      {
+        "day": "Day 1",
+        "title": "Chamonix · kit and movement",
+        "detail": "Fitting crampons and axe, then movement drills on easy glacier snow."
+      },
+      {
+        "day": "Day 2",
+        "title": "Rope work and belaying",
+        "detail": "Tying in, running belays and rappelling on the Mer de Glace."
+      },
+      {
+        "day": "Day 3",
+        "title": "Glacier travel",
+        "detail": "Roped travel, crevasse rescue systems and a navigation exercise in poor visibility."
+      },
+      {
+        "day": "Day 4",
+        "title": "Summit attempt",
+        "detail": "A 4,000 m peak chosen on the day by the guide, with a dawn start and a long descent."
+      },
+      {
+        "day": "Day 5",
+        "title": "Wrap-up",
+        "detail": "Debrief, next-steps advice and an evening in Chamonix."
+      }
     ]
   },
   {
@@ -239,13 +512,39 @@
     "guideRatio": "1:3",
     "image": "red-peaks",
     "summary": "Polar light, midnight sun and endless north-facing powder. A week ski-touring the Lyngen Alps above the Arctic Circle, with glacier crossings and coastal descents to the fjords.",
-    "highlights": ["North-face powder", "Glacier travel with rope", "Midnight sun summits", "Fjord-side descents"],
-    "includes": ["7 days guiding", "Avalanche kit and group equipment", "Boat transfers", "Lodging and meals"],
-    "skills": ["Confident off-piste skiing", "Ski touring", "Cold-weather layering"],
+    "highlights": [
+      "North-face powder",
+      "Glacier travel with rope",
+      "Midnight sun summits",
+      "Fjord-side descents"
+    ],
+    "includes": [
+      "7 days guiding",
+      "Avalanche kit and group equipment",
+      "Boat transfers",
+      "Lodging and meals"
+    ],
+    "skills": [
+      "Confident off-piste skiing",
+      "Ski touring",
+      "Cold-weather layering"
+    ],
     "itinerary": [
-      { "day": "Day 1", "title": "Tromsø · arrival", "detail": "Kit fitting, weather window planning and a short evening ski on Kvaløya." },
-      { "day": "Day 2–6", "title": "Lyngen Alps", "detail": "Five days of touring the alpine faces, roped glacier crossings and long north-side descents." },
-      { "day": "Day 7", "title": "Fjord exit", "detail": "A final summit under the midnight sun and a boat back to Tromsø." }
+      {
+        "day": "Day 1",
+        "title": "Tromsø · arrival",
+        "detail": "Kit fitting, weather window planning and a short evening ski on Kvaløya."
+      },
+      {
+        "day": "Day 2–6",
+        "title": "Lyngen Alps",
+        "detail": "Five days of touring the alpine faces, roped glacier crossings and long north-side descents."
+      },
+      {
+        "day": "Day 7",
+        "title": "Fjord exit",
+        "detail": "A final summit under the midnight sun and a boat back to Tromsø."
+      }
     ]
   },
   {
@@ -265,14 +564,197 @@
     "guideRatio": "1:5",
     "image": "teal-range",
     "summary": "The Roof of Africa on the classic Machame route: rainforest, moorland, alpine desert and a summit ridge at 05,899 m, with a strong acclimatisation profile and a full support team.",
-    "highlights": ["Machame 'Whiskey Route'", "Shira plateau acclimatisation", "Stella Point sunrise", "Full camp and porter support"],
-    "includes": ["9 days guiding", "Park fees", "Full board and camping", "Porter and cook team", "Summit kit"],
-    "skills": ["Good walking fitness for 7 days", "No climbing experience needed"],
+    "highlights": [
+      "Machame 'Whiskey Route'",
+      "Shira plateau acclimatisation",
+      "Stella Point sunrise",
+      "Full camp and porter support"
+    ],
+    "includes": [
+      "9 days guiding",
+      "Park fees",
+      "Full board and camping",
+      "Porter and cook team",
+      "Summit kit"
+    ],
+    "skills": [
+      "Good walking fitness for 7 days",
+      "No climbing experience needed"
+    ],
     "itinerary": [
-      { "day": "Day 1–3", "title": "Forest to Shira plateau", "detail": "From the rainforest through the heather moorland to the Shira plateau at 3,800 m." },
-      { "day": "Day 4–5", "title": "Lava Tower and Barranco", "detail": "A strong acclimatisation day to 4,600 m, then a high traverse over the Shira plateau." },
-      { "day": "Day 6", "title": "Summit night", "detail": "A midnight start to Stella Point on the crater rim for sunrise, then Uhuru Peak at 5,895 m." },
-      { "day": "Day 7–9", "title": "Descent and out", "detail": "A fast descent through the Mweka forest and a closing dinner in Arusha." }
+      {
+        "day": "Day 1–3",
+        "title": "Forest to Shira plateau",
+        "detail": "From the rainforest through the heather moorland to the Shira plateau at 3,800 m."
+      },
+      {
+        "day": "Day 4–5",
+        "title": "Lava Tower and Barranco",
+        "detail": "A strong acclimatisation day to 4,600 m, then a high traverse over the Shira plateau."
+      },
+      {
+        "day": "Day 6",
+        "title": "Summit night",
+        "detail": "A midnight start to Stella Point on the crater rim for sunrise, then Uhuru Peak at 5,895 m."
+      },
+      {
+        "day": "Day 7–9",
+        "title": "Descent and out",
+        "detail": "A fast descent through the Mweka forest and a closing dinner in Arusha."
+      }
+    ]
+  },
+  {
+    "id": "elbrus",
+    "name": "Mount Elbrus Ascent",
+    "peak": "Elbrus",
+    "height": 5642,
+    "country": "Russia",
+    "region": "Caucasus",
+    "duration": "7 days",
+    "season": "June to September",
+    "difficulty": 3,
+    "grade": "2B",
+    "priceFrom": 1850,
+    "currency": "USD",
+    "groupMax": 8,
+    "guideRatio": "1:4",
+    "image": "red-peaks",
+    "summary": "Europe's highest peak: a glaciated volcano with a classic south-side route, ideal as a first 5,000 m summit.",
+    "highlights": [
+      "Cable car to 3,800 m",
+      "Barrels Hut acclimatisation",
+      "Summit traverse to the west glacier",
+      "24-hour summit push"
+    ],
+    "includes": [
+      "Six nights accommodation",
+      "Full board on mountain",
+      "Cable car transfers",
+      "Experienced guide",
+      "Climbing hardware"
+    ],
+    "skills": [
+      "Glacier travel basics",
+      "Crampon technique",
+      "High-altitude fitness",
+      "Self-arrest practice"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Mineralnye Vody to Terskol",
+        "detail": "Transfer to the Baksan valley, gear check and altitude acclimatisation walk."
+      },
+      {
+        "day": "Day 2",
+        "title": "Cable car to Mir Station",
+        "detail": "Ride to 3,500 m, short acclimatisation hike, overnight at Base Camp."
+      },
+      {
+        "day": "Day 3",
+        "title": "Barrels Hut",
+        "detail": "Climb to the Diesel Hut area (3,800 m), practise ice-axe arrest, overnight in the barrel huts."
+      },
+      {
+        "day": "Day 4",
+        "title": "Summit day",
+        "detail": "Start before dawn via the south side, reach the twin summit of Elbrus at sunrise, descend to Base Camp."
+      },
+      {
+        "day": "Day 5",
+        "title": "Reserve day",
+        "detail": "Weather buffer for the summit attempt; if already summitted, an easy valley walk."
+      },
+      {
+        "day": "Day 6",
+        "title": "Descent to Terskol",
+        "detail": "Pack up, descend to the village, celebratory dinner."
+      },
+      {
+        "day": "Day 7",
+        "title": "Departure",
+        "detail": "Transfer back to Mineralnye Vody for flights home."
+      }
+    ]
+  },
+  {
+    "id": "cook",
+    "name": "Aoraki / Mount Cook",
+    "peak": "Mount Cook",
+    "height": 3724,
+    "country": "New Zealand",
+    "region": "South Pacific",
+    "duration": "8 days",
+    "season": "October to April",
+    "difficulty": 4,
+    "grade": "PD",
+    "priceFrom": 3200,
+    "currency": "NZD",
+    "groupMax": 4,
+    "guideRatio": "1:2",
+    "image": "nz-peaks",
+    "summary": "New Zealand's highest mountain: the classic Linda Glacier route, a serious alpine objective with glacier travel.",
+    "highlights": [
+      "Tasman Glacier approach",
+      "High camp in the Hooker Valley",
+      "Summit sunrise over the Southern Alps",
+      "Linda Glacier traverse"
+    ],
+    "includes": [
+      "Seven nights accommodation",
+      "Full board in the mountains",
+      "Mountain guide and assistant",
+      "Technical group gear",
+      "Park fees and transfers"
+    ],
+    "skills": [
+      "Glacier travel",
+      "Steep snow climbing",
+      "Crevasse rescue",
+      "Expedition fitness"
+    ],
+    "itinerary": [
+      {
+        "day": "Day 1",
+        "title": "Mount Cook Village",
+        "detail": "Arrival, gear issue, weather briefing and a gentle acclimatisation walk in the Hooker Valley."
+      },
+      {
+        "day": "Day 2",
+        "title": "Glacier skills day",
+        "detail": "Crampon, ice axe and rope-team practice on the lower Tasman Glacier."
+      },
+      {
+        "day": "Day 3",
+        "title": "To high camp",
+        "detail": "Fly in by ski-plane, establish high camp above the glacier."
+      },
+      {
+        "day": "Day 4",
+        "title": "Summit window",
+        "detail": "Early start via the Linda Glacier, summit Aoraki at first light, descend to high camp."
+      },
+      {
+        "day": "Day 5",
+        "title": "Reserve day",
+        "detail": "Weather buffer for the summit attempt."
+      },
+      {
+        "day": "Day 6",
+        "title": "Descend",
+        "detail": "Break camp, ski-plane out, return to Mount Cook Village."
+      },
+      {
+        "day": "Day 7",
+        "title": "Rest day",
+        "detail": "Free day in the village, gear debrief."
+      },
+      {
+        "day": "Day 8",
+        "title": "Departure",
+        "detail": "Transfer to Christchurch or Queenstown for departure."
+      }
     ]
   }
 ]

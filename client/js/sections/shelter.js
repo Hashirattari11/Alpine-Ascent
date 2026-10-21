@@ -4,7 +4,7 @@ import { esc, picture, skeleton } from '../utils.js'
 const dots = (n, label) => `<span class="dots" role="img" aria-label="${label} ${n} of 5">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= n ? 'on' : ''}"></i>`).join('')}</span>`
 
 const card = (s, i) => `
-  <div class="col-md-6 col-lg-4" data-reveal style="--d:${(i % 3) * 0.12}s">
+  <div class="card-grid-item" data-reveal style="--d:${(i % 4) * 0.08}s">
     <article class="card-lux shelter-card tilt zoom">
       <div class="badge-wrap">
         ${picture(s.image, `${s.title}: a mountain shelter option`, { sizes: '(min-width: 992px) 400px, 100vw' })}
@@ -25,5 +25,5 @@ const card = (s, i) => `
   </div>`
 
 export function initShelter() {
-  return mount('#shelterGrid', 'shelter', (list) => list.map(card).join(''), { skeleton: skeleton(3, 'col-md-6 col-lg-4', 480), label: 'shelter guidance' })
+  return mount('#shelterGrid', 'shelter', (list) => list.map(card).join(''), { skeleton: skeleton(3, 'card-grid-item', 480), label: 'shelter guidance' })
 }
