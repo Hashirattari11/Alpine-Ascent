@@ -8,8 +8,7 @@
     "postinstall": "npm run pages && npm --prefix server install && npm --prefix client install",
     "pages": "node scripts/build-pages.mjs",
     "dev": "npm run pages && concurrently -k -n api,web -c yellow,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
-    "start": "npm run pages && npm --prefix client run setup && npm start --prefix server",
-    "images": "node scripts/download-images.mjs"
+    "start": "npm run pages && npm start --prefix server"
   },
   "devDependencies": {
     "concurrently": "^9.1.0"

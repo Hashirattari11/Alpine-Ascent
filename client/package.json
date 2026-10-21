@@ -5,9 +5,7 @@
   "description": "Alpine Ascents front end: plain HTML, CSS, JavaScript, Bootstrap 5 and jQuery",
   "type": "module",
   "scripts": {
-    "setup": "node scripts/setup.mjs",
-    "postinstall": "node scripts/setup.mjs",
-    "dev": "node scripts/setup.mjs && node dev-server.mjs",
+    "dev": "node dev-server.mjs",
     "start": "node dev-server.mjs"
   },
   "dependencies": {

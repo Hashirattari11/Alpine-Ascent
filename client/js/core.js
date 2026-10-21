@@ -9,7 +9,7 @@ export async function mount(selector, resource, render, { skeleton = '', label =
   const load = async () => {
     $el.attr('aria-busy', 'true').html(skeleton)
     try { const { data } = await getResource(resource, { force: false }); $el.html(render(data)).attr('aria-busy', 'false'); afterRender($el[0]); if (after) after($el, data); return data }
-    catch { $el.attr('aria-busy', 'false').html(errorBlock(label)); $el.find('[data-retry]').one('click', load); return null }
+    catch (e) { console.error(`[${resource}]`, e); $el.attr('aria-busy', 'false').html(errorBlock(label)); $el.find('[data-retry]').one('click', load); return null }
   }
   return load()
 }

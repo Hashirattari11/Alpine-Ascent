@@ -203,9 +203,9 @@ export function initGuidelines() {
           <div class="guide-progress mt-auto" style="--p:${(done / c.items.length).toFixed(2)}"><em data-count-label>${done}/${c.items.length} ready</em>
             <span><i style="transform:scaleX(${done / c.items.length})"></i></span></div></div></article></div>`
     }
-    return `<div class="card-grid card-grid--three">${g.cards.map((c, i) => card(c, i)).join('')}</div>
+    return `${g.cards.map((c, i) => card(c, i)).join('')}
       <div class="col-12" data-reveal ${hasChecks ? '' : 'hidden'}><p class="text-end"><button type="button" class="btn btn-ghost btn-sm" id="resetChecks"><i class="bi bi-arrow-counterclockwise"></i><span>Reset checklist</span></button></p></div>`
-  }, { skeleton: `<div class="card-grid">${skeleton(3, 'card-grid-item', 460)}</div>`, label: 'the guidelines',
+  }, { skeleton: skeleton(3, 'card-grid-item', 460), label: 'the guidelines',
     after: ($el, g) => {
       $el.on('change', 'input[type="checkbox"]', function () {
         const all = loadChecks(); all[this.dataset.key] = this.checked; saveChecks(all)
@@ -249,8 +249,25 @@ export function initClubs() {
   const REGIONS = ['All', 'Asia', 'Europe', 'Africa', 'North America', 'South America', 'Oceania']
   let clubs = [], region = 'All', selectedId = null, map, layer
   const visible = () => clubs.filter((c) => region === 'All' || c.region === region)
-  const fmtDist = (km) => km < 10 ? `${km.toFixed(1)} km` : `${Math.round(km).toLocaleString('en-US')} km`
   const pin = (active) => `<div class="aa-pin ${active ? 'is-active' : ''}"><span></span></div>`
+  const renderList = () => {
+    const list = visible()
+    $('#clubList').html(list.length ? list.map((c) => `<li class="club-item ${c.id === selectedId ? 'is-active' : ''}" data-id="${esc(c.id)}">
+      <button type="button" class="club-item__btn"><span class="club-item__pin">${pin(c.id === selectedId)}</span>
+        <span><span class="club-item__name">${esc(c.name)}</span><span class="club-item__place">${esc(c.city)}, ${esc(c.country)}</span></span></button>
+      <div class="club-item__more"><div><div class="club-item__more-inner"><p class="mb-2">${esc(c.description)}</p>
+        <p class="small mb-1 text-muted">Founded ${c.founded} · ${esc(c.members)} members</p></div></div></div></li>`).join('') : '<li class="load-error">No clubs match this filter.</li>')
+  }
+  const renderMarkers = () => {
+    layer.clearLayers()
+    visible().forEach((c) => { const m = L.marker([c.lat, c.lng], { title: c.name, keyboard: true })
+      m.bindPopup(`<div class="pop">${picture(c.image, `${c.name}, ${c.city}`, { sizes: '270px', cls: 'pop__img' })}
+        <div class="pop__body"><h4>${esc(c.name)}</h4><div class="pop__place">${esc(c.city)}, ${esc(c.country)}</div><p>${esc(c.description)}</p>
+        <a class="btn btn-gold" href="${esc(c.url)}" target="_blank" rel="noopener noreferrer"><span>Visit club</span></a></div></div>`)
+      m.on('click', () => selectClub(c.id)); layer.addLayer(m) })
+  }
+  const selectClub = (id) => { selectedId = selectedId === id ? null : id; renderList(); renderMarkers() }
+
   return mount('#clubList', 'clubs', (data) => { clubs = data; return '' }, {
     label: 'the club list',
     after: () => {
@@ -272,23 +289,6 @@ export function initClubs() {
       renderList(); renderMarkers()
     },
   })
-  const renderList = () => {
-    const list = visible()
-    $('#clubList').html(list.length ? list.map((c) => `<li class="club-item ${c.id === selectedId ? 'is-active' : ''}" data-id="${esc(c.id)}">
-      <button type="button" class="club-item__btn"><span class="club-item__pin">${pin(c.id === selectedId)}</span>
-        <span><span class="club-item__name">${esc(c.name)}</span><span class="club-item__place">${esc(c.city)}, ${esc(c.country)}</span></span></button>
-      <div class="club-item__more"><div><div class="club-item__more-inner"><p class="mb-2">${esc(c.description)}</p>
-        <p class="small mb-1 text-muted">Founded ${c.founded} · ${esc(c.members)} members</p></div></div></div></li>`).join('') : '<li class="load-error">No clubs match this filter.</li>')
-  }
-  const renderMarkers = () => {
-    layer.clearLayers()
-    visible().forEach((c) => { const m = L.marker([c.lat, c.lng], { title: c.name, keyboard: true })
-      m.bindPopup(`<div class="pop">${picture(c.image, `${c.name}, ${c.city}`, { sizes: '270px', cls: 'pop__img' })}
-        <div class="pop__body"><h4>${esc(c.name)}</h4><div class="pop__place">${esc(c.city)}, ${esc(c.country)}</div><p>${esc(c.description)}</p>
-        <a class="btn btn-gold" href="${esc(c.url)}" target="_blank" rel="noopener noreferrer"><span>Visit club</span></a></div></div>`)
-      m.on('click', () => selectClub(c.id)); layer.addLayer(m) })
-  }
-  const selectClub = (id) => { selectedId = selectedId === id ? null : id; renderList(); renderMarkers() }
 }
 
 // ---------- Stories ----------

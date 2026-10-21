@@ -1,6 +1,6 @@
 [build]
   base = "."
-  command = "npm run pages && npm --prefix client run setup"
+  command = "npm run pages"
   publish = "client"
 
 [build.environment]
