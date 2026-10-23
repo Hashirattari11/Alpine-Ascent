@@ -1,18 +1,9 @@
-# dependencies (not used by the website, only by old tooling)
 node_modules/
-
-# logs
 *.log
 npm-debug.log*
-
-# OS / editor
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
-
-# tooling artefact
 .freebuff/
-
-# OS temp
 tmp/

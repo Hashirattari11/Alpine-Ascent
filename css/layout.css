@@ -171,3 +171,8 @@ body.is-ready .hero__foot { transition-delay: 1.1s; }
 .form-note { font-size: 0.85rem; color: var(--muted); }
 .form-note.is-error { color: #ff9b8f; }
 .form-note.is-ok { color: #9be3b5; }
+@media (max-width: 575.98px) {
+  .story-controls.story-controls { flex-wrap: wrap; gap: 0.9rem 1rem; }
+  .story-controls .story-count { margin-left: auto; }
+  .story-controls .story-dots { order: 3; width: 100%; margin-left: 0; justify-content: center; }
+}

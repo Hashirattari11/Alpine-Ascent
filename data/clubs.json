@@ -57,7 +57,7 @@
   {
     "id": "iceland", "name": "Icelandic Alpine Club", "short": "Ís félkið", "country": "Iceland", "city": "Reykjavík", "region": "Europe",
     "lat": 64.1466, "lng": -21.9426, "founded": 1946, "members": "900",
-    "url": "https://www.isveif", "email": "info@isveif.is",
+    "url": "https://www.isveif.is", "email": "info@isveif.is",
     "description": "The guardians of Icelandic highland routes, opening the Fimmvörðuháls and Eyjafjallajökull routes each summer.",
     "image": "aurora",
     "upcoming": [

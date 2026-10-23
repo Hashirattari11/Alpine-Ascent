@@ -33,7 +33,7 @@ export function initTypes() {
   const pips = (n) => `<span class="pips">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= n ? 'on' : ''}"></i>`).join('')}</span>`
   const pad = (n) => String(n).padStart(2, '0')
   const card = (t, i) => `
-    <div class="col-md-6 col-xl-3" data-reveal style="--d:${(i % 4) * 0.1}s">
+    <div class="col-md-6 col-lg-4 col-xl-3" data-reveal style="--d:${(i % 4) * 0.1}s">
       <div class="type-card zoom" data-type="${esc(t.id)}">
         <div class="type-card__inner">
         <div class="type-face type-face--front">
@@ -53,7 +53,7 @@ export function initTypes() {
           <button type="button" class="flip-btn"><i class="bi bi-arrow-left"></i><span>Back</span></button>
         </div></div></div></div>`
   const contactHref = () => document.getElementById('contact') ? '#contact' : 'contact.html'
-  const cta = `<div class="col-md-12 col-xl-3" data-reveal style="--d:.3s">
+  const cta = `<div class="col-md-12 col-lg-4 col-xl-3" data-reveal style="--d:.3s">
     <div class="type-cta"><p class="eyebrow"><span class="eyebrow__line"></span>Not sure?</p>
       <h3>Not sure where to start?</h3><p>Tell us your experience and ambitions. A guide will design an itinerary.</p>
       <div><a href="${contactHref()}" class="btn btn-gold"><span>Talk to a guide</span><i class="bi bi-arrow-right"></i></a></div></div></div>`
@@ -64,7 +64,7 @@ export function initTypes() {
     $f.find('.flip-btn').attr('aria-expanded', String(flipped))
   }
   return mount('#typesGrid', 'types', (types) => types.map(card).join('') + cta, {
-    skeleton: skeleton(4, 'col-md-6 col-xl-3', 470), label: 'the climbing styles',
+    skeleton: skeleton(4, 'col-md-6 col-lg-4 col-xl-3', 470), label: 'the climbing styles',
     after: ($grid) => {
       $grid.on('click', '.type-face--front', function () { setFlip($(this).closest('.type-card'), true) })
       $grid.on('click', '.type-face--back .flip-btn', function () { setFlip($(this).closest('.type-card'), false) })

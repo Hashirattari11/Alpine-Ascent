@@ -11,7 +11,6 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
-# CSS, JS and JSON are not fingerprinted, so never let a browser hold them stale.
 [[headers]]
   for = "/css/*"
   [headers.values]
