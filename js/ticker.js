@@ -1,5 +1,5 @@
 import { pad, esc } from './utils.js'
-import { loc, requestLocation } from './location.js'
+import { loc, requestLocation, autoLocate } from './location.js'
 
 const dateFmt = new Intl.DateTimeFormat('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })
 const tzShort = () => (new Intl.DateTimeFormat('en-GB', { timeZoneName: 'short' }).formatToParts(new Date()).find((p) => p.type === 'timeZoneName') || {}).value || ''
@@ -26,6 +26,8 @@ export function initTicker() {
   track.innerHTML = Array.from({ length: copies }, (_, i) => groupHtml(i > 0)).join('')
   document.querySelectorAll('[data-t="tz"]').forEach((n) => (n.textContent = tzShort()))
   tick(); paintLocation(); setInterval(tick, 1000)
+  $(document).on('aa:location', paintLocation)
   $(document).on('click', '[data-ticker-locate]', () => { loc.status = 'idle'; requestLocation() })
   window.addEventListener('resize', size)
+  autoLocate()
 }

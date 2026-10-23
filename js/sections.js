@@ -3,6 +3,7 @@ import { mount } from './core.js'
 import { esc, picture, skeleton, fmtDate, hydrateImages } from './utils.js'
 import { replayCounters } from './effects.js'
 import { distanceKm } from './location.js'
+import { addEnquiry, addSubscriber } from './db.js'
 
 const diffLabel = (n) => n <= 2 ? 'Beginner' : n <= 3 ? 'Moderate' : n <= 4 ? 'Challenging' : 'Expert'
 const diffCls = (n) => n <= 2 ? 'r1' : n <= 3 ? 'r1' : n <= 4 ? 'r2' : 'r3'
@@ -56,7 +57,7 @@ export function initTypes() {
           <button type="button" class="flip-btn"><i class="bi bi-arrow-left"></i><span>Back</span></button>
         </div></div></div></div>`
   const contactHref = () => document.getElementById('contact') ? '#contact' : 'contact.html'
-  const cta = `<div class="col-md-6 col-xl-3" data-reveal style="--d:.3s">
+  const cta = `<div class="col-md-12 col-xl-3" data-reveal style="--d:.3s">
     <div class="type-cta"><p class="eyebrow"><span class="eyebrow__line"></span>Not sure?</p>
       <h3>Not sure where to start?</h3><p>Tell us your experience and ambitions. A guide will design an itinerary.</p>
       <div><a href="${contactHref()}" class="btn btn-gold"><span>Talk to a guide</span><i class="bi bi-arrow-right"></i></a></div></div></div>`
@@ -458,6 +459,9 @@ export function initContact() {
     const btn = $('#submitBtn')
     btn.prop('disabled', true).find('span').text('Sending...')
     $('#formNote').removeClass('is-error is-ok').text('')
+    try {
+      addEnquiry({ name: name, email: email, phone: phone, interest: interest, message: message })
+    } catch (e) {}
     setTimeout(function () {
       btn.prop('disabled', false).find('span').text('Send enquiry')
       $('#enquiryForm').addClass('is-sent').hide()
@@ -474,6 +478,9 @@ export function initContact() {
     const email = $('#nlEmail').val().trim(), note = $('#nlNote')
     note.removeClass('is-error is-ok')
     if (!emailOk(email)) { note.addClass('is-error').text('Please enter a valid email address.'); return }
+    try {
+      addSubscriber(email)
+    } catch (e) {}
     note.addClass('is-ok').text('You are on the list. Watch your inbox for trip notes.')
     this.reset()
   })

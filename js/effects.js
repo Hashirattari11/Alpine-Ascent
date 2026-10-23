@@ -8,11 +8,19 @@ export function initReveal(root = document) {
 export function countUp(el, to, { duration = 2000, decimals = 0, plain = false, suffix = '' } = {}) {
   const fmt = (v) => (plain ? String(Math.round(v)) : fmtNum(v, decimals)) + suffix
   const start = performance.now()
+  let finished = false
+  const finish = () => {
+    if (finished) return
+    finished = true
+    el.textContent = fmt(to)
+  }
+  const timer = setTimeout(finish, duration + 100)
   const step = () => {
+    if (finished) return
     const p = Math.min(1, (performance.now() - start) / duration)
     el.textContent = fmt(to * p)
     if (p < 1) requestAnimationFrame(step)
-    else el.textContent = fmt(to)
+    else { clearTimeout(timer); finish() }
   }
   requestAnimationFrame(step)
 }
