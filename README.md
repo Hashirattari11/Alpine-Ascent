@@ -7,7 +7,7 @@ A multi-page mountaineering and expedition website built with **HTML, CSS, JavaS
 - **HTML5** — 14 pages sharing the same navbar, footer and modals
 - **CSS3** — custom design system in `css/base.css`, `css/layout.css`, `css/sections.css`
 - **JavaScript** — ES modules in `js/` (no framework)
-- **Bootstrap 5** — grid, modals, tabs, carousel, toasts
+- **Bootstrap 5** — grid, modals, tabs and carousel
 - **jQuery** — DOM ready, events and `$.getJSON`
 - **JSON** — all page content lives in `data/*.json`
 - **SVG** — logo, favicon and the dotted world map on the clubs page
