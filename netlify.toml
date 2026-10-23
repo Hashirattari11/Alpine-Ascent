@@ -1,13 +1,5 @@
 [build]
-  base = "."
-  command = "npm run pages"
-  publish = "client"
-
-[build.environment]
-  NODE_VERSION = "20"
-  # AA_API_BASE must be set in the Netlify UI (Site settings → Environment variables),
-  # e.g. AA_API_BASE=https://your-api.up.railway.app
-  # Leave it unset to use the bundled offline content mirror only.
+  publish = "."
 
 [[headers]]
   for = "/images/*"
@@ -19,7 +11,7 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
-# CSS and JS are not fingerprinted, so never let a browser hold them stale.
+# CSS, JS and JSON are not fingerprinted, so never let a browser hold them stale.
 [[headers]]
   for = "/css/*"
   [headers.values]
@@ -27,6 +19,11 @@
 
 [[headers]]
   for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/data/*"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 

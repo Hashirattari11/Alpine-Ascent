@@ -3,7 +3,7 @@ name: Deploy Static Website
 on:
   push:
     branches:
-      - main  # Jab bhi aap main branch par push karenge, yeh deploy hoga
+      - main
   workflow_dispatch:
 
 permissions:
@@ -11,49 +11,28 @@ permissions:
   pages: write
   id-token: write
 
-# Pages only ever serves one deployment, so never let two builds race.
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      # Vendor assets (Bootstrap, jQuery, Leaflet, icons) are copied from node_modules
-      # by client/scripts/setup.mjs, so the client deps must exist before it runs.
-      - name: Install client dependencies
-        run: npm ci --prefix client
-
-      # The 14 HTML pages are generated from scripts/build-pages.mjs + client/pages/*.
-      # They are committed too, but generating them here keeps the published site
-      # consistent with the shell in scripts/build-pages.mjs.
-      - name: Build pages
-        run: npm run pages
-
-      - name: Copy vendor assets
-        run: npm --prefix client run setup
-
-      - name: Upload Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./client  # the publish directory: index.html + 13 pages, css, js, images, vendor
-
   deploy:
-    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
