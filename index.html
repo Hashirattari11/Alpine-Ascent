@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/sections.css" />
     <script>
-      // Safety net: never leave the visitor staring at the preloader, even if a script fails.
       window.addEventListener('load', function () {
         setTimeout(function () {
           var p = document.getElementById('preloader')
@@ -122,7 +121,6 @@
     </div>
 
     <main id="main" tabindex="-1">
-<!-- HERO -->
       <section id="home" class="hero" aria-label="Introduction">
         <div class="hero__slides" id="heroSlides" data-parallax="0.28">
           <div class="hero__slide is-active"><img src="images/hero-matterhorn.webp" srcset="images/hero-matterhorn-sm.webp 720w, images/hero-matterhorn.webp 2200w" sizes="100vw" alt="A climber in a red jacket stands on a snowy ridge looking at the Matterhorn at dawn" fetchpriority="high" decoding="async" /></div>
@@ -155,7 +153,6 @@
         </div>
       </section>
 
-      <!-- ABOUT -->
       <section id="about" class="section section--about" aria-labelledby="aboutTitle">
         <div class="section__bg" aria-hidden="true"><img src="images/sunset-ridges-sm.webp" alt="" loading="eager" decoding="async" fetchpriority="low" data-parallax="0.12" /></div>
         <div class="container position-relative">
@@ -177,7 +174,6 @@
         </div>
       </section>
 
-      <!-- SIGNATURE EXPEDITIONS -->
       <section id="signature" class="section section--alt section--photo" aria-labelledby="signatureTitle">
         <div class="section__bg" aria-hidden="true"><img src="images/everest-ama-sm.webp" alt="" loading="eager" decoding="async" fetchpriority="low" data-parallax="0.12" /></div>
         <div class="container position-relative">
@@ -193,7 +189,6 @@
         </div>
       </section>
 
-      <!-- THE TEAM / PHILOSOPHY -->
       <section id="why" class="section" aria-labelledby="whyTitle">
         <div class="container">
           <div class="row g-5 align-items-center">

@@ -1,6 +1,3 @@
-/* ==========================================================================
-   Section components
-   ========================================================================== */
 .section--about { padding-bottom: clamp(4rem, 8vw, 7rem); }
 .pillars { margin: clamp(3rem, 7vw, 5.5rem) 0 clamp(3rem, 7vw, 5rem); }
 .pillars li { position: relative; padding-top: 1.8rem; }
@@ -94,11 +91,6 @@
 .tip b { color: var(--gold); font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.7rem; display: block; margin-bottom: 0.2rem; }
 .shelter-card, .hazard-card, .news-card, .guide-card, .record-card { height: 100%; }
 .card-lux { height: 100%; display: flex; flex-direction: column; background: linear-gradient(180deg, rgba(20, 28, 37, 0.85), rgba(12, 17, 23, 0.9)); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform 0.55s var(--ease), border-color 0.4s, box-shadow 0.5s; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); will-change: transform; }
-/* ---------- Card grids ----------
-   Bootstrap columns leave a ragged last row when the item count is not a multiple of the
-   column count (a lone card stranded bottom-left). This flex grid keeps all cards equal
-   width and centres the short last row; .card-grid--three caps XL at 3 columns so counts
-   like 6 or 9 always land on complete rows. */
 .card-grid { --aa-cols: 1; display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 1.5rem; }
 .card-grid > * { flex: 0 0 auto; width: calc((100% - (var(--aa-cols) - 1) * 1.5rem) / var(--aa-cols)); min-width: 0; display: flex; flex-direction: column; }
 .card-grid > * > .card-lux, .card-grid > * > article { flex: 1 1 auto; }
@@ -106,9 +98,6 @@
 @media (min-width: 992px) { .card-grid, .card-grid--three { --aa-cols: 3; } }
 @media (min-width: 1200px) { .card-grid { --aa-cols: 4; } .card-grid--three { --aa-cols: 3; } }
 .card-grid > .col-12 { width: 100%; }
-/* Tilt: the JS drives transform every mousemove, so kill the 550ms card transition while
-   the card is tilting (otherwise it lags mushily); on leave the class drops and the card
-   eases back on the normal transform transition. */
 .tilt.is-tilting { transition: none; }
 .card-lux:hover { border-color: rgba(201, 169, 97, 0.55); box-shadow: 0 30px 60px -28px rgba(0, 0, 0, 0.9); }
 .card-lux .img-wrap { aspect-ratio: 16 / 10; }
@@ -241,8 +230,6 @@
 .lightbox__stage img { max-width: 100%; max-height: 100%; min-height: 0; object-fit: contain; border-radius: 6px; transition: opacity 0.35s, transform 0.5s var(--ease); user-select: none; -webkit-user-drag: none; }
 .lightbox__stage img.is-swapping { opacity: 0; transform: scale(0.98); }
 .lightbox__stage figcaption { margin-top: 1rem; font-family: var(--ff-display); font-size: 1.25rem; color: var(--text); text-align: center; }
-/* Sits above the stage (and any YouTube iframe) so the film can always be dismissed.
-   Only the longhand background-color is set: the .btn-close shorthand carries the X glyph. */
 .lightbox__close { position: absolute; z-index: 5; top: 1rem; right: 1rem; width: 2.75rem; height: 2.75rem; padding: 0; border: 1px solid var(--line-strong); border-radius: 50%; background-color: rgba(11, 15, 20, 0.82); background-size: 1.05rem 1.05rem; opacity: 1; transition: background-color 0.3s var(--ease), border-color 0.3s var(--ease); }
 .lightbox__close:hover, .lightbox__close:focus-visible { background-color: var(--gold); border-color: var(--gold); opacity: 1; }
 .lightbox__nav { position: absolute; z-index: 3; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; border-radius: 50%; border: 1px solid var(--line-strong); background: rgba(11, 15, 20, 0.6); color: var(--text); display: grid; place-items: center; transition: all 0.3s var(--ease); }
@@ -259,12 +246,7 @@
 #newsModalContent .img-wrap { aspect-ratio: 16 / 7; }
 #newsModalContent .btn-close { position: absolute; z-index: 3; right: 1rem; top: 1rem; background-color: rgba(11, 15, 20, 0.6); border-radius: 50%; padding: 0.7rem; }
 .news-article { padding: clamp(1.4rem, 4vw, 2.6rem); }
-/* Cap the article hero so the headline and body stay on screen.
-   flex: none stops the flex column from squeezing it into a letterbox strip. */
 .news-modal__hero { flex: none; aspect-ratio: 16 / 9; max-height: 42vh; overflow: hidden; }
-/* Needs the id selector to outrank `#newsModalContent .img-wrap`: combined with `height: 100%`
-   that 16/7 ratio made the browser derive the width from the height (465px inside a 799px hero).
-   Both dimensions are stated here so the wrapper fills the hero exactly. */
 #newsModalContent .news-modal__hero .img-wrap { width: 100%; height: 100%; aspect-ratio: 16 / 9; }
 .news-article h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); margin: 0.4rem 0 1.2rem; }
 .news-article p { color: #cfd8e1; }
@@ -294,8 +276,6 @@
 .exp-title { font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 0.7rem; }
 .exp-card .card-lux__body > p { color: var(--muted); }
 .exp-tags { margin-top: 0.9rem; }
-/* Collapsed itinerary block opened by the card's arrow button: grid-template-rows 0fr -> 1fr
-   keeps the easing fully animatable without measuring heights. */
 .exp-more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.55s var(--ease); }
 .exp-card--open .exp-more { grid-template-rows: 1fr; }
 .exp-more__inner { overflow: hidden; min-height: 0; }

@@ -1,4 +1,3 @@
-// Navbar: glass on scroll, mobile overlay menu, dropdowns, active state.
 import { scrollToId } from './utils.js'
 
 const HIDE_AFTER = 320

@@ -1,4 +1,3 @@
-// Simple visual effects: reveal on scroll, counters, tilt, cursor, progress bar.
 import { reduced, canHover, fmtNum } from './utils.js'
 
 export function initReveal(root = document) {

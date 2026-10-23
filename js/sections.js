@@ -1,4 +1,3 @@
-// All page sections in one file. Each init() runs only if its container exists on the page.
 import { mount } from './core.js'
 import { esc, picture, skeleton, fmtDate, hydrateImages } from './utils.js'
 import { replayCounters } from './effects.js'
@@ -12,7 +11,6 @@ const dots = (n) => `<span class="dots">${[1, 2, 3, 4, 5].map((i) => `<i class="
 
 const paragraphs = (body) => body.split(/\n+/).map((p) => `<p>${esc(p)}</p>`).join('')
 
-// ---------- About / stats ----------
 export function initAbout() {
   return mount('#stats', 'stats', (stats) => stats.map((s, i) => `
     <div class="col-6 col-lg-3 stat" data-reveal style="--d:${i * 0.1}s">
@@ -21,7 +19,6 @@ export function initAbout() {
     </div>`).join(''), { skeleton: skeleton(4, 'col-6 col-lg-3', 110), label: 'our numbers' })
 }
 
-// ---------- History ----------
 export function initHistory() {
   return mount('#timelineItems', 'history', (items) => items.map((h) => `
     <article class="t-item"><div class="t-card zoom" data-reveal>
@@ -32,7 +29,6 @@ export function initHistory() {
   { skeleton: skeleton(2, 'd-block mb-4', 380), label: 'the timeline' })
 }
 
-// ---------- Types ----------
 export function initTypes() {
   const pips = (n) => `<span class="pips">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= n ? 'on' : ''}"></i>`).join('')}</span>`
   const pad = (n) => String(n).padStart(2, '0')
@@ -76,7 +72,6 @@ export function initTypes() {
   })
 }
 
-// ---------- Techniques ----------
 export function initTechniques() {
   return mount('#techWrap', 'techniques', (list) => `
     <div class="col-lg-4" data-reveal>
@@ -97,7 +92,6 @@ export function initTechniques() {
   })
 }
 
-// ---------- Shelter ----------
 export function initShelter() {
   const card = (s, i) => `
     <div class="card-grid-item" data-reveal style="--d:${(i % 4) * 0.08}s">
@@ -115,7 +109,6 @@ export function initShelter() {
   })
 }
 
-// ---------- Hazards ----------
 export function initHazards() {
   const level = (r) => r >= 5 ? 'r3' : r === 4 ? 'r2' : 'r1'
   const card = (h, i) => `
@@ -136,7 +129,6 @@ export function initHazards() {
   })
 }
 
-// ---------- Records ----------
 export function initRecords() {
   const card = (r, i) => `
     <div class="card-grid-item" data-reveal style="--d:${(i % 4) * 0.08}s">
@@ -160,7 +152,6 @@ export function initRecords() {
   })
 }
 
-// ---------- News ----------
 export function initNews() {
   let articles = []
   const card = (n, i) => `
@@ -186,7 +177,6 @@ export function initNews() {
   })
 }
 
-// ---------- Guidelines ----------
 const LS = 'aa_guides_checks'
 const loadChecks = () => { try { return JSON.parse(localStorage.getItem(LS)) || {} } catch { return {} } }
 const saveChecks = (v) => localStorage.setItem(LS, JSON.stringify(v))
@@ -246,7 +236,6 @@ export function initGuidelines() {
   })
 }
 
-// ---------- Clubs ----------
 export function initClubs() {
   const REGIONS = ['All', 'Asia', 'Europe', 'Africa', 'North America', 'South America', 'Oceania']
   let clubs = []
@@ -316,7 +305,6 @@ export function initClubs() {
   })
 }
 
-// ---------- Stories ----------
 export function initStories() {
   return mount('#storiesWrap', 'stories', (items) => `
     <div id="storyCarousel" class="carousel slide" data-bs-interval="9000"><div class="carousel-inner">${items.map((s, i) => `
@@ -338,7 +326,6 @@ export function initStories() {
   })
 }
 
-// ---------- Gallery ----------
 export function initGallery() {
   const CATS = ['All', 'Peaks', 'Climbing', 'Camps', 'Glaciers & Ice', 'Videos']
   const isVideo = (g) => g.type === 'video'
@@ -385,7 +372,6 @@ export function initGallery() {
   })
 }
 
-// ---------- Expeditions ----------
 const expCard = (e, i, full) => `
     <div class="card-grid-item" data-reveal style="--d:${(i % 3) * 0.1}s">
       <article class="card-lux exp-card tilt" id="exp-${esc(e.id)}">
@@ -433,7 +419,6 @@ export async function initExpeditions() {
   render()
 }
 
-// ---------- Contact ----------
 const emailOk = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)
 const FALLBACK_INTERESTS = ['Everest Base Camp Trek', 'Island Peak & Lobuche', 'Mont Blanc Ascent', 'Matterhorn Ascent', 'Denali Expedition', 'Aconcagua Expedition', 'Ski Mountaineering Haute Route', 'Introductory Mountaineering Course', 'Private / Custom Expedition', 'Corporate & Group Programmes']
 

@@ -1,6 +1,3 @@
-/* ==========================================================================
-   Layout: navbar, mobile menu, hero, ticker, footer
-   ========================================================================== */
 .site-nav {
   position: fixed; inset: 0 0 auto 0; z-index: 1500; height: var(--nav-h);
   transition: transform 0.55s var(--ease), opacity 0.45s ease, background-color 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
@@ -15,9 +12,6 @@
 .brand:hover img { transform: translateY(-2px) scale(1.06); }
 .brand__word { font-family: var(--ff-display); font-weight: 500; font-size: 1.1rem; letter-spacing: 0.34em; line-height: 1; white-space: nowrap; }
 .brand__word b { color: var(--gold); font-weight: 500; }
-/* ---------- Navigation ----------
-   Compact dropdown bar from 900px up; the full-screen hamburger overlay below that.
-   Five top-level entries only, so the bar can never crowd the brand on a laptop. */
 .site-nav__menu { display: none; }
 .nav-list { display: flex; align-items: center; justify-content: center; gap: clamp(0.25rem, 0.7vw, 0.9rem); margin: 0 auto; padding: 0; list-style: none; }
 .nav-list > li { position: relative; }
@@ -57,11 +51,6 @@
 .burger[aria-expanded='true'] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 @media (min-width: 576px) { .visitor-badge__label { display: inline; } .brand__word { font-size: 1.2rem; } }
 @media (max-width: 380px) { .brand__word { letter-spacing: 0.2em; font-size: 0.95rem; } .visitor-badge { padding-inline: 0.65rem; } .brand img { width: 32px; height: 32px; } }
-/* ---------- Navigation ----------
-   One hamburger at every screen width. Fourteen links cannot sit beside the brand
-   without colliding on ordinary laptops, so the inline list (see .site-nav__menu
-   above) is never shown and the overlay menu is the single entry point on phones,
-   laptops and desktops alike. The burger is the primary control, so give it presence. */
 .burger { width: 52px; height: 52px; }
 .burger span { width: 20px; }
 @media (max-width: 380px) { .burger { width: 44px; height: 44px; } .burger span { width: 17px; } }

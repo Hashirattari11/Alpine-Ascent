@@ -1,4 +1,3 @@
-// Entry point: boots shared chrome and page sections.
 import { loadImageMeta, hydrateImages } from './utils.js'
 import { initReveal, initCounters, initParallax, initProgress, initPointerEffects } from './effects.js'
 import { runPreloader } from './preloader.js'
